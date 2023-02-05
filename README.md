@@ -19,7 +19,7 @@ The system provides an efficient solution for building a container ecosystem. Us
 
 - Docker container management preferably using kubernetes
 
-- providing users with option to manage their deployement 
+- Providing users with option to manage their deployement 
 
 ## 3. Non Functional Requirements
 
@@ -43,8 +43,8 @@ The system provides an efficient solution for building a container ecosystem. Us
 
 # Design Specification
 On a high level:
-- authenticate user
-- take config inputs from users reagrding the deployment requirements. eg - no of GPUs, CPUs, libraries reqd etc 
-- create a dynamic dockerfile or kubernetes deployment scripts according to user specifications
-- setup the deployment ecosystem
-- provide access to the deployment container.
+- Authenticate user
+- Take config inputs from users reagrding the deployment requirements. eg - no of GPUs, CPUs, libraries reqd etc 
+- Create a dynamic dockerfile or kubernetes deployment scripts according to user specifications
+- Setup the deployment ecosystem
+- Provide access to the deployment container.
