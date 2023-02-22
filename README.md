@@ -84,6 +84,24 @@ On clicking the Submit button a progress bar will be shown which also shows succ
     "cpu": "",
     "gpu": "",
     "storage": ""
+  },
+  "dataset": {
+    "category": [
+      {
+        "name": "",
+        "db": [
+          {
+            "name": "",
+            "dataset": [
+              {
+                "name": "",
+                "version": ""
+              }
+            ]
+          }
+        ]
+      }
+    ]
   }
 }
 ```
