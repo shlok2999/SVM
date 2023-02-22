@@ -63,3 +63,28 @@ On clicking the Submit button a progress bar will be shown which also shows succ
 ## Architecture Overview
 ![dfs](https://github.com/shlok2999/SVM/blob/main/dfs_arch_v1.jpg)
 
+## Configuration Contract
+```json
+{
+  "env-name": "",
+  "version": "",
+  "os": {
+    "image-name": "",
+    "version": "",
+    "tags": ""
+  },
+  "language": {
+    "image-name": "",
+    "version": "",
+    "tags": "",
+    "libraries": []
+  },
+  "resources": {
+    "ram": "",
+    "cpu": "",
+    "gpu": "",
+    "storage": ""
+  }
+}
+```
+
