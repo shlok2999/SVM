@@ -48,5 +48,10 @@ The project will be delivered in phases:
 - Prototype phase: Building a simple and efficient prototype to demonstrate the workflow for container ecosystem deployment
 - Concurrency support: This phase will mostly focus on making the abover prototype more rustic and handle traffic efficiently
 - UI Integration phase
+    This phase deals with the Integration of whole backend with a UI Interface so that, it can be easily used by the end user.
+    ![dfs](https://user-images.githubusercontent.com/89220287/220525179-6791ee82-f38e-44b9-9c7f-910b2d36de28.png)
+
+    
+      
 - Logging and Fault Tolerance
 
