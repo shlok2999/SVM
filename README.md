@@ -60,3 +60,6 @@ On clicking the Submit button a progress bar will be shown which also shows succ
       
 - Logging and Fault Tolerance
 
+## Architecture Overview
+![dfs](https://github.com/shlok2999/SVM/blob/main/dfs_arch_v1.jpg)
+
