@@ -1,0 +1,3 @@
+{version: '3.9', services: {demo_svm: {container_name: demo_svm, build: {context: .},
+      ports: ['8000:8000/tcp', '8080:80/udp'], tty: true, deploy: {resources: {limits: {
+            cpus: '1.0', memory: 1G}}}}}}

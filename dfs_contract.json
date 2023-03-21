@@ -1,0 +1,59 @@
+{
+  "env-name": "fjasldf",
+  "version": "1",
+  "os": {
+    "image-name": "ubuntu",
+    "version": "",
+    "tags": "22.04"
+  },
+  "languages": [{
+    "language-name":"python",
+    "libraries":["numpy"]
+    }
+  ],
+  "resources": {
+    "ram": "1G",
+    "cpu": "1.0",
+    "gpu": "1",
+    "storage": 54
+  },
+  "dataset": [
+    {
+      "category-name": "ffs",
+      "db": [
+        {
+          "db-name": "fsgr",
+          "dataset": [
+            {
+              "dataset-name": "effr",
+              "version": "34"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+
+  "port-publish": [
+    {
+      "external": 
+      {
+        "ports": "8000"
+      },
+      "internal": {
+        "ports": "8000",
+        "protocol": "tcp"
+      }
+    },
+    {
+      "external": 
+      {
+        "ports": "8080"
+      },
+      "internal": {
+        "ports": "80",
+        "protocol": "udp"
+      }
+    }
+  ]
+}
