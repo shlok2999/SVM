@@ -2,7 +2,7 @@ import json
 from flask import Flask, jsonify
 from json_schema_validator import *
 from kafka_producer import Kafka_Producer
-import requests
+from helper import *
 # from django.http import JsonResponse
 
 app = Flask(__name__)
@@ -17,8 +17,7 @@ def get_env_config():
 
 
     if validate_config(data):
-        ans = requests.get('http://127.0.0.1:8000/search', params=data).content.decode()
-        ans = json.loads(ans)
+        ans = get_response('http://127.0.0.1:8000/search',data['resources'])
         kafka_producer_obj = Kafka_Producer(ans['topic'])
         kafka_producer_obj.send_valid_config(data)
         response = {'response':'config valid'}

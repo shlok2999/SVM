@@ -3,7 +3,7 @@ from flask import Flask, jsonify, request
 import psutil
 import subprocess as sp
 import shutil
-
+import uuid
 
 app = Flask(__name__)
 
@@ -15,8 +15,8 @@ def get_gpu_memory():
 
 @app.route('/node_status')
 def get_node_status():
-    cpu_usage = psutil.cpu_percent(interval = 1)
-    cpu_usage_per_proccesor = psutil.cpu_percent(interval = 1,percpu= True)
+    cpu_usage = psutil.cpu_percent(interval = 2)
+    cpu_usage_per_proccesor = psutil.cpu_percent(interval = 2,percpu= True)
     cpu_count = len(cpu_usage_per_proccesor)
     free_gpu_memory = get_gpu_memory() #In MB
     gpu_count = len(free_gpu_memory) 
@@ -30,7 +30,8 @@ def get_node_status():
                 'free_gpu_memory':free_gpu_memory,
                 'gpu_count':gpu_count,
                 'free_ram':free_ram,
-                'free_disk_space':free_disk_space}
+                'free_disk_space':free_disk_space,
+                'topic': str(hex(uuid.getnode()))}
     return jsonify(response)
 
 if __name__ == '__main__':
