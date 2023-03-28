@@ -1,0 +1,159 @@
+{
+    "type": "object",
+    "required": [ "env-name", "version", "os" ],
+    "properties": {
+        "env-name": {
+            "description": "name for the config file",
+            "type": "string"
+        },
+        "version": {
+            "description": "versionof the config",
+            "type": "string"
+        },
+        "os": {
+            "type": "object",
+            "required": [ "image-name", "tags"],
+            "properties": {
+                "image-name": {
+                    "description": "name of the os to install",
+                    "type": "string"
+                },
+                "version": {
+                    "description": "versionof the config",
+                    "type": "string"
+                },
+                "tags": {
+                    "description": "name of the os to install",
+                    "type": "string"
+                }
+            }
+        },
+
+        "language": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": [ "image-name", "tags"],
+                "properties": {
+                    "language-name": {
+                        "description": "name of the language to install",
+                        "type": "string"
+                    },
+                    "libraries": {
+                        "type": "array",
+                        "minItems": 1,
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+
+        "resources": {
+            "type": "object",
+            "properties": {
+                "ram": {
+                    "description": "ram to allocate",
+                    "type": "string"
+                },
+                "cpu": {
+                    "description": "cpu to allocate",
+                    "type": "string"
+                },
+                "gpu": {
+                    "description": "number of gpu to allocate",
+                    "type": "string"
+                },
+                "storage": {
+                    "description": "volume size",
+                    "type": "integer"
+                }
+            }
+        },
+
+        "dataset": {
+            "description": "dataset to download",
+            "type": "array",
+            "items": {
+                "description": "",
+                "type": "object",
+                "required": ["category-name", "db"],
+                "properties": {
+                    "category-name": {
+                        "description":"",
+                        "type": "string" 
+                    },
+                    "db": {
+                        "description": "",
+                        "type": "array",
+                        "items": {
+                            "description": "",
+                            "type": "object",
+                            "required": ["db-name", "dataset"],
+                            "properties": {
+                                "db-name": {
+                                    "description": "",
+                                    "type": "string"
+                                },
+                                "dataset": {
+                                    "description": "",
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "required": ["dataset-name", "version"],
+                                        "properties": {
+                                            "dataset-name": {
+                                                "description": "",
+                                                "type": "string"
+                                            },
+                                            "version": {
+                                                "description": "",
+                                                "type": "string"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+
+        "port-publish": {
+            "description": "publish ports for outside world",
+            "type": "array",
+            "minItems": 1,
+            "items": {
+                "description": "port mapping object",
+                "type": "object",
+                "required" : ["external", "internal"],
+                "properties": {
+                    "external" : {
+                        "type": "object",
+                        "required": ["ports"],
+                        "properties": {
+                            "ports": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "internal" : {
+                    "type": "object",
+                    "required": ["ports"],
+                    "properties": {
+                        "ports": {
+                            "type": "string"
+                        },
+                        "protocol": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}

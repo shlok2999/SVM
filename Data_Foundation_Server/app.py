@@ -17,9 +17,13 @@ def get_env_config():
 
 
     if validate_config(data):
-        ans = get_response('http://127.0.0.1:8000/search',data['resources'])
-        kafka_producer_obj = Kafka_Producer(ans['topic'])
-        kafka_producer_obj.send_valid_config(data)
+        print(data)
+        ans = get_response('http://127.0.0.1:8080/node_info',data['resources'])
+        # print("data:",data)
+        print('+++++++++++++++++++++++++++++++')
+        print('ans',ans)
+        # kafka_producer_obj = Kafka_Producer(ans['topic'])
+        # kafka_producer_obj.send_valid_config(data)
         response = {'response':'config valid'}
         return jsonify(response)
 
@@ -27,4 +31,4 @@ def get_env_config():
     return jsonify(response)
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=8000, debug=True)
+    app.run(host="127.0.0.1", port=8000, debug=True)
