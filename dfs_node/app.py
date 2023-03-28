@@ -32,6 +32,7 @@ def get_node_status():
                 'free_ram':free_ram,
                 'free_disk_space':free_disk_space,
                 'topic': str(hex(uuid.getnode()))}
+    print(response)
     return jsonify(response)
 
 if __name__ == '__main__':
