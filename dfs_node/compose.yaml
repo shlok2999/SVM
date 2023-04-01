@@ -1,0 +1,26 @@
+version: '3.9'
+services:
+  demo_svm:
+    container_name: demo_svm
+    build:
+      context: .
+    ports:
+    - 9000:9000/tcp
+    - 9080:980/udp
+    tty: true
+    volumes:
+    - type: tmpfs
+      target: /target
+      tmpfs:
+        size: '104857600'
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 1G
+        reservations:
+          devices:
+          - driver: nvidia
+            count: 1
+            capabilities:
+            - gpu

@@ -19,11 +19,12 @@ def get_env_config():
     if validate_config(data):
         print(data)
         ans = get_response('http://127.0.0.1:8080/node_info',data['resources'])
+        print(ans)
         # print("data:",data)
         print('+++++++++++++++++++++++++++++++')
         print('ans',ans)
-        # kafka_producer_obj = Kafka_Producer(ans['topic'])
-        # kafka_producer_obj.send_valid_config(data)
+        kafka_producer_obj = Kafka_Producer(ans['topic'])
+        kafka_producer_obj.send_valid_config(data)
         response = {'response':'config valid'}
         return jsonify(response)
 

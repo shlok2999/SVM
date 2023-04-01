@@ -88,6 +88,12 @@ def write_to_dockerfile(file_desc, installation_steps):
 # data = json.load(file_desc)
 # file_desc.close()
 
+def extract_temp_filesystem(storage_req):
+	req_list = []
+	for req in storage_req:
+		req_list.append(req)
+	return req_list
+
 def init_env_setup_steps(installation_steps, data):
 	env_name = None
 	if 'env_name' in data:
@@ -119,6 +125,10 @@ def init_env_setup_steps(installation_steps, data):
 	port_mappings = None
 	if 'port-publish' in data:
 		port_mappings = data['port-publish']
+	
+	storage_req = None
+	if 'storage' in data:
+		storage_req = data['storage']
 
 	docker_file_desc = open("Dockerfile",'w')
 
@@ -127,13 +137,14 @@ def init_env_setup_steps(installation_steps, data):
 	# resources_dockerfile_content = extract_resource_requirements(resources)
 	ram, cpu, gpu = extract_resource_requirements(resources)
 	port_mapping_content = extract_port_mapping(port_mappings)
+	temp_filesystem = extract_temp_filesystem(storage_req)
 
 	write_to_dockerfile(docker_file_desc, os_dockerfile_content)
 	write_to_dockerfile(docker_file_desc, languages_dockerfile_content)
 	write_to_dockerfile(docker_file_desc, ["USER root"])
 	docker_file_desc.close()
 
-	create_compose_file("demo_svm", ram, cpu, gpu, port_mapping_content)
+	create_compose_file("demo_svm", ram, cpu, gpu, port_mapping_content, temp_filesystem)
 
 	# with open("output.log", "w") as output:
 	# 	subprocess.call("sudo docker compose --compatibility up -d", shell=True, stdout=output, stderr=output)

@@ -6,7 +6,7 @@ import uuid
 class Kafka_Consumer:
     def __init__(self,topic):
         self.bootstrap_servers = ['localhost:9092']
-        self.auto_offset_reset = 'earliest'
+        self.auto_offset_reset = 'latest'
         self.topic = topic
         self.consumer = KafkaConsumer(
             self.topic,

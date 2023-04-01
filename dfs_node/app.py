@@ -18,8 +18,9 @@ def get_node_status():
     cpu_usage = psutil.cpu_percent(interval = 2)
     cpu_usage_per_proccesor = psutil.cpu_percent(interval = 2,percpu= True)
     cpu_count = len(cpu_usage_per_proccesor)
-    free_gpu_memory = get_gpu_memory() #In MB
-    gpu_count = len(free_gpu_memory) 
+    # free_gpu_memory = get_gpu_memory() #In MB
+    free_gpu_memory = []
+    gpu_count = len(free_gpu_memory)
     free_ram = psutil.virtual_memory()[1] #In Bytes
     path = '/'
     stat = shutil.disk_usage(path)

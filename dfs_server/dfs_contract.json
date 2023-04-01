@@ -38,22 +38,27 @@
     {
       "external": 
       {
-        "ports": "8000"
+        "ports": "9000"
       },
       "internal": {
-        "ports": "8000",
+        "ports": "9000",
         "protocol": "tcp"
       }
     },
     {
       "external": 
       {
-        "ports": "8080"
+        "ports": "9080"
       },
       "internal": {
-        "ports": "80",
+        "ports": "980",
         "protocol": "udp"
       }
     }
-  ]
+  ],
+
+  "storage": [{
+    "target": "/target",
+    "size": "104857600"
+  }]
 }

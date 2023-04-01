@@ -47,9 +47,9 @@ def get_health(thread_name):
         node_ip = get_node_ip()
         current_status = dict()
         for ip in node_ip:
-            # print('sending request to :',ip)
+            print('sending request to :',ip)
             response = get_response(ip,None)
-            # print('got response',response)
+            print('got response',response)
             current_status[ip] = response
         cached_status = current_status
         time.sleep(5)
