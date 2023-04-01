@@ -53,7 +53,7 @@ The project will be delivered in phases:
     
     ![dfs](https://github.com/shlok2999/SVM/blob/main/dfs_new.png)
 
-    As shown in the above diagram, the UI will appear in the as a form wherein user will get to choose the python version user will work on, framework user wants to get support of in their Ecosystem, Computing Requirements for the Ecosystem. All the frameworms & python resource requirements will be a dropdwon which shows the list of resources that are avialbale to create an ecosystem.
+    As shown in the above diagram, the UI will appear in the as a form wherein user will get to choose the language version user will work on, library user wants to get support of in their Ecosystem, Computing Requirements for the Ecosystem. All the libraries & langiages resource requirements will be a dropdwon which shows the list of resources that are avialbale to create an ecosystem.
 On clicking the Submit button a progress bar will be shown which also shows success/failure status at the end of loading.
 
     
