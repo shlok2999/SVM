@@ -51,7 +51,7 @@ The project will be delivered in phases:
     This phase deals with the Integration of whole backend with a UI Interface so that, it can be easily used by the end user.
     
     
-    ![dfs](https://user-images.githubusercontent.com/89220287/220525179-6791ee82-f38e-44b9-9c7f-910b2d36de28.png)
+    ![dfs](https://github.com/shlok2999/SVM/blob/main/dfs_new.png)
 
     As shown in the above diagram, the UI will appear in the as a form wherein user will get to choose the python version user will work on, framework user wants to get support of in their Ecosystem, Computing Requirements for the Ecosystem. All the frameworms & python resource requirements will be a dropdwon which shows the list of resources that are avialbale to create an ecosystem.
 On clicking the Submit button a progress bar will be shown which also shows success/failure status at the end of loading.
