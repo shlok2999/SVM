@@ -64,45 +64,64 @@ On clicking the Submit button a progress bar will be shown which also shows succ
 ![dfs](https://github.com/shlok2999/SVM/blob/main/dfs_arch_v1.jpg)
 
 ## Configuration Contract
-```json
-{
-  "env-name": "",
-  "version": "",
+```{
+  "env-name": "fjasldf",
+  "version": "1",
   "os": {
-    "image-name": "",
+    "image-name": "ubuntu",
     "version": "",
-    "tags": ""
+    "tags": "22.04"
   },
-  "language": {
-    "image-name": "",
-    "version": "",
-    "tags": "",
-    "libraries": []
-  },
+  "languages": [{
+    "language-name":"python",
+    "libraries":["numpy"]
+    }
+  ],
   "resources": {
-    "ram": "",
-    "cpu": "",
-    "gpu": "",
-    "storage": ""
+    "ram": "1G",
+    "cpu": "1.0",
+    "gpu": "1",
+    "storage": 54
   },
-  "dataset": {
-    "category": [
+  "dataset": [
+    {
+      "category-name": "ffs",
+      "db": [
+        {
+          "db-name": "fsgr",
+          "dataset": [
+            {
+              "dataset-name": "effr",
+              "version": "34"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+
+  "port-publish": [
+    {
+      "external": 
       {
-        "name": "",
-        "db": [
-          {
-            "name": "",
-            "dataset": [
-              {
-                "name": "",
-                "version": ""
-              }
-            ]
-          }
-        ]
+        "ports": "8000"
+      },
+      "internal": {
+        "ports": "8000",
+        "protocol": "tcp"
       }
-    ]
-  }
+    },
+    {
+      "external": 
+      {
+        "ports": "8080"
+      },
+      "internal": {
+        "ports": "80",
+        "protocol": "udp"
+      }
+    }
+  ]
 }
 ```
 
