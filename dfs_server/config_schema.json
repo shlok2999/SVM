@@ -155,14 +155,18 @@
             }
         },
         "storage": {
-            "type": "object",
-            "reaquired": ["target", "size"],
-            "properties": {
-                "target": {
-                    "type": "string"
-                },
-                "size": {
-                    "type": "string"
+            "type": "array",
+            "minItems": 1,
+            "items": {
+                "type": "object",
+                "required": ["target", "size"],
+                "properties": {
+                    "target": {
+                        "type": "string"
+                    },
+                    "size": {
+                        "type": "string"
+                    }
                 }
             }
         }
