@@ -18,7 +18,7 @@ def validate_config(json_data):
         validate(instance=json_data, schema=execute_api_schema)
     except jsonschema.exceptions.ValidationError as err:
         print(err)
-        return False, err
+        return False
     
     return True
 

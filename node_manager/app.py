@@ -33,7 +33,7 @@ def create_app():
     return app
 
 def get_node_ip():
-    return ['http://127.0.0.1:8090/node_status']
+    return ['http://127.0.0.1:8010/node_status']
 
 def get_health(thread_name):
     '''
