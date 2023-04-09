@@ -1,4 +1,5 @@
 {
     "database":"",
-    "minio_endpoint":""
+    "minio_endpoint":"",
+    "bootstrap_servers": ["localhost:9092"]
 }

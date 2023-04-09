@@ -1,11 +1,8 @@
 {
   "env-name": "fjasldf",
   "version": "1",
-  "os": {
-    "image-name": "ubuntu",
-    "version": "",
-    "tags": "22.04"
-  },
+  "isTemplate": 0,
+  "os": "ubuntu",
   "languages": [{
     "language-name":"python",
     "libraries":["numpy"]
@@ -15,9 +12,8 @@
     "ram": "1G",
     "cpu": "1.0",
     "gpu": "1",
-    "storage": 54
   },
-  "dataset": [
+  "datasets": [
     {
       "category-name": "ffs",
       "db": [
@@ -59,6 +55,7 @@
 
   "storage": [{
     "target": "/target",
-    "size": "104857600"
+    "size": "104857600",
+    "lifecycle": "temporary"
   }]
 }

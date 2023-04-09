@@ -106,8 +106,8 @@ def init_env_setup_steps(installation_steps, data):
 	os = None
 	if 'os' in data:
 		os = data['os']
-		if os['image-name'] in installation_steps:
-			installation_steps = installation_steps[os['image-name']]
+		if os in installation_steps:
+			installation_steps = installation_steps[os]
 		
 
 	languages = None
@@ -149,9 +149,10 @@ def init_env_setup_steps(installation_steps, data):
 	# with open("output.log", "w") as output:
 	# 	subprocess.call("sudo docker compose --compatibility up -d", shell=True, stdout=output, stderr=output)
 
-	docker = DockerClient(compose_files=["./compose.yaml"])
-	docker.compose.build()
-	docker.compose.up()
+	# docker = DockerClient(compose_files=["./compose.yaml"])
+	# docker.compose.build()
+	# docker.compose.up()
+	subprocess.Popen(['docker','compose','--compatibility','up','-d'])
 
 # docker_run_command_list = ["docker run -d"]
 # docker_run_command_list.extend(port_mapping_content)

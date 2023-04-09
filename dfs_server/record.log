@@ -1,0 +1,37 @@
+2023-05-01 02:50:58,397 INFO werkzeug MainThread :  * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+2023-05-01 02:50:58,398 INFO werkzeug MainThread :  * Restarting with stat
+2023-05-01 02:50:58,893 WARNING werkzeug MainThread :  * Debugger is active!
+2023-05-01 02:50:58,894 INFO werkzeug MainThread :  * Debugger PIN: 968-689-477
+2023-05-01 02:53:54,621 INFO app Thread-2 : returning all templates list from db
+2023-05-01 02:53:54,621 INFO werkzeug Thread-2 : 127.0.0.1 - - [01/May/2023 02:53:54] "GET /templates HTTP/1.1" 200 -
+2023-05-01 02:54:25,577 INFO werkzeug MainThread :  * Detected change in '/home/vishal/Documents/sem4/dfs/SVM/dfs_server/app.py', reloading
+2023-05-01 02:54:26,086 INFO werkzeug MainThread :  * Restarting with stat
+2023-05-01 02:54:26,629 WARNING werkzeug MainThread :  * Debugger is active!
+2023-05-01 02:54:26,630 INFO werkzeug MainThread :  * Debugger PIN: 968-689-477
+2023-05-01 02:54:31,399 INFO app Thread-2 : returning all templates list from db
+2023-05-01 02:54:31,400 INFO werkzeug Thread-2 : 127.0.0.1 - - [01/May/2023 02:54:31] "GET /templates HTTP/1.1" 200 -
+2023-05-01 02:55:03,894 INFO werkzeug MainThread :  * Detected change in '/home/vishal/Documents/sem4/dfs/SVM/dfs_server/app.py', reloading
+2023-05-01 02:55:04,492 INFO werkzeug MainThread :  * Restarting with stat
+2023-05-01 02:55:05,114 WARNING werkzeug MainThread :  * Debugger is active!
+2023-05-01 02:55:05,115 INFO werkzeug MainThread :  * Debugger PIN: 968-689-477
+2023-05-01 02:55:17,247 INFO app Thread-2 : returning all templates list from db
+2023-05-01 02:55:17,250 INFO werkzeug Thread-2 : 127.0.0.1 - - [01/May/2023 02:55:17] "GET /templates HTTP/1.1" 200 -
+2023-05-01 02:56:12,790 INFO werkzeug MainThread :  * Detected change in '/home/vishal/Documents/sem4/dfs/SVM/dfs_server/app.py', reloading
+2023-05-01 02:56:13,318 INFO werkzeug MainThread :  * Restarting with stat
+2023-05-01 02:56:13,864 WARNING werkzeug MainThread :  * Debugger is active!
+2023-05-01 02:56:13,865 INFO werkzeug MainThread :  * Debugger PIN: 968-689-477
+2023-05-01 02:56:16,161 INFO app Thread-2 : received request for get_templates()
+2023-05-01 02:56:16,436 INFO app Thread-2 : returning all templates list from db
+2023-05-01 02:56:16,438 INFO werkzeug Thread-2 : 127.0.0.1 - - [01/May/2023 02:56:16] "GET /templates HTTP/1.1" 200 -
+2023-05-01 02:56:57,782 INFO werkzeug MainThread :  * Detected change in '/home/vishal/Documents/sem4/dfs/SVM/dfs_server/app.py', reloading
+2023-05-01 02:56:58,240 INFO werkzeug MainThread :  * Restarting with stat
+2023-05-01 02:56:58,752 WARNING werkzeug MainThread :  * Debugger is active!
+2023-05-01 02:56:58,752 INFO werkzeug MainThread :  * Debugger PIN: 968-689-477
+2023-05-01 02:57:09,181 INFO werkzeug MainThread :  * Detected change in '/home/vishal/Documents/sem4/dfs/SVM/dfs_server/app.py', reloading
+2023-05-01 02:57:09,702 INFO werkzeug MainThread :  * Restarting with stat
+2023-05-01 02:57:10,215 WARNING werkzeug MainThread :  * Debugger is active!
+2023-05-01 02:57:10,215 INFO werkzeug MainThread :  * Debugger PIN: 968-689-477
+2023-05-01 02:57:35,778 INFO app Thread-2 : received request for get_library_detail()
+2023-05-01 02:57:36,241 INFO app Thread-2 : returning entries in db for os ubuntu
+2023-05-01 02:57:36,243 INFO werkzeug Thread-2 : 127.0.0.1 - - [01/May/2023 02:57:36] "GET /library/os/ubuntu HTTP/1.1" 200 -
+2023-05-01 02:58:40,089 INFO werkzeug MainThread :  * Detected change in '/home/vishal/Documents/sem4/dfs/SVM/dfs_server/app.py', reloading
