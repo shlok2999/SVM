@@ -21,7 +21,7 @@ def get_node_status():
     # free_gpu_memory = get_gpu_memory() #In MB
     free_gpu_memory = []
     gpu_count = len(free_gpu_memory)
-    free_ram = psutil.virtual_memory()[1] #In Bytes
+    free_ram = psutil.virtual_memory()[1]/1e9 #Divided by 1e9 to convert Bytes into GB.
     path = '/'
     stat = shutil.disk_usage(path)
     free_disk_space = stat.free/1e9 #Divivded by 1e9 to covert Bytes into GB

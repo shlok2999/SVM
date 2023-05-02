@@ -1,5 +1,6 @@
 {
     "database":"",
     "minio_endpoint":"",
-    "bootstrap_servers": ["localhost:9092"]
+    "bootstrap_servers": ["localhost:9092"],
+    "resource_manager":""
 }
