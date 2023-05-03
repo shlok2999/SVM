@@ -2,8 +2,15 @@ import json
 from flask import Flask, jsonify, request
 from threading import Thread
 from helper import *
+from config import DevelopmentConfig
 import time
 import atexit
+import socket
+from pymongo import MongoClient
+from database_ops import *
+import bson.json_util as json_util
+import logging
+import public_ip as ip
 
 cached_status = dict() # Used to store the current free resources in nodes
 killed = True
@@ -11,15 +18,13 @@ health_thread = None
 node_usage_status = dict() # Used to know how much resource of each node is already used
 environment_details = get_environment_details()
 
+
 def initiate_the_usage():
     global node_usage_status
     node_usage_status = get_response(environment_details['node_monitor'],'/send_usage',None) # need to add coorect ip
     print(node_usage_status)
 
-NODE_AGENT1="http://127.0.0.1:8010"
-
-def get_node_ip():
-    return [f'{NODE_AGENT1}/node_status']
+    
 
 def get_health(thread_name):
     '''
@@ -30,14 +35,15 @@ def get_health(thread_name):
     global killed
     print('in get health')
     while(killed):
-        node_ip = get_node_ip()
+        node_agents = get_node_agents_list()
         current_status = dict()
-        for ip in node_ip:
+        for agent in node_agent:
+            node_status_api_path = f'{agent["ip"]}:{agent["port"]}{app.config["NODE_AGENT_STATUS_API"]}'
             topic = None
             try:
-                # print('sending request to :',ip)
-                response = get_response(ip,"",None)
-                # print('got response',response)
+                print('sending request to :',agent['ip'])
+                response = get_response(node_status_api_path,None)
+                print('got response',response)
                 topic = response['topic']
                 current_status[response['topic']] = response
                 if response['topic'] not in node_usage_status:
@@ -55,6 +61,13 @@ def get_health(thread_name):
         # print(node_usage_status)
         # print(cached_status)
         time.sleep(5)
+
+
+def get_node_agents_list():
+    node_agents = get_node_agents(db, app.config['SERVICES_COLL'], app.config['NODE_AGENT_TYPE'])
+    return node_agents
+
+
 
 def select_node(data,cached_data):
     '''
@@ -93,6 +106,12 @@ def select_node(data,cached_data):
 
 def create_app():
     app = Flask(__name__)
+
+    app.config.from_object(DevelopmentConfig())
+
+    mongo_client = MongoClient(app.config['MONGO_URL'])
+    db = mongo_client.get_database(app.config['MONGO_DB'])
+
     @app.route('/node_info', methods = ['GET','POST'])
     def get_node_info():
         '''
@@ -152,7 +171,31 @@ def create_app():
     return app
 
 
+def register_self(config):
+    self_ip_addr = get_local_ip()
+    if app.config['DEVELOPMENT'] == False:
+        self_ip_addr = ip.get()
+
+    app.logger.info(f"registering service {app.config['NODE_MANAGER']} at ip {self_ip_addr}")
+
+    free_port = next_free_port()
+
+    if free_port is None:
+        raise ValueError('could not find a free port')
+    
+    app.logger.info(f"found free port at {free_port}")
+    
+    if not register_service(db, app.config['SERVICES_COLL'], 
+                            app.config['NODE_MANAGER'], 
+                            self_ip_addr, free_port):
+        raise Exception('could not register service')
+
+    app.logger.info(f"registering service {app.config['NODE_MANAGER']} at ip {self_ip_addr} and port {free_port}")
+
+    return self_ip_addr, free_port
+
 app = create_app()
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=8080,debug=True)
+    ip, port = register_self(app.config)
+    app.run(host=ip, port=port,debug=False)

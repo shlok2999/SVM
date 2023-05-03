@@ -8,6 +8,7 @@ from database_ops import *
 from constants import *
 import bson.json_util as json_util
 import logging
+import public_ip as ip
 
 logging.basicConfig(filename='record.log', 
                     level=logging.DEBUG, format=f'%(asctime)s %(levelname)s %(name)s %(threadName)s : %(message)s')
@@ -67,6 +68,25 @@ def get_env_config():
     app.logger.error(f"no entry found in db for os {os_name}")
     return create_response(INVALID_CONFIG), 403
 
+
+@app.route("/library/os")
+def get_os_names():
+    app.logger.info(f"received request for get_library_detail()")
+    library_obj = get_os_list(db, app.config['LIBRARY_COLL'])
+
+    if library_obj is None:
+        app.logger.error(f"failed to query db or no entry found in db for library collection")
+        return create_response(INTERNAL_SERVER_ERROR), 500
+
+    if len(library_obj.keys()) == 0:
+        app.logger.error(f"no entry found in db")
+        return create_response(INVALID_LIBRARY), 403
+
+    app.logger.info(f"returning entries for all operating system present in library")
+    
+    return library_obj, 200
+
+
 @app.route("/library/os/<os_name>")
 def get_library_detail(os_name):
     app.logger.info(f"received request for get_library_detail()")
@@ -95,6 +115,53 @@ def get_templates():
     app.logger.info(f"returning all templates list from db")
     return create_bson_response(templates_obj)
 
+def register_self():
+    self_ip_addr = get_local_ip()
+    if app.config['DEVELOPMENT'] == False:
+        self_ip_addr = ip.get()
+
+    app.logger.info(f"registering service {app.config['DFS_SERVER']} at ip {self_ip_addr}")
+
+    free_port = next_free_port()
+
+    if free_port is None:
+        raise ValueError('could not find a free port')
+    
+    app.logger.info(f"found free port at {free_port}")
+    
+    if not register_service(db, app.config['SERVICES_COLL'], 
+                            app.config['DFS_SERVER'], 
+                            self_ip_addr, free_port):
+        raise Exception('could not register service')
+
+    app.logger.info(f"registering service {app.config['DFS_SERVER']} at ip {self_ip_addr} and port {free_port}")
+
+    return self_ip_addr, free_port
+
+@app.route("/configs")
+def retrieve_all_configs():
+    app.logger.info(f"received request for retireieve_all_configs()")
+    configs_obj = get_all_configs(db, app.config['CONFIGS_COLL'])
+
+    if configs_obj is None:
+        app.logger.error(f"failed to query db or No entry found in db for configs collection")
+        return create_response(INTERNAL_SERVER_ERROR), 500
+
+    app.logger.info(f"returning all configs list from db")
+    return create_bson_response(configs_obj)
+
+@app.route("/configs/<config_id>")
+def get_single_config(config_id):
+    app.logger.info(f"received request for get_single_config() for config id {config_id}")
+    config_obj = get_config(db, app.config['CONFIGS_COLL'], config_id)
+
+    if config_obj is None:
+        app.logger.error(f"failed to query db or No entry found in db for configs collection for config id {config_id}")
+        return create_response(INTERNAL_SERVER_ERROR), 500
+
+    app.logger.info(f"returning record for config id {config_id} from db")
+    return create_bson_response(config_obj)
+
 # @app.route("/provision/<config_id>", methods=["POST"])
 # def provision_env(config_id):
 #     config_obj = get_config(db, app.config['CONFIGS_COLL'], config_id)
@@ -105,7 +172,7 @@ def get_templates():
 #     if len(config_obj) == 0:
 #         return create_response(INVALID_CONFIG), 403
     
-#     node_manager_obj = get_node_manager(db, app.config['SERVICES_COLL'])
+#     node_manager_obj = get_node_manager(db, app.config['SERVICES_COLL'], app.config['NODE_MANAGER'])
 #     if len(node_manager_obj) == 0:
 #         return create_response(INTERNAL_SERVER_ERROR), 500
     
@@ -123,4 +190,5 @@ def get_templates():
 #     kafka_producer_obj.send_valid_config(config_obj)
 
 if __name__ == "__main__":
-    app.run(host="127.0.0.1", port=8000, debug=True)
+    ip, port = register_self()
+    app.run(host=ip, port=port, debug=False)

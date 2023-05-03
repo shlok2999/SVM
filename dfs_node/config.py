@@ -13,8 +13,7 @@ class DevelopmentConfig(Config):
     SERVICES_COLL = "services"
     DFS_SERVER = "dfs-server"
     NODE_MANAGER = "node-manager"
-    NODE_AGENT_TYPE = "node-agent"
-    NODE_AGENT_STATUS_API = "/status"
+    DFS_NODE = "node-agent"
     DEVELOPMENT = True
 
 class ProductionConfig(Config):
@@ -29,6 +28,5 @@ class ProductionConfig(Config):
     DEBUG = False
     DFS_SERVER = "dfs-server"
     NODE_MANAGER = "node-manager"
-    NODE_AGENT_TYPE = "node-agent"
-    NODE_AGENT_STATUS_API = "/status"
+    DFS_NODE = "node-agent"
     ENV = "production"

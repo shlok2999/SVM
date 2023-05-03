@@ -4,8 +4,45 @@ import psutil
 import subprocess as sp
 import shutil
 import uuid
+from config import DevelopmentConfig
+from pymongo import MongoClient
+from database_ops import *
+import bson.json_util as json_util
+import logging
+import public_ip as ip
+from helper import *
 
 app = Flask(__name__)
+app.config.from_object(DevelopmentConfig())
+
+mongo_client = MongoClient(app.config['MONGO_URL'])
+db = mongo_client.get_database(app.config['MONGO_DB'])
+mongo_client = MongoClient(app.config['MONGO_URL'])
+db = mongo_client.get_database(app.config['MONGO_DB'])
+
+def register_self():
+    self_ip_addr = get_local_ip()
+    if app.config['DEVELOPMENT'] == False:
+        self_ip_addr = ip.get()
+
+    app.logger.info(f"registering service {app.config['DFS_NODE']} at ip {self_ip_addr}")
+
+    free_port = next_free_port()
+
+    if free_port is None:
+        raise ValueError('could not find a free port')
+    
+    app.logger.info(f"found free port at {free_port}")
+    
+    service_name = f'{app.config["DFS_NODE"]}_{self_ip_addr}'
+    if not register_service(db, app.config['SERVICES_COLL'], 
+                            service_name, 
+                            self_ip_addr, free_port):
+        raise Exception('could not register service')
+
+    app.logger.info(f"registering service {app.config['DFS_NODE']} at ip {self_ip_addr} and port {free_port}")
+
+    return self_ip_addr, free_port
 
 def get_gpu_memory():
     command = "nvidia-smi --query-gpu=memory.free --format=csv"
@@ -37,4 +74,5 @@ def get_node_status():
     return jsonify(response)
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=8010, debug=True)
+    ip, port = register_self()
+    app.run(host=ip, port=port, debug=False)

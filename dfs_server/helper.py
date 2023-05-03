@@ -1,12 +1,12 @@
 import requests
 import json
-
+import socket
 from flask import jsonify
 import json
 import jsonschema
 from jsonschema import validate
 import bson.json_util as json_util
-
+from requests import get
 
 def get_schema():
     with open('config_schema.json', 'r') as file:
@@ -64,3 +64,30 @@ def get_environment_details():
     data = json.load(file_desc)
     file_desc.close()
     return data
+
+def get_local_ip():
+    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    s.settimeout(0)
+    try:
+        s.connect(('10.254.254.254', 1))
+        self_ip = s.getsockname()[0]
+    except Exception:
+        self_ip = '127.0.0.1'
+    finally:
+        s.close()
+
+    print(self_ip)
+    return self_ip
+
+def next_free_port():
+    port = 8000
+    max_port = 65536
+    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    while port <= max_port:
+        try:
+            sock.bind(('', port))
+            sock.close()
+            return port
+        except OSError:
+            port += 1
+    return None

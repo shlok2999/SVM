@@ -11,6 +11,9 @@ class DevelopmentConfig(Config):
     DEPLOYMENTS_COLL = "deployments"
     TEMPLATES_COLL = "templates"
     SERVICES_COLL = "services"
+    DFS_SERVER = "dfs-server"
+    NODE_MANAGER = "node-manager"
+    DEVELOPMENT = True
 
 class ProductionConfig(Config):
     MONGO_URL = "mongodb+srv://dfs-user:dfssvm2023@dfs-cluster0.qbwo159.mongodb.net/?retryWrites=true&w=majority"
@@ -22,4 +25,5 @@ class ProductionConfig(Config):
     SERVICES_COLL = "services"
     DEVELOPMENT = False
     DEBUG = False
-    DB_HOST = 'my.production.database'
+    DFS_SERVER = "dfs-server"
+    ENV = "production"

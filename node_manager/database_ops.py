@@ -3,6 +3,7 @@ import datetime
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 import socket
+import re
 
 def create_stub_for_one_lang(language_name, lang_record):
     temp_stub = {}
@@ -106,7 +107,7 @@ def save_deployment_detail(db_obj, collection, config_data, topic, node_agent_id
         print("An exception occurred ::", e)
         return None
 
-def get_all_configs(db_obj, collection):
+def retireieve_all_configs(db_obj, collection):
     try:
         col_obj = db_obj[collection]
         config_record = list(col_obj.find({}))
@@ -124,4 +125,11 @@ def register_service(db_obj, collection, service_name, ip, port):
         print("An exception occurred ::", e)
         return False
 
-# def get_node_manager(db_obj, collection, service_name):
+def get_node_agents(db_obj, collection, service_type):
+    try:
+        col_obj = db_obj[collection]
+        node_agents = list(col_obj.find({"type": service_type}))
+        return node_agents
+    except Exception as e:
+        print("An exception occurred ::", e)
+        return None

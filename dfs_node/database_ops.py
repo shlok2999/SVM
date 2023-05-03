@@ -106,7 +106,7 @@ def save_deployment_detail(db_obj, collection, config_data, topic, node_agent_id
         print("An exception occurred ::", e)
         return None
 
-def get_all_configs(db_obj, collection):
+def retireieve_all_configs(db_obj, collection):
     try:
         col_obj = db_obj[collection]
         config_record = list(col_obj.find({}))
@@ -118,10 +118,8 @@ def get_all_configs(db_obj, collection):
 def register_service(db_obj, collection, service_name, ip, port):
     try:
         col_obj = db_obj[collection]
-        col_obj.update_one({"service-name" : service_name},{"$set": { "ip" : ip, "port": port}}, upsert=True)
+        col_obj.update_one({"service-name" : service_name},{"$set": { "ip" : ip, "port": port, "type": "node-agent"}}, upsert=True)
         return True
     except Exception as e:
         print("An exception occurred ::", e)
         return False
-
-# def get_node_manager(db_obj, collection, service_name):

@@ -35,3 +35,147 @@
 2023-05-01 02:57:36,241 INFO app Thread-2 : returning entries in db for os ubuntu
 2023-05-01 02:57:36,243 INFO werkzeug Thread-2 : 127.0.0.1 - - [01/May/2023 02:57:36] "GET /library/os/ubuntu HTTP/1.1" 200 -
 2023-05-01 02:58:40,089 INFO werkzeug MainThread :  * Detected change in '/home/vishal/Documents/sem4/dfs/SVM/dfs_server/app.py', reloading
+2023-05-01 18:56:32,012 INFO werkzeug MainThread :  * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+2023-05-01 18:56:32,013 INFO werkzeug MainThread :  * Restarting with stat
+2023-05-01 18:56:32,545 WARNING werkzeug MainThread :  * Debugger is active!
+2023-05-01 18:56:32,546 INFO werkzeug MainThread :  * Debugger PIN: 968-689-477
+2023-05-01 18:56:43,903 INFO app Thread-2 : received request for get_library_detail()
+2023-05-01 18:56:44,210 INFO app Thread-2 : returning entries in db for os alpine
+2023-05-01 18:56:44,211 INFO werkzeug Thread-2 : 127.0.0.1 - - [01/May/2023 18:56:44] "GET /library/os/alpine HTTP/1.1" 200 -
+2023-05-01 18:59:44,124 INFO werkzeug MainThread :  * Detected change in '/home/vishal/Documents/sem4/dfs/SVM/dfs_server/app.py', reloading
+2023-05-01 18:59:44,635 INFO werkzeug MainThread :  * Restarting with stat
+2023-05-01 19:03:42,627 INFO werkzeug MainThread :  * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+2023-05-01 19:03:42,628 INFO werkzeug MainThread :  * Restarting with stat
+2023-05-01 19:03:43,117 WARNING werkzeug MainThread :  * Debugger is active!
+2023-05-01 19:03:43,117 INFO werkzeug MainThread :  * Debugger PIN: 968-689-477
+2023-05-01 19:03:47,600 INFO app Thread-2 : received request for get_library_detail()
+2023-05-01 19:03:47,607 INFO werkzeug Thread-2 : 127.0.0.1 - - [01/May/2023 19:03:47] "[35m[1mGET /library/os HTTP/1.1[0m" 500 -
+2023-05-01 19:04:11,811 INFO werkzeug MainThread :  * Detected change in '/home/vishal/Documents/sem4/dfs/SVM/dfs_server/database_ops.py', reloading
+2023-05-01 19:04:12,380 INFO werkzeug MainThread :  * Restarting with stat
+2023-05-01 19:04:12,900 WARNING werkzeug MainThread :  * Debugger is active!
+2023-05-01 19:04:12,900 INFO werkzeug MainThread :  * Debugger PIN: 968-689-477
+2023-05-01 19:04:23,369 INFO werkzeug MainThread :  * Detected change in '/home/vishal/Documents/sem4/dfs/SVM/dfs_server/app.py', reloading
+2023-05-01 19:04:23,851 INFO werkzeug MainThread :  * Restarting with stat
+2023-05-01 19:04:24,346 WARNING werkzeug MainThread :  * Debugger is active!
+2023-05-01 19:04:24,346 INFO werkzeug MainThread :  * Debugger PIN: 968-689-477
+2023-05-01 19:04:29,828 INFO werkzeug MainThread :  * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+2023-05-01 19:04:29,829 INFO werkzeug MainThread :  * Restarting with stat
+2023-05-01 19:04:30,409 WARNING werkzeug MainThread :  * Debugger is active!
+2023-05-01 19:04:30,410 INFO werkzeug MainThread :  * Debugger PIN: 968-689-477
+2023-05-01 19:04:34,912 INFO app Thread-2 : received request for get_library_detail()
+2023-05-01 19:04:35,205 INFO app Thread-2 : returning entries for all operating system present in library
+2023-05-01 19:04:35,206 INFO werkzeug Thread-2 : 127.0.0.1 - - [01/May/2023 19:04:35] "GET /library/os HTTP/1.1" 200 -
+2023-05-01 19:04:42,225 INFO werkzeug MainThread :  * Detected change in '/home/vishal/Documents/sem4/dfs/SVM/dfs_server/app.py', reloading
+2023-05-01 19:04:42,685 INFO werkzeug MainThread :  * Restarting with stat
+2023-05-01 19:04:43,272 WARNING werkzeug MainThread :  * Debugger is active!
+2023-05-01 19:04:43,273 INFO werkzeug MainThread :  * Debugger PIN: 968-689-477
+2023-05-01 19:20:34,131 INFO werkzeug MainThread :  * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+2023-05-01 19:20:34,131 INFO werkzeug MainThread :  * Restarting with stat
+2023-05-01 19:20:34,649 WARNING werkzeug MainThread :  * Debugger is active!
+2023-05-01 19:20:34,650 INFO werkzeug MainThread :  * Debugger PIN: 968-689-477
+2023-05-01 19:20:57,628 INFO werkzeug MainThread :  * Detected change in '/home/vishal/Documents/sem4/dfs/SVM/dfs_server/app.py', reloading
+2023-05-01 19:20:57,960 INFO werkzeug MainThread :  * Restarting with stat
+2023-05-01 19:20:58,512 WARNING werkzeug MainThread :  * Debugger is active!
+2023-05-01 19:20:58,512 INFO werkzeug MainThread :  * Debugger PIN: 968-689-477
+2023-05-01 19:21:09,240 INFO werkzeug MainThread :  * Detected change in '/home/vishal/Documents/sem4/dfs/SVM/dfs_server/app.py', reloading
+2023-05-01 19:21:09,776 INFO werkzeug MainThread :  * Restarting with stat
+2023-05-01 19:21:10,519 DEBUG urllib3.connectionpool MainThread : Starting new HTTPS connection (1): api.ipify.org:443
+2023-05-01 19:21:11,758 DEBUG urllib3.connectionpool MainThread : https://api.ipify.org:443 "GET / HTTP/1.1" 200 14
+2023-05-01 19:21:11,765 WARNING werkzeug MainThread :  * Debugger is active!
+2023-05-01 19:21:11,765 INFO werkzeug MainThread :  * Debugger PIN: 968-689-477
+2023-05-01 19:24:10,383 DEBUG urllib3.connectionpool Thread-3 : Starting new HTTPS connection (1): ifconfig.co:443
+2023-05-01 19:24:10,383 DEBUG urllib3.connectionpool Thread-2 : Starting new HTTPS connection (1): icanhazip.com:443
+2023-05-01 19:24:10,389 DEBUG urllib3.connectionpool Thread-4 : Starting new HTTPS connection (1): ipinfo.io:443
+2023-05-01 19:24:10,392 DEBUG urllib3.connectionpool Thread-5 : Starting new HTTPS connection (1): checkip.amazonaws.com:443
+2023-05-01 19:24:10,392 DEBUG urllib3.connectionpool Thread-1 : Starting new HTTPS connection (1): ipecho.net:443
+2023-05-01 19:24:10,394 DEBUG urllib3.connectionpool Thread-6 : Starting new HTTPS connection (1): api.ipify.org:443
+2023-05-01 19:24:10,557 DEBUG urllib3.connectionpool Thread-2 : https://icanhazip.com:443 "GET / HTTP/1.1" 200 15
+2023-05-01 19:24:10,558 INFO root Thread-2 : Asked https://icanhazip.com for our IP -> 218.185.248.66
+2023-05-01 19:24:10,762 DEBUG urllib3.connectionpool Thread-4 : https://ipinfo.io:443 "GET /ip HTTP/1.1" 200 14
+2023-05-01 19:24:10,764 INFO root Thread-4 : Asked https://ipinfo.io/ip for our IP -> 218.185.248.66
+2023-05-01 19:24:10,772 DEBUG urllib3.connectionpool Thread-1 : https://ipecho.net:443 "GET /plain HTTP/1.1" 200 14
+2023-05-01 19:24:10,773 INFO root Thread-1 : Asked https://ipecho.net/plain for our IP -> 218.185.248.66
+2023-05-01 19:24:10,923 DEBUG urllib3.connectionpool Thread-3 : https://ifconfig.co:443 "GET /ip HTTP/1.1" 200 15
+2023-05-01 19:24:10,924 INFO root Thread-3 : Asked https://ifconfig.co/ip for our IP -> 218.185.248.66
+2023-05-01 19:24:11,206 DEBUG urllib3.connectionpool Thread-5 : https://checkip.amazonaws.com:443 "GET / HTTP/1.1" 200 15
+2023-05-01 19:24:11,208 INFO root Thread-5 : Asked https://checkip.amazonaws.com for our IP -> 218.185.248.66
+2023-05-01 19:24:12,343 DEBUG urllib3.connectionpool Thread-6 : https://api.ipify.org:443 "GET / HTTP/1.1" 200 14
+2023-05-01 19:24:12,344 INFO root Thread-6 : Asked https://api.ipify.org for our IP -> 218.185.248.66
+2023-05-01 19:24:12,351 INFO werkzeug MainThread :  * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+2023-05-01 19:24:12,352 INFO werkzeug MainThread :  * Restarting with stat
+2023-05-01 19:24:14,938 DEBUG urllib3.connectionpool Thread-5 : Starting new HTTPS connection (1): ipecho.net:443
+2023-05-01 19:24:14,942 DEBUG urllib3.connectionpool Thread-2 : Starting new HTTPS connection (1): icanhazip.com:443
+2023-05-01 19:24:14,944 DEBUG urllib3.connectionpool Thread-1 : Starting new HTTPS connection (1): ipinfo.io:443
+2023-05-01 19:24:14,951 DEBUG urllib3.connectionpool Thread-6 : Starting new HTTPS connection (1): api.ipify.org:443
+2023-05-01 19:24:14,951 DEBUG urllib3.connectionpool Thread-4 : Starting new HTTPS connection (1): checkip.amazonaws.com:443
+2023-05-01 19:24:14,953 DEBUG urllib3.connectionpool Thread-3 : Starting new HTTPS connection (1): ifconfig.co:443
+2023-05-01 19:24:15,101 DEBUG urllib3.connectionpool Thread-2 : https://icanhazip.com:443 "GET / HTTP/1.1" 200 15
+2023-05-01 19:24:15,103 INFO root Thread-2 : Asked https://icanhazip.com for our IP -> 218.185.248.66
+2023-05-01 19:24:15,282 DEBUG urllib3.connectionpool Thread-5 : https://ipecho.net:443 "GET /plain HTTP/1.1" 200 14
+2023-05-01 19:24:15,283 INFO root Thread-5 : Asked https://ipecho.net/plain for our IP -> 218.185.248.66
+2023-05-01 19:24:15,285 DEBUG urllib3.connectionpool Thread-1 : https://ipinfo.io:443 "GET /ip HTTP/1.1" 200 14
+2023-05-01 19:24:15,287 INFO root Thread-1 : Asked https://ipinfo.io/ip for our IP -> 218.185.248.66
+2023-05-01 19:24:15,329 DEBUG urllib3.connectionpool Thread-3 : https://ifconfig.co:443 "GET /ip HTTP/1.1" 200 15
+2023-05-01 19:24:15,331 INFO root Thread-3 : Asked https://ifconfig.co/ip for our IP -> 218.185.248.66
+2023-05-01 19:24:15,686 DEBUG urllib3.connectionpool Thread-4 : https://checkip.amazonaws.com:443 "GET / HTTP/1.1" 200 15
+2023-05-01 19:24:15,687 INFO root Thread-4 : Asked https://checkip.amazonaws.com for our IP -> 218.185.248.66
+2023-05-01 19:24:16,254 WARNING werkzeug MainThread :  * Debugger is active!
+2023-05-01 19:24:16,255 INFO werkzeug MainThread :  * Debugger PIN: 968-689-477
+2023-05-01 19:53:59,985 INFO app MainThread : registering service dfs-server at ip 192.168.1.109
+2023-05-01 19:54:29,128 INFO app MainThread : registering service dfs-server at ip 192.168.1.109
+2023-05-01 19:54:29,129 INFO app MainThread : found free port at 8000
+2023-05-01 19:55:02,975 INFO app MainThread : registering service dfs-server at ip 192.168.1.109
+2023-05-01 19:55:02,975 INFO app MainThread : found free port at 8000
+2023-05-01 19:56:03,644 INFO app MainThread : registering service dfs-server at ip 192.168.1.109
+2023-05-01 19:56:03,645 INFO app MainThread : found free port at 8000
+2023-05-01 19:56:04,127 INFO werkzeug MainThread :  * Running on http://192.168.1.109:8000/ (Press CTRL+C to quit)
+2023-05-01 19:56:04,128 INFO werkzeug MainThread :  * Restarting with stat
+2023-05-01 19:56:04,597 INFO app MainThread : registering service dfs-server at ip 192.168.1.109
+2023-05-01 19:56:04,597 INFO app MainThread : found free port at 8001
+2023-05-01 19:56:05,077 WARNING werkzeug MainThread :  * Debugger is active!
+2023-05-01 19:56:05,077 INFO werkzeug MainThread :  * Debugger PIN: 968-689-477
+2023-05-02 14:53:39,012 INFO app MainThread : registering service dfs-server at ip 192.168.1.109
+2023-05-02 14:53:39,012 INFO app MainThread : found free port at 8000
+2023-05-02 14:53:48,730 INFO werkzeug MainThread :  * Running on http://192.168.1.109:8000/ (Press CTRL+C to quit)
+2023-05-02 14:53:48,731 INFO werkzeug MainThread :  * Restarting with stat
+2023-05-02 14:53:49,235 INFO app MainThread : registering service dfs-server at ip 192.168.1.109
+2023-05-02 14:53:49,235 INFO app MainThread : found free port at 8001
+2023-05-02 14:53:56,984 WARNING werkzeug MainThread :  * Debugger is active!
+2023-05-02 14:53:56,984 INFO werkzeug MainThread :  * Debugger PIN: 968-689-477
+2023-05-02 14:57:33,957 INFO app MainThread : registering service dfs-server at ip 192.168.1.109
+2023-05-02 14:57:33,957 INFO app MainThread : found free port at 8000
+2023-05-02 14:57:44,242 INFO werkzeug MainThread :  * Running on http://192.168.1.109:8000/ (Press CTRL+C to quit)
+2023-05-02 14:57:44,243 INFO werkzeug MainThread :  * Restarting with stat
+2023-05-02 14:57:50,041 INFO app MainThread : registering service dfs-server at ip 192.168.1.109
+2023-05-02 14:57:50,042 INFO app MainThread : found free port at 8001
+2023-05-02 14:57:50,888 WARNING werkzeug MainThread :  * Debugger is active!
+2023-05-02 14:57:50,888 INFO werkzeug MainThread :  * Debugger PIN: 968-689-477
+2023-05-02 15:00:10,655 INFO werkzeug MainThread :  * Detected change in '/home/vishal/Documents/sem4/dfs/SVM/dfs_server/app.py', reloading
+2023-05-02 15:00:11,178 INFO werkzeug MainThread :  * Restarting with stat
+2023-05-02 15:00:16,103 INFO app MainThread : registering service dfs-server at ip 192.168.1.109
+2023-05-02 15:00:16,103 INFO app MainThread : found free port at 8001
+2023-05-02 15:00:29,920 INFO app MainThread : registering service dfs-server at ip 192.168.1.109
+2023-05-02 15:00:29,920 INFO app MainThread : found free port at 8000
+2023-05-02 15:00:30,731 INFO app MainThread : registering service dfs-server at ip 192.168.1.109 and port 8000
+2023-05-02 15:00:30,736 INFO werkzeug MainThread :  * Running on http://192.168.1.109:8000/ (Press CTRL+C to quit)
+2023-05-02 15:00:30,738 INFO werkzeug MainThread :  * Restarting with stat
+2023-05-02 15:00:31,252 INFO app MainThread : registering service dfs-server at ip 192.168.1.109
+2023-05-02 15:00:31,252 INFO app MainThread : found free port at 8001
+2023-05-02 15:00:32,092 INFO app MainThread : registering service dfs-server at ip 192.168.1.109 and port 8001
+2023-05-02 15:00:32,102 WARNING werkzeug MainThread :  * Debugger is active!
+2023-05-02 15:00:32,103 INFO werkzeug MainThread :  * Debugger PIN: 968-689-477
+2023-05-02 15:00:57,426 INFO app Thread-2 : received request for retireieve_all_configs()
+2023-05-02 15:00:57,433 INFO werkzeug Thread-2 : 192.168.1.109 - - [02/May/2023 15:00:57] "[35m[1mGET /configs HTTP/1.1[0m" 500 -
+2023-05-02 15:01:15,614 INFO werkzeug MainThread :  * Detected change in '/home/vishal/Documents/sem4/dfs/SVM/dfs_server/database_ops.py', reloading
+2023-05-02 15:01:16,191 INFO werkzeug MainThread :  * Restarting with stat
+2023-05-02 15:03:38,212 INFO app MainThread : registering service dfs-server at ip 192.168.1.109
+2023-05-02 15:03:38,212 INFO app MainThread : found free port at 8000
+2023-05-02 15:03:39,054 INFO app MainThread : registering service dfs-server at ip 192.168.1.109 and port 8000
+2023-05-02 15:03:39,087 INFO werkzeug MainThread :  * Running on http://192.168.1.109:8000/ (Press CTRL+C to quit)
+2023-05-02 15:03:58,510 INFO app Thread-1 : received request for retireieve_all_configs()
+2023-05-02 15:03:58,720 INFO app Thread-1 : returning all configs list from db
+2023-05-02 15:03:58,723 INFO werkzeug Thread-1 : 192.168.1.109 - - [02/May/2023 15:03:58] "GET /configs HTTP/1.1" 200 -
+2023-05-02 15:58:14,575 INFO app MainThread : registering service dfs-server at ip 192.168.1.109
+2023-05-02 15:58:14,575 INFO app MainThread : found free port at 8000
+2023-05-02 15:58:15,160 INFO app MainThread : registering service dfs-server at ip 192.168.1.109 and port 8000
+2023-05-02 15:58:15,171 INFO werkzeug MainThread :  * Running on http://192.168.1.109:8000/ (Press CTRL+C to quit)
