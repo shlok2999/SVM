@@ -20,7 +20,6 @@ db = mongo_client.get_database(app.config['MONGO_DB'])
 
 @app.route("/config", methods=["POST"])
 def get_env_config():
-<<<<<<< Updated upstream
     user_config_contract = request.get_json()
     
     app.logger.info(f"received request for get_env_config()")

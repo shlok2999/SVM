@@ -11,7 +11,7 @@
   "resources": {
     "ram": "1G",
     "cpu": "1.0",
-    "gpu": "1",
+    "gpu": "1"
   },
   "datasets": [
     {
