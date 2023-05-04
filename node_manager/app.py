@@ -17,14 +17,7 @@ killed = True
 health_thread = None
 node_usage_status = dict() # Used to know how much resource of each node is already used
 environment_details = get_environment_details()
-
-
-def initiate_the_usage():
-    global node_usage_status
-    node_usage_status = get_response(environment_details['node_monitor'],'/send_usage',None) # need to add coorect ip
-    print(node_usage_status)
-
-    
+db = None
 
 def get_health(thread_name):
     '''
@@ -36,16 +29,18 @@ def get_health(thread_name):
     print('in get health')
     while(killed):
         node_agents = get_node_agents_list()
+        # print(node_agents)
         current_status = dict()
-        for agent in node_agent:
+        for agent in node_agents:
             node_status_api_path = f'{agent["ip"]}:{agent["port"]}{app.config["NODE_AGENT_STATUS_API"]}'
             topic = None
             try:
-                print('sending request to :',agent['ip'])
+                # print('sending request to :',agent['ip'])
                 response = get_response(node_status_api_path,None)
-                print('got response',response)
+                # print('got response',response)
                 topic = response['topic']
                 current_status[response['topic']] = response
+                # print(current_status)
                 if response['topic'] not in node_usage_status:
                     node_usage_status[response['topic']] = get_response(environment_details['node_monitor'],'/topic_usage',{'topic':response['topic']})
             except:
@@ -80,7 +75,7 @@ def select_node(data,cached_data):
     response = {}
     response['resource_available'] = False
     response['topic'] = None
-    
+    Node = None
     for node in cached_data.keys():
         print(cached_data[node])
         if data['ram'] <= cached_data[node]['free_ram'] and data['cpu'] <= cached_data[node]['cpu_count'] and data['gpu'] <= cached_data[node]['gpu_count'] and data['storage'] <= cached_data[node]['free_disk_space']:
@@ -88,7 +83,8 @@ def select_node(data,cached_data):
             response['resource_available'] = True
             post_data = data
             post_data['topic'] = cached_data[node]['topic']
-            print(post_response(environment_details['node_monitor'], "/add_container", post_data))
+            node_monitor_url = get_service(db, app.config['SERVICES_COLL'], 'node-monitor')
+            post_response(node_monitor_url, app.config['NODE_MONTIOR_ADD_CONTAINER_API'], post_data)
 
             cached_data[node]['free_ram'] -= data['ram']
             cached_data[node]['gpu_count'] -= data['gpu']
@@ -99,12 +95,15 @@ def select_node(data,cached_data):
             node_usage_status[cached_data[node]['topic']]['gpu'] += data['gpu']
             node_usage_status[cached_data[node]['topic']]['cpu'] += data['cpu']
             node_usage_status[cached_data[node]['topic']]['storage'] += data['storage']
-            
+            Node = node
             break
-    cached_status = cached_data
+    if Node is not None:
+        cached_status[Node] = cached_data[Node]
     return response
 
 def create_app():
+    global db
+    
     app = Flask(__name__)
 
     app.config.from_object(DevelopmentConfig())
@@ -119,10 +118,11 @@ def create_app():
         It Returns details of node on which container can be deployed
         '''
         data = request.json
+        print(data)
         resource_data = data['resources']
         response = {}
-        print(data)
-        print(resource_data)
+        # print(data)
+        # print(resource_data)
         storage = 0
         # print(resource_data)
         resource_data['ram'] = float(resource_data['ram'][:-1])
@@ -143,7 +143,7 @@ def create_app():
 
         return jsonify(response)
     
-    @app.route('/node_failed', methods = ['GET','POST'])
+    @app.route('/node/failed', methods = ['GET','POST'])
     def update_node_status():
         '''
         In case a container doesnot successfully deployed on
@@ -154,9 +154,10 @@ def create_app():
         node_usage_status[data['topic']]['cpu'] += data['cpu']
         node_usage_status[data['topic']]['gpu'] += data['gpu']
         node_usage_status[data['topic']]['ram'] += data['ram']
+
     
-    def initiate():
-        initiate_the_usage()
+    def initiate(db, config, logger):
+        initiate_the_usage(db, config, logger)
         global health_thread
         health_thread = Thread(target=get_health, args=('health',))
         health_thread.start()
@@ -166,9 +167,17 @@ def create_app():
         killed = False
         health_thread.join()
     
-    initiate()
+    initiate(db, app.config, app.logger)
     atexit.register(inter)
     return app
+
+
+
+def initiate_the_usage(db, config, logger):
+    global node_usage_status
+    node_monitor_url = get_service(db, config['SERVICES_COLL'], 'node-monitor')
+    node_usage_status = get_response(node_monitor_url, config['NODE_MONTIOR_NA_USAGE_API'],None) # need to add coorect ip
+    logger.info(f"got node usage stats: {node_usage_status}")
 
 
 def register_self(config):

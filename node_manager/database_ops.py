@@ -119,7 +119,8 @@ def retireieve_all_configs(db_obj, collection):
 def register_service(db_obj, collection, service_name, ip, port):
     try:
         col_obj = db_obj[collection]
-        col_obj.update_one({"service-name" : service_name},{"$set": { "ip" : ip, "port": port}}, upsert=True)
+        final_ip_address = f'http://{ip}'
+        col_obj.update_one({"service-name" : service_name},{"$set": { "ip" : final_ip_address, "port": port}}, upsert=True)
         return True
     except Exception as e:
         print("An exception occurred ::", e)
@@ -130,6 +131,15 @@ def get_node_agents(db_obj, collection, service_type):
         col_obj = db_obj[collection]
         node_agents = list(col_obj.find({"type": service_type}))
         return node_agents
+    except Exception as e:
+        print("An exception occurred ::", e)
+        return None
+
+def get_service(db_obj, collection, service_name):
+    try:
+        col_obj = db_obj[collection]
+        service = col_obj.find_one({"service-name": service_name})
+        return f'{service["ip"]}:{service["port"]}'
     except Exception as e:
         print("An exception occurred ::", e)
         return None

@@ -13,8 +13,11 @@ class DevelopmentConfig(Config):
     SERVICES_COLL = "services"
     DFS_SERVER = "dfs-server"
     NODE_MANAGER = "node-manager"
+    NODE_MONITOR = "node-monitor"
     NODE_AGENT_TYPE = "node-agent"
     NODE_AGENT_STATUS_API = "/status"
+    NODE_MONTIOR_NA_USAGE_API = '/node-agent/usage'
+    NODE_MONTIOR_ADD_CONTAINER_API = '/add_container'
     DEVELOPMENT = True
 
 class ProductionConfig(Config):
@@ -30,5 +33,8 @@ class ProductionConfig(Config):
     DFS_SERVER = "dfs-server"
     NODE_MANAGER = "node-manager"
     NODE_AGENT_TYPE = "node-agent"
+    NODE_MONITOR = "node-monitor"
     NODE_AGENT_STATUS_API = "/status"
+    NODE_MONTIOR_NA_USAGE_API = '/node-agent/usage'
+    NODE_MONTIOR_ADD_CONTAINER_API = '/add_container'
     ENV = "production"

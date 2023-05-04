@@ -13,7 +13,31 @@ db = mongo_client.get_database(app.config['MONGO_DB'])
 environment_details = get_environment_details()
 
 
-@app.route('/send_usage')
+def register_self(config):
+    self_ip_addr = get_local_ip()
+    if app.config['DEVELOPMENT'] == False:
+        self_ip_addr = ip.get()
+
+    app.logger.info(f"registering service {app.config['NODE_MONITOR']} at ip {self_ip_addr}")
+
+    free_port = next_free_port()
+
+    if free_port is None:
+        raise ValueError('could not find a free port')
+    
+    app.logger.info(f"found free port at {free_port}")
+    
+    if not register_service(db, app.config['SERVICES_COLL'], 
+                            app.config['NODE_MONITOR'], 
+                            self_ip_addr, free_port):
+        raise Exception('could not register service')
+
+    app.logger.info(f"registering service {app.config['NODE_MONITOR']} at ip {self_ip_addr} and port {free_port}")
+
+    return self_ip_addr, free_port
+
+
+@app.route('/node-agent/usage')
 def send_overall_usage():
     '''
     This functionn is called when the node manager starts running
@@ -73,7 +97,6 @@ def send_topic_usage():
 
     return response
 
-
 @app.route('/add_container',methods = ['GET','POST'])
 def add_container_details():
     '''
@@ -93,8 +116,10 @@ def update_container():
     update_deployment_detail(db_obj = db, config_id = data['config_id'], collection = 'deployments', status = data['status'])
     if data['status'] == PROVISION_FAILURE_CODE:
         response = get_resource_detail(db_obj = db, config_id = data['config_id'], collection = 'configs')
-        post_response(ip = environment_details['node_manager'], function = '/node_failed', data = response)
+        node_manager_url = get_service(db, app.config['SERVICES_COLL'], app.config['NODE_MANAGER'])
+        post_response(ip = node_manager_url, function = app.config['NODE_MANAGER_NODE_FAIL_API'], data = response)
 
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=8020, debug=True)
+    ip, port = register_self(app.config)
+    app.run(host=ip, port=port, debug=False)

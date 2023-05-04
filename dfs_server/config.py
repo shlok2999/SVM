@@ -13,6 +13,7 @@ class DevelopmentConfig(Config):
     SERVICES_COLL = "services"
     DFS_SERVER = "dfs-server"
     NODE_MANAGER = "node-manager"
+    NODE_MANAGER_NODE_INFO_API = "/node_info"
     DEVELOPMENT = True
 
 class ProductionConfig(Config):
@@ -27,3 +28,5 @@ class ProductionConfig(Config):
     DEBUG = False
     DFS_SERVER = "dfs-server"
     ENV = "production"
+    NODE_MANAGER = "node-manager"
+    NODE_MANAGER_NODE_INFO_API = "/node_info"

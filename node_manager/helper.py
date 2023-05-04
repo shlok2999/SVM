@@ -8,7 +8,9 @@ def get_response(ip_address,data):
     return ans
 
 def get_response(ip_address,function,data):
-    ans = requests.get(ip_address + function, params=data).content.decode()
+    final_url = f'{ip_address}{function}'
+    print(final_url)
+    ans = requests.get(final_url, params=data).content.decode()
     ans = json.loads(ans)
     return ans
 

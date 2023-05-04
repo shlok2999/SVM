@@ -118,8 +118,22 @@ def retireieve_all_configs(db_obj, collection):
 def register_service(db_obj, collection, service_name, ip, port):
     try:
         col_obj = db_obj[collection]
-        col_obj.update_one({"service-name" : service_name},{"$set": { "ip" : ip, "port": port, "type": "node-agent"}}, upsert=True)
+        final_ip_address = f'http://{ip}'
+        col_obj.update_one({"service-name" : service_name},{"$set": { "ip" : final_ip_address, "port": port, "type": "node-agent"}}, upsert=True)
         return True
     except Exception as e:
         print("An exception occurred ::", e)
         return False
+
+def get_kafka_service(db_obj, collection, service_name):
+    try:
+        bootstrap_servers = []
+        col_obj = db_obj[collection]
+        kafka_service_list = col_obj.find_one({"service-name": service_name})
+        for service in kafka_service_list["servers"]:
+            bootstrap_servers.append(f'{service["ip"]}:{service["port"]}')
+
+        return bootstrap_servers
+    except Exception as e:
+        print("An exception occurred ::", e)
+        return None

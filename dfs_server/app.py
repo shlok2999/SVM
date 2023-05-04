@@ -162,32 +162,42 @@ def get_single_config(config_id):
     app.logger.info(f"returning record for config id {config_id} from db")
     return create_bson_response(config_obj)
 
-# @app.route("/provision/<config_id>", methods=["POST"])
-# def provision_env(config_id):
-#     config_obj = get_config(db, app.config['CONFIGS_COLL'], config_id)
+@app.route("/provision/<config_id>", methods=["POST"])
+def provision_env(config_id):
+    config_obj = get_config(db, app.config['CONFIGS_COLL'], config_id)
     
-#     if config_obj is None:
-#         return create_response(INTERNAL_SERVER_ERROR), 500
+    if config_obj is None:
+        app.logger.error(f"failed to query db or No entry found in db for configs collection for config id {config_id}")
+        return create_response(INTERNAL_SERVER_ERROR), 500
     
-#     if len(config_obj) == 0:
-#         return create_response(INVALID_CONFIG), 403
+    node_manager_address = get_node_manager(db, app.config['SERVICES_COLL'], app.config['NODE_MANAGER'])
+    if node_manager_address == None:
+        app.logger.error(f"could not find noide manager address")
+        return create_response(INTERNAL_SERVER_ERROR), 500
     
-#     node_manager_obj = get_node_manager(db, app.config['SERVICES_COLL'], app.config['NODE_MANAGER'])
-#     if len(node_manager_obj) == 0:
-#         return create_response(INTERNAL_SERVER_ERROR), 500
+    request_stub = {}
+    request_stub['resources'] = config_obj['resources']
+    request_stub['env_name'] = config_obj["env-name"]
+    request_stub['_id'] = str(config_obj['_id'])
+    request_stub['storage'] = config_obj['storage']
+    deployable_node = post_response(node_manager_address, app.config["NODE_MANAGER_NODE_INFO_API"], request_stub)
     
-#     deployable_node = get_response(f'{node_manager_obj['address']}/node_info',config_obj[0]['resources'])
+    if deployable_node['resource_available'] == False:
+        app.logger.error(f"failed to find enough free resources for config id {config_id}")
+        return create_response(INTERNAL_SERVER_ERROR), 500
+
+    # node_agent_id = f'node-agent_{deployable_node['topic']}'
+    # deployment_id = save_deployment_detail(db, app.config['DEPLOYMENTS_COLL'], 
+    #                                     config_id, node_agent_id)
     
-#     deployment_id = save_deployment_detail(db, app.config['DEPLOYMENTS_COLL'], 
-#                                         config_obj[0], deployable_node['id'])
+    # if deployment_id is None:
+    #     app.logger.error(f"could not find noide manager address")
+    #     return create_response(INTERNAL_SERVER_ERROR), 500
     
-#     if deployment_id is None:
-#         return create_response(INTERNAL_SERVER_ERROR), 500
+    # config_obj[0]['deployment_id'] = deployment_id
     
-#     config_obj[0]['deployment_id'] = deployment_id
-    
-#     kafka_producer_obj = Kafka_Producer(node_manager_obj['topic'])
-#     kafka_producer_obj.send_valid_config(config_obj)
+    kafka_producer_obj = Kafka_Producer(deployable_node['topic'])
+    kafka_producer_obj.send_valid_config(config_obj)
 
 if __name__ == "__main__":
     ip, port = register_self()

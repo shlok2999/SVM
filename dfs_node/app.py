@@ -22,6 +22,7 @@ db = mongo_client.get_database(app.config['MONGO_DB'])
 
 def register_self():
     self_ip_addr = get_local_ip()
+    self_mac_addr = str(hex(uuid.getnode()))
     if app.config['DEVELOPMENT'] == False:
         self_ip_addr = ip.get()
 
@@ -34,7 +35,7 @@ def register_self():
     
     app.logger.info(f"found free port at {free_port}")
     
-    service_name = f'{app.config["DFS_NODE"]}_{self_ip_addr}'
+    service_name = f'{app.config["DFS_NODE"]}_{self_mac_addr}'
     if not register_service(db, app.config['SERVICES_COLL'], 
                             service_name, 
                             self_ip_addr, free_port):

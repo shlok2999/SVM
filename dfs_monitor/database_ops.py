@@ -152,3 +152,22 @@ def get_config_details_by_topic(db_obj, collection, topic, status):
     except Exception as e:
         print("An exception occured",e)
         return []
+
+def get_service(db_obj, collection, service_name):
+    try:
+        col_obj = db_obj[collection]
+        service = col_obj.find_one({"service-name": service_name})
+        return f'{service["ip"]:{service["port"]}}'
+    except Exception as e:
+        print("An exception occurred ::", e)
+        return None
+
+def register_service(db_obj, collection, service_name, ip, port):
+    try:
+        col_obj = db_obj[collection]
+        final_ip_address = f'http://{ip}'
+        col_obj.update_one({"service-name" : service_name},{"$set": { "ip" : final_ip_address, "port": port}}, upsert=True)
+        return True
+    except Exception as e:
+        print("An exception occurred ::", e)
+        return False

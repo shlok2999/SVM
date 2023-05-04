@@ -4,14 +4,21 @@ from docker_create import *
 import uuid
 from helper import *
 from subprocess import Popen, PIPE
+from pymongo import MongoClient
+from database_ops import *
 
+MONGO_URL = "mongodb+srv://dfs-user:dfssvm2023@dfs-cluster0.qbwo159.mongodb.net/?retryWrites=true&w=majority"
+MONGO_DB = "dfs_db"
+SERVICES_COLL = "services"
+KAFKA_SERVICE = "kafka"
 
-environment_data = get_environment_details()
+mongo_client = MongoClient(MONGO_URL)
+db = mongo_client.get_database(MONGO_DB)
+
 
 class Kafka_Consumer:
     def __init__(self,topic):
-        print(environment_data)
-        self.bootstrap_servers = environment_data['bootstrap_servers']
+        self.bootstrap_servers = get_kafka_service(db, SERVICES_COLL, KAFKA_SERVICE)
         print(self.bootstrap_servers,type(self.bootstrap_servers))
         self.auto_offset_reset = 'latest'
         self.topic = topic

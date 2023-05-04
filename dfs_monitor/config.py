@@ -11,6 +11,15 @@ class DevelopmentConfig(Config):
     DEPLOYMENTS_COLL = "deployments"
     TEMPLATES_COLL = "templates"
     SERVICES_COLL = "services"
+    DFS_SERVER = "dfs-server"
+    NODE_MANAGER = "node-manager"
+    NODE_MONITOR = "node-monitor"
+    NODE_AGENT_TYPE = "node-agent"
+    NODE_AGENT_STATUS_API = "/status"
+    NODE_MONTIOR_NA_USAGE_API = '/node-agent/usage'
+    NODE_MONTIOR_ADD_CONTAINER_API = '/add_container'
+    NODE_MANAGER_NODE_FAIL_API = '/node/failed'
+    DEVELOPMENT = True
 
 class ProductionConfig(Config):
     MONGO_URL = "mongodb+srv://dfs-user:dfssvm2023@dfs-cluster0.qbwo159.mongodb.net/?retryWrites=true&w=majority"
@@ -21,5 +30,11 @@ class ProductionConfig(Config):
     TEMPLATES_COLL = "templates"
     SERVICES_COLL = "services"
     DEVELOPMENT = False
-    DEBUG = False
-    DB_HOST = 'my.production.database'
+    DFS_SERVER = "dfs-server"
+    NODE_MANAGER = "node-manager"
+    NODE_MONITOR = "node-monitor"
+    NODE_AGENT_TYPE = "node-agent"
+    NODE_AGENT_STATUS_API = "/status"
+    NODE_MONTIOR_NA_USAGE_API = '/node-agent/usage'
+    NODE_MONTIOR_ADD_CONTAINER_API = '/add_container'
+    DEVELOPMENT = False

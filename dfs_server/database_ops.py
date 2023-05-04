@@ -84,17 +84,17 @@ def get_template(db_obj, collection, template_id):
 def get_config(db_obj, collection, config_id):
     try:
         col_obj = db_obj[collection]
-        config_record = list(col_obj.find({"_id": ObjectId(config_id)}))
+        config_record = col_obj.find_one({"_id": ObjectId(config_id)})
         return config_record
     except Exception as e:
         print("An exception occurred ::", e)
         return None
 
-def save_deployment_detail(db_obj, collection, config_data, topic, node_agent_id):
+def save_deployment_detail(db_obj, collection, config_id, node_agent_id):
     deployment_obj = {}
     try:
         col_obj = db_obj[collection]
-        deployment_obj['config_id'] = config_data['_id']
+        deployment_obj['config_id'] = config_id
         deployment_obj['node_agent_id'] = node_agent_id
         deployment_obj['status'] = PROVISION_PENDING_CODE
         deployment_obj['last_deployment_time'] = datetime.datetime.utcnow()
@@ -118,10 +118,18 @@ def get_all_configs(db_obj, collection):
 def register_service(db_obj, collection, service_name, ip, port):
     try:
         col_obj = db_obj[collection]
-        col_obj.update_one({"service-name" : service_name},{"$set": { "ip" : ip, "port": port}}, upsert=True)
+        final_ip_address = f'http://{ip}'
+        col_obj.update_one({"service-name" : service_name},{"$set": { "ip" : final_ip_address, "port": port}}, upsert=True)
         return True
     except Exception as e:
         print("An exception occurred ::", e)
         return False
 
-# def get_node_manager(db_obj, collection, service_name):
+def get_node_manager(db_obj, collection, service_name):
+    try:
+        col_obj = db_obj[collection]
+        node_manager = col_obj.find_one({"service-name": service_name})
+        return f'{node_manager["ip"]}:{node_manager["port"]}'
+    except Exception as e:
+        print("An exception occurred ::", e)
+        return None
