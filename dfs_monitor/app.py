@@ -4,9 +4,12 @@ from config import DevelopmentConfig
 from pymongo import MongoClient
 from database_ops import *
 from helper import *
+from flask_cors import CORS
+
 
 app = Flask(__name__)
 app.config.from_object(DevelopmentConfig())
+CORS(app)
 
 mongo_client = MongoClient(app.config['MONGO_URL'])
 db = mongo_client.get_database(app.config['MONGO_DB'])
@@ -35,6 +38,15 @@ def register_self(config):
     app.logger.info(f"registering service {app.config['NODE_MONITOR']} at ip {self_ip_addr} and port {free_port}")
 
     return self_ip_addr, free_port
+
+
+@app.route('/status/<config_id>')
+def send_config_status(config_id):
+    '''
+    Return status of the respective config_id
+    '''
+    print(config_id)
+    return jsonify(get_config_status(db_obj = db, config_id = config_id, collection = "deployments"))
 
 
 @app.route('/node-agent/usage')
@@ -95,7 +107,7 @@ def send_topic_usage():
     response['cpu'] = cpu
     response['storage'] = storage
 
-    return response
+    return jsonify(response)
 
 @app.route('/add_container',methods = ['GET','POST'])
 def add_container_details():

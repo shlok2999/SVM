@@ -1513,3 +1513,1379 @@ NameError: name 'os_name' is not defined
 2023-05-04 23:48:35,225 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on http://10.42.0.221:8000
 2023-05-04 23:48:35,225 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-05-05 00:23:33,327 INFO app MainThread : registering service dfs-server at ip 10.42.0.221
+2023-05-05 00:23:33,327 INFO app MainThread : found free port at 8000
+2023-05-05 00:23:33,776 INFO app MainThread : registering service dfs-server at ip 10.42.0.221 and port 8000
+2023-05-05 00:23:33,780 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://10.42.0.221:8000
+2023-05-05 00:23:33,780 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-05-05 00:28:08,506 INFO app MainThread : registering service dfs-server at ip 10.42.0.221
+2023-05-05 00:28:08,506 INFO app MainThread : found free port at 8000
+2023-05-05 00:28:08,987 INFO app MainThread : registering service dfs-server at ip 10.42.0.221 and port 8000
+2023-05-05 00:28:08,991 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://10.42.0.221:8000
+2023-05-05 00:28:08,991 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-05-05 00:32:53,011 INFO werkzeug Thread-1 (process_request_thread) : 10.42.0.1 - - [05/May/2023 00:32:53] "OPTIONS /config HTTP/1.1" 200 -
+2023-05-05 00:32:53,016 INFO app Thread-2 (process_request_thread) : received request for get_env_config()
+2023-05-05 00:32:53,027 ERROR app Thread-2 (process_request_thread) : no entry found in db for os 
+2023-05-05 00:32:53,028 INFO werkzeug Thread-2 (process_request_thread) : 10.42.0.1 - - [05/May/2023 00:32:53] "[31m[1mPOST /config HTTP/1.1[0m" 403 -
+2023-05-05 00:35:04,159 INFO app MainThread : registering service dfs-server at ip 10.42.0.221
+2023-05-05 00:35:04,159 INFO app MainThread : found free port at 8000
+2023-05-05 00:35:04,639 INFO app MainThread : registering service dfs-server at ip 10.42.0.221 and port 8000
+2023-05-05 00:35:04,644 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://10.42.0.221:8000
+2023-05-05 00:35:04,644 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-05-05 00:35:20,676 INFO werkzeug Thread-1 (process_request_thread) : 10.42.0.1 - - [05/May/2023 00:35:20] "OPTIONS /config HTTP/1.1" 200 -
+2023-05-05 00:35:20,684 INFO app Thread-2 (process_request_thread) : received request for get_env_config()
+2023-05-05 00:35:20,698 ERROR app Thread-2 (process_request_thread) : no entry found in db for os 
+2023-05-05 00:35:20,699 INFO werkzeug Thread-2 (process_request_thread) : 10.42.0.1 - - [05/May/2023 00:35:20] "[31m[1mPOST /config HTTP/1.1[0m" 403 -
+2023-05-05 00:37:30,920 INFO werkzeug Thread-3 (process_request_thread) : 10.42.0.1 - - [05/May/2023 00:37:30] "OPTIONS /config HTTP/1.1" 200 -
+2023-05-05 00:37:30,925 INFO app Thread-4 (process_request_thread) : received request for get_env_config()
+2023-05-05 00:37:30,936 ERROR app Thread-4 (process_request_thread) : no entry found in db for os 
+2023-05-05 00:37:30,936 INFO werkzeug Thread-4 (process_request_thread) : 10.42.0.1 - - [05/May/2023 00:37:30] "[31m[1mPOST /config HTTP/1.1[0m" 403 -
+2023-05-05 00:39:28,679 INFO werkzeug Thread-5 (process_request_thread) : 10.42.0.1 - - [05/May/2023 00:39:28] "OPTIONS /config HTTP/1.1" 200 -
+2023-05-05 00:39:28,684 INFO app Thread-6 (process_request_thread) : received request for get_env_config()
+2023-05-05 00:39:28,692 ERROR app Thread-6 (process_request_thread) : no entry found in db for os 
+2023-05-05 00:39:28,693 INFO werkzeug Thread-6 (process_request_thread) : 10.42.0.1 - - [05/May/2023 00:39:28] "[31m[1mPOST /config HTTP/1.1[0m" 403 -
+2023-05-05 00:44:09,802 INFO werkzeug Thread-7 (process_request_thread) : 10.42.0.1 - - [05/May/2023 00:44:09] "OPTIONS /config HTTP/1.1" 200 -
+2023-05-05 00:44:09,808 INFO app Thread-8 (process_request_thread) : received request for get_env_config()
+2023-05-05 00:44:09,954 INFO app Thread-8 (process_request_thread) : no entry found in db for os 
+2023-05-05 00:44:09,955 INFO werkzeug Thread-8 (process_request_thread) : 10.42.0.1 - - [05/May/2023 00:44:09] "POST /config HTTP/1.1" 200 -
+2023-05-05 00:53:54,265 INFO app Thread-9 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-05 00:53:54,313 INFO app Thread-9 (process_request_thread) : returning all configs list from db
+2023-05-05 00:53:54,315 INFO werkzeug Thread-9 (process_request_thread) : 10.42.0.1 - - [05/May/2023 00:53:54] "GET /configs HTTP/1.1" 200 -
+2023-05-05 00:54:05,501 INFO app Thread-10 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-05 00:54:05,549 INFO app Thread-10 (process_request_thread) : returning all configs list from db
+2023-05-05 00:54:05,551 INFO werkzeug Thread-10 (process_request_thread) : 10.42.0.1 - - [05/May/2023 00:54:05] "GET /configs HTTP/1.1" 200 -
+2023-05-05 00:54:59,288 INFO app Thread-11 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-05 00:54:59,332 INFO app Thread-11 (process_request_thread) : returning all configs list from db
+2023-05-05 00:54:59,334 INFO werkzeug Thread-11 (process_request_thread) : 10.42.0.1 - - [05/May/2023 00:54:59] "GET /configs HTTP/1.1" 200 -
+2023-05-05 00:55:03,778 INFO app Thread-12 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-05 00:55:03,820 INFO app Thread-12 (process_request_thread) : returning all configs list from db
+2023-05-05 00:55:03,823 INFO werkzeug Thread-12 (process_request_thread) : 10.42.0.1 - - [05/May/2023 00:55:03] "GET /configs HTTP/1.1" 200 -
+2023-05-05 00:56:32,062 INFO app Thread-13 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-05 00:56:32,103 INFO app Thread-13 (process_request_thread) : returning all configs list from db
+2023-05-05 00:56:32,105 INFO werkzeug Thread-13 (process_request_thread) : 10.42.0.1 - - [05/May/2023 00:56:32] "GET /configs HTTP/1.1" 200 -
+2023-05-05 00:56:47,423 INFO app Thread-14 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-05 00:56:47,464 INFO app Thread-14 (process_request_thread) : returning all configs list from db
+2023-05-05 00:56:47,466 INFO werkzeug Thread-14 (process_request_thread) : 10.42.0.1 - - [05/May/2023 00:56:47] "GET /configs HTTP/1.1" 200 -
+2023-05-05 00:57:07,935 INFO app Thread-15 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-05 00:57:07,978 INFO app Thread-15 (process_request_thread) : returning all configs list from db
+2023-05-05 00:57:07,979 INFO werkzeug Thread-15 (process_request_thread) : 10.42.0.1 - - [05/May/2023 00:57:07] "GET /configs HTTP/1.1" 200 -
+2023-05-05 00:57:13,535 INFO app Thread-16 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-05 00:57:13,576 INFO app Thread-16 (process_request_thread) : returning all configs list from db
+2023-05-05 00:57:13,579 INFO werkzeug Thread-16 (process_request_thread) : 10.42.0.1 - - [05/May/2023 00:57:13] "GET /configs HTTP/1.1" 200 -
+2023-05-05 00:57:19,678 INFO app Thread-17 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-05 00:57:19,719 INFO app Thread-17 (process_request_thread) : returning all configs list from db
+2023-05-05 00:57:19,721 INFO werkzeug Thread-17 (process_request_thread) : 10.42.0.1 - - [05/May/2023 00:57:19] "GET /configs HTTP/1.1" 200 -
+2023-05-05 00:57:21,932 INFO app Thread-18 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-05 00:57:21,973 INFO app Thread-18 (process_request_thread) : returning all configs list from db
+2023-05-05 00:57:21,975 INFO werkzeug Thread-18 (process_request_thread) : 10.42.0.1 - - [05/May/2023 00:57:21] "GET /configs HTTP/1.1" 200 -
+2023-05-05 00:58:08,320 INFO app Thread-19 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-05 00:58:08,362 INFO app Thread-19 (process_request_thread) : returning all configs list from db
+2023-05-05 00:58:08,364 INFO werkzeug Thread-19 (process_request_thread) : 10.42.0.1 - - [05/May/2023 00:58:08] "GET /configs HTTP/1.1" 200 -
+2023-05-05 00:58:08,405 INFO app Thread-20 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-05 00:58:08,446 INFO app Thread-20 (process_request_thread) : returning all configs list from db
+2023-05-05 00:58:08,450 INFO werkzeug Thread-20 (process_request_thread) : 10.42.0.221 - - [05/May/2023 00:58:08] "GET /configs HTTP/1.1" 200 -
+2023-05-05 00:58:12,331 INFO app Thread-21 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-05 00:58:12,373 INFO app Thread-21 (process_request_thread) : returning all configs list from db
+2023-05-05 00:58:12,375 INFO werkzeug Thread-21 (process_request_thread) : 10.42.0.1 - - [05/May/2023 00:58:12] "GET /configs HTTP/1.1" 200 -
+2023-05-05 00:58:14,361 INFO app Thread-22 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-05 00:58:14,403 INFO app Thread-22 (process_request_thread) : returning all configs list from db
+2023-05-05 00:58:14,405 INFO werkzeug Thread-22 (process_request_thread) : 10.42.0.1 - - [05/May/2023 00:58:14] "GET /configs HTTP/1.1" 200 -
+2023-05-05 00:58:19,993 INFO app Thread-23 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-05 00:58:20,034 INFO app Thread-23 (process_request_thread) : returning all configs list from db
+2023-05-05 00:58:20,036 INFO werkzeug Thread-23 (process_request_thread) : 10.42.0.1 - - [05/May/2023 00:58:20] "GET /configs HTTP/1.1" 200 -
+2023-05-05 00:58:22,049 INFO app Thread-24 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-05 00:58:22,090 INFO app Thread-24 (process_request_thread) : returning all configs list from db
+2023-05-05 00:58:22,091 INFO werkzeug Thread-24 (process_request_thread) : 10.42.0.1 - - [05/May/2023 00:58:22] "GET /configs HTTP/1.1" 200 -
+2023-05-05 00:58:34,939 INFO app Thread-25 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-05 00:58:34,980 INFO app Thread-25 (process_request_thread) : returning all configs list from db
+2023-05-05 00:58:34,982 INFO werkzeug Thread-25 (process_request_thread) : 10.42.0.1 - - [05/May/2023 00:58:34] "GET /configs HTTP/1.1" 200 -
+2023-05-05 00:58:38,115 INFO app Thread-26 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-05 00:58:38,158 INFO app Thread-26 (process_request_thread) : returning all configs list from db
+2023-05-05 00:58:38,160 INFO werkzeug Thread-26 (process_request_thread) : 10.42.0.1 - - [05/May/2023 00:58:38] "GET /configs HTTP/1.1" 200 -
+2023-05-05 00:58:44,209 INFO app Thread-27 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-05 00:58:44,250 INFO app Thread-27 (process_request_thread) : returning all configs list from db
+2023-05-05 00:58:44,252 INFO werkzeug Thread-27 (process_request_thread) : 10.42.0.1 - - [05/May/2023 00:58:44] "GET /configs HTTP/1.1" 200 -
+2023-05-05 00:58:46,310 INFO app Thread-28 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-05 00:58:46,351 INFO app Thread-28 (process_request_thread) : returning all configs list from db
+2023-05-05 00:58:46,353 INFO werkzeug Thread-28 (process_request_thread) : 10.42.0.1 - - [05/May/2023 00:58:46] "GET /configs HTTP/1.1" 200 -
+2023-05-05 00:59:06,724 INFO app Thread-29 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-05 00:59:06,765 INFO app Thread-29 (process_request_thread) : returning all configs list from db
+2023-05-05 00:59:06,766 INFO werkzeug Thread-29 (process_request_thread) : 10.42.0.1 - - [05/May/2023 00:59:06] "GET /configs HTTP/1.1" 200 -
+2023-05-05 00:59:08,734 INFO app Thread-30 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-05 00:59:08,782 INFO app Thread-30 (process_request_thread) : returning all configs list from db
+2023-05-05 00:59:08,784 INFO werkzeug Thread-30 (process_request_thread) : 10.42.0.1 - - [05/May/2023 00:59:08] "GET /configs HTTP/1.1" 200 -
+2023-05-05 01:00:40,895 INFO app Thread-31 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-05 01:00:40,936 INFO app Thread-31 (process_request_thread) : returning all configs list from db
+2023-05-05 01:00:40,938 INFO werkzeug Thread-31 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:00:40] "GET /configs HTTP/1.1" 200 -
+2023-05-05 01:00:40,944 INFO app Thread-32 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-05 01:00:41,016 INFO app Thread-32 (process_request_thread) : returning all configs list from db
+2023-05-05 01:00:41,019 INFO werkzeug Thread-32 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:00:41] "GET /configs HTTP/1.1" 200 -
+2023-05-05 01:00:43,298 INFO app Thread-33 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-05 01:00:43,338 INFO app Thread-33 (process_request_thread) : returning all configs list from db
+2023-05-05 01:00:43,341 INFO werkzeug Thread-33 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:00:43] "GET /configs HTTP/1.1" 200 -
+2023-05-05 01:01:06,888 INFO app Thread-34 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-05 01:01:06,930 INFO app Thread-34 (process_request_thread) : returning all configs list from db
+2023-05-05 01:01:06,932 INFO werkzeug Thread-34 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:01:06] "GET /configs HTTP/1.1" 200 -
+2023-05-05 01:01:09,567 INFO app Thread-35 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-05 01:01:09,609 INFO app Thread-35 (process_request_thread) : returning all configs list from db
+2023-05-05 01:01:09,612 INFO werkzeug Thread-35 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:01:09] "GET /configs HTTP/1.1" 200 -
+2023-05-05 01:01:32,405 INFO app Thread-36 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-05 01:01:32,449 INFO app Thread-36 (process_request_thread) : returning all configs list from db
+2023-05-05 01:01:32,451 INFO werkzeug Thread-36 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:01:32] "GET /configs HTTP/1.1" 200 -
+2023-05-05 01:01:39,366 INFO app Thread-37 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-05 01:01:39,407 INFO app Thread-37 (process_request_thread) : returning all configs list from db
+2023-05-05 01:01:39,408 INFO werkzeug Thread-37 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:01:39] "GET /configs HTTP/1.1" 200 -
+2023-05-05 01:02:12,134 INFO app Thread-38 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-05 01:02:12,175 INFO app Thread-38 (process_request_thread) : returning all configs list from db
+2023-05-05 01:02:12,177 INFO werkzeug Thread-38 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:02:12] "GET /configs HTTP/1.1" 200 -
+2023-05-05 01:02:14,592 INFO app Thread-39 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-05 01:02:14,633 INFO app Thread-39 (process_request_thread) : returning all configs list from db
+2023-05-05 01:02:14,635 INFO werkzeug Thread-39 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:02:14] "GET /configs HTTP/1.1" 200 -
+2023-05-05 01:02:30,770 INFO app Thread-40 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-05 01:02:30,811 INFO app Thread-40 (process_request_thread) : returning all configs list from db
+2023-05-05 01:02:30,813 INFO werkzeug Thread-40 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:02:30] "GET /configs HTTP/1.1" 200 -
+2023-05-05 01:02:32,607 INFO app Thread-41 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-05 01:02:32,648 INFO app Thread-41 (process_request_thread) : returning all configs list from db
+2023-05-05 01:02:32,650 INFO werkzeug Thread-41 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:02:32] "GET /configs HTTP/1.1" 200 -
+2023-05-05 01:04:26,578 INFO app Thread-42 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-05 01:04:26,620 INFO app Thread-42 (process_request_thread) : returning all configs list from db
+2023-05-05 01:04:26,623 INFO werkzeug Thread-42 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:04:26] "GET /configs HTTP/1.1" 200 -
+2023-05-05 01:04:26,628 INFO app Thread-43 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-05 01:04:26,668 INFO app Thread-43 (process_request_thread) : returning all configs list from db
+2023-05-05 01:04:26,671 INFO werkzeug Thread-43 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:04:26] "GET /configs HTTP/1.1" 200 -
+2023-05-05 01:04:28,627 INFO app Thread-44 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-05 01:04:28,668 INFO app Thread-44 (process_request_thread) : returning all configs list from db
+2023-05-05 01:04:28,670 INFO werkzeug Thread-44 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:04:28] "GET /configs HTTP/1.1" 200 -
+2023-05-05 01:05:19,109 INFO app Thread-45 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-05 01:05:19,151 INFO app Thread-45 (process_request_thread) : returning all configs list from db
+2023-05-05 01:05:19,153 INFO werkzeug Thread-45 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:05:19] "GET /configs HTTP/1.1" 200 -
+2023-05-05 01:05:21,158 INFO app Thread-46 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-05 01:05:21,202 INFO app Thread-46 (process_request_thread) : returning all configs list from db
+2023-05-05 01:05:21,204 INFO werkzeug Thread-46 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:05:21] "GET /configs HTTP/1.1" 200 -
+2023-05-05 01:05:48,829 INFO app Thread-47 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-05 01:05:48,870 INFO app Thread-47 (process_request_thread) : returning all configs list from db
+2023-05-05 01:05:48,872 INFO werkzeug Thread-47 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:05:48] "GET /configs HTTP/1.1" 200 -
+2023-05-05 01:05:51,037 INFO app Thread-48 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-05 01:05:51,080 INFO app Thread-48 (process_request_thread) : returning all configs list from db
+2023-05-05 01:05:51,082 INFO werkzeug Thread-48 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:05:51] "GET /configs HTTP/1.1" 200 -
+2023-05-05 01:05:59,561 INFO app Thread-49 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-05 01:05:59,602 INFO app Thread-49 (process_request_thread) : returning all configs list from db
+2023-05-05 01:05:59,604 INFO werkzeug Thread-49 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:05:59] "GET /configs HTTP/1.1" 200 -
+2023-05-05 01:06:01,604 INFO app Thread-50 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-05 01:06:01,645 INFO app Thread-50 (process_request_thread) : returning all configs list from db
+2023-05-05 01:06:01,646 INFO werkzeug Thread-50 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:06:01] "GET /configs HTTP/1.1" 200 -
+2023-05-05 01:08:47,475 INFO app MainThread : registering service dfs-server at ip 10.42.0.221
+2023-05-05 01:08:47,475 INFO app MainThread : found free port at 8005
+2023-05-05 01:08:47,894 INFO app MainThread : registering service dfs-server at ip 10.42.0.221 and port 8005
+2023-05-05 01:08:47,898 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://10.42.0.221:8005
+2023-05-05 01:08:47,898 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-05-05 01:10:53,879 INFO app MainThread : registering service dfs-server at ip 10.42.0.221
+2023-05-05 01:10:53,879 INFO app MainThread : found free port at 8005
+2023-05-05 01:10:54,288 INFO app MainThread : registering service dfs-server at ip 10.42.0.221 and port 8005
+2023-05-05 01:10:54,294 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://10.42.0.221:8005
+2023-05-05 01:10:54,294 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-05-05 01:11:18,096 INFO app Thread-1 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-05 01:11:18,134 INFO app Thread-1 (process_request_thread) : returning all configs list from db
+2023-05-05 01:11:18,136 INFO werkzeug Thread-1 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:11:18] "GET /configs HTTP/1.1" 200 -
+2023-05-05 01:11:20,369 INFO app Thread-2 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-05 01:11:20,407 INFO app Thread-2 (process_request_thread) : returning all configs list from db
+2023-05-05 01:11:20,409 INFO werkzeug Thread-2 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:11:20] "GET /configs HTTP/1.1" 200 -
+2023-05-05 01:11:37,469 INFO app Thread-3 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-05 01:11:37,509 INFO app Thread-3 (process_request_thread) : returning all configs list from db
+2023-05-05 01:11:37,511 INFO werkzeug Thread-3 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:11:37] "GET /configs HTTP/1.1" 200 -
+2023-05-05 01:11:43,047 INFO werkzeug Thread-4 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:11:43] "OPTIONS /provision/%22644ece15809917bf2dc3956c HTTP/1.1" 200 -
+2023-05-05 01:11:43,053 ERROR app Thread-5 (process_request_thread) : failed to query db or No entry found in db for configs collection for config id "644ece15809917bf2dc3956c
+2023-05-05 01:11:43,053 INFO werkzeug Thread-5 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:11:43] "[35m[1mPOST /provision/%22644ece15809917bf2dc3956c HTTP/1.1[0m" 500 -
+2023-05-05 01:12:51,607 INFO app Thread-6 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-05 01:12:51,647 INFO app Thread-6 (process_request_thread) : returning all configs list from db
+2023-05-05 01:12:51,649 INFO werkzeug Thread-6 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:12:51] "GET /configs HTTP/1.1" 200 -
+2023-05-05 01:12:54,235 INFO app Thread-7 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-05 01:12:54,274 INFO app Thread-7 (process_request_thread) : returning all configs list from db
+2023-05-05 01:12:54,277 INFO werkzeug Thread-7 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:12:54] "GET /configs HTTP/1.1" 200 -
+2023-05-05 01:13:07,782 INFO app Thread-8 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-05 01:13:07,822 INFO app Thread-8 (process_request_thread) : returning all configs list from db
+2023-05-05 01:13:07,825 INFO werkzeug Thread-8 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:13:07] "GET /configs HTTP/1.1" 200 -
+2023-05-05 01:13:09,616 INFO app Thread-9 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-05 01:13:09,655 INFO app Thread-9 (process_request_thread) : returning all configs list from db
+2023-05-05 01:13:09,656 INFO werkzeug Thread-9 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:13:09] "GET /configs HTTP/1.1" 200 -
+2023-05-05 01:13:10,856 INFO werkzeug Thread-10 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:13:10] "OPTIONS /provision/%22644ece15809917bf2dc3956c HTTP/1.1" 200 -
+2023-05-05 01:13:10,861 ERROR app Thread-11 (process_request_thread) : failed to query db or No entry found in db for configs collection for config id "644ece15809917bf2dc3956c
+2023-05-05 01:13:10,862 INFO werkzeug Thread-11 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:13:10] "[35m[1mPOST /provision/%22644ece15809917bf2dc3956c HTTP/1.1[0m" 500 -
+2023-05-05 01:13:28,515 INFO app Thread-12 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-05 01:13:28,554 INFO app Thread-12 (process_request_thread) : returning all configs list from db
+2023-05-05 01:13:28,557 INFO werkzeug Thread-12 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:13:28] "GET /configs HTTP/1.1" 200 -
+2023-05-05 01:13:33,269 INFO app Thread-13 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-05 01:13:33,323 INFO app Thread-13 (process_request_thread) : returning all configs list from db
+2023-05-05 01:13:33,325 INFO werkzeug Thread-13 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:13:33] "GET /configs HTTP/1.1" 200 -
+2023-05-05 01:13:34,920 INFO werkzeug Thread-14 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:13:34] "OPTIONS /provision/644ece15809917bf2dc3956c HTTP/1.1" 200 -
+2023-05-05 01:13:35,028 DEBUG urllib3.connectionpool Thread-15 (process_request_thread) : Starting new HTTP connection (1): 10.42.0.221:8003
+2023-05-05 01:13:35,137 DEBUG urllib3.connectionpool Thread-15 (process_request_thread) : http://10.42.0.221:8003 "POST /node_info HTTP/1.1" 200 53
+2023-05-05 01:13:35,137 DEBUG kafka.producer.kafka Thread-15 (process_request_thread) : Starting the Kafka producer
+2023-05-05 01:13:35,138 DEBUG kafka.metrics.metrics Thread-15 (process_request_thread) : Added sensor with name connections-closed
+2023-05-05 01:13:35,138 DEBUG kafka.metrics.metrics Thread-15 (process_request_thread) : Added sensor with name connections-created
+2023-05-05 01:13:35,138 DEBUG kafka.metrics.metrics Thread-15 (process_request_thread) : Added sensor with name select-time
+2023-05-05 01:13:35,138 DEBUG kafka.metrics.metrics Thread-15 (process_request_thread) : Added sensor with name io-time
+2023-05-05 01:13:35,138 DEBUG kafka.client Thread-15 (process_request_thread) : Initiating connection to node bootstrap-0 at localhost:9092
+2023-05-05 01:13:35,138 DEBUG kafka.metrics.metrics Thread-15 (process_request_thread) : Added sensor with name bytes-sent-received
+2023-05-05 01:13:35,138 DEBUG kafka.metrics.metrics Thread-15 (process_request_thread) : Added sensor with name bytes-sent
+2023-05-05 01:13:35,138 DEBUG kafka.metrics.metrics Thread-15 (process_request_thread) : Added sensor with name bytes-received
+2023-05-05 01:13:35,138 DEBUG kafka.metrics.metrics Thread-15 (process_request_thread) : Added sensor with name request-latency
+2023-05-05 01:13:35,138 DEBUG kafka.metrics.metrics Thread-15 (process_request_thread) : Added sensor with name node-bootstrap-0.bytes-sent
+2023-05-05 01:13:35,138 DEBUG kafka.metrics.metrics Thread-15 (process_request_thread) : Added sensor with name node-bootstrap-0.bytes-received
+2023-05-05 01:13:35,138 DEBUG kafka.metrics.metrics Thread-15 (process_request_thread) : Added sensor with name node-bootstrap-0.latency
+2023-05-05 01:13:35,139 DEBUG kafka.conn Thread-15 (process_request_thread) : <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <disconnected> [unspecified None]>: creating new socket
+2023-05-05 01:13:35,139 DEBUG kafka.conn Thread-15 (process_request_thread) : <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <disconnected> [IPv4 ('127.0.0.1', 9092)]>: setting socket option (6, 1, 1)
+2023-05-05 01:13:35,139 INFO kafka.conn Thread-15 (process_request_thread) : <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to localhost:9092 [('127.0.0.1', 9092) IPv4]
+2023-05-05 01:13:35,139 INFO kafka.conn Thread-15 (process_request_thread) : Probing node bootstrap-0 broker version
+2023-05-05 01:13:35,139 DEBUG kafka.conn Thread-15 (process_request_thread) : <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: established TCP connection
+2023-05-05 01:13:35,139 INFO kafka.conn Thread-15 (process_request_thread) : <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2023-05-05 01:13:35,139 DEBUG kafka.client Thread-15 (process_request_thread) : Node bootstrap-0 connected
+2023-05-05 01:13:35,139 DEBUG kafka.protocol.parser Thread-15 (process_request_thread) : Sending request ApiVersionRequest_v0()
+2023-05-05 01:13:35,139 DEBUG kafka.conn Thread-15 (process_request_thread) : <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]> Request 1: ApiVersionRequest_v0()
+2023-05-05 01:13:35,240 DEBUG kafka.protocol.parser Thread-15 (process_request_thread) : Sending request MetadataRequest_v0(topics=[])
+2023-05-05 01:13:35,240 DEBUG kafka.conn Thread-15 (process_request_thread) : <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]> Request 2: MetadataRequest_v0(topics=[])
+2023-05-05 01:13:35,241 DEBUG kafka.protocol.parser Thread-15 (process_request_thread) : Received correlation id: 1
+2023-05-05 01:13:35,241 DEBUG kafka.protocol.parser Thread-15 (process_request_thread) : Processing response ApiVersionResponse_v0
+2023-05-05 01:13:35,241 DEBUG kafka.conn Thread-15 (process_request_thread) : <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]> Response 1 (102.0045280456543 ms): ApiVersionResponse_v0(error_code=0, api_versions=[(api_key=0, min_version=0, max_version=9), (api_key=1, min_version=0, max_version=13), (api_key=2, min_version=0, max_version=7), (api_key=3, min_version=0, max_version=12), (api_key=4, min_version=0, max_version=7), (api_key=5, min_version=0, max_version=4), (api_key=6, min_version=0, max_version=8), (api_key=7, min_version=0, max_version=3), (api_key=8, min_version=0, max_version=8), (api_key=9, min_version=0, max_version=8), (api_key=10, min_version=0, max_version=4), (api_key=11, min_version=0, max_version=9), (api_key=12, min_version=0, max_version=4), (api_key=13, min_version=0, max_version=5), (api_key=14, min_version=0, max_version=5), (api_key=15, min_version=0, max_version=5), (api_key=16, min_version=0, max_version=4), (api_key=17, min_version=0, max_version=1), (api_key=18, min_version=0, max_version=3), (api_key=19, min_version=0, max_version=7), (api_key=20, min_version=0, max_version=6), (api_key=21, min_version=0, max_version=2), (api_key=22, min_version=0, max_version=4), (api_key=23, min_version=0, max_version=4), (api_key=24, min_version=0, max_version=3), (api_key=25, min_version=0, max_version=3), (api_key=26, min_version=0, max_version=3), (api_key=27, min_version=0, max_version=1), (api_key=28, min_version=0, max_version=3), (api_key=29, min_version=0, max_version=3), (api_key=30, min_version=0, max_version=3), (api_key=31, min_version=0, max_version=3), (api_key=32, min_version=0, max_version=4), (api_key=33, min_version=0, max_version=2), (api_key=34, min_version=0, max_version=2), (api_key=35, min_version=0, max_version=4), (api_key=36, min_version=0, max_version=2), (api_key=37, min_version=0, max_version=3), (api_key=38, min_version=0, max_version=3), (api_key=39, min_version=0, max_version=2), (api_key=40, min_version=0, max_version=2), (api_key=41, min_version=0, max_version=3), (api_key=42, min_version=0, max_version=2), (api_key=43, min_version=0, max_version=2), (api_key=44, min_version=0, max_version=1), (api_key=45, min_version=0, max_version=0), (api_key=46, min_version=0, max_version=0), (api_key=47, min_version=0, max_version=0), (api_key=48, min_version=0, max_version=1), (api_key=49, min_version=0, max_version=1), (api_key=50, min_version=0, max_version=0), (api_key=51, min_version=0, max_version=0), (api_key=56, min_version=0, max_version=2), (api_key=57, min_version=0, max_version=1), (api_key=58, min_version=0, max_version=0), (api_key=60, min_version=0, max_version=0), (api_key=61, min_version=0, max_version=0), (api_key=65, min_version=0, max_version=0), (api_key=66, min_version=0, max_version=0), (api_key=67, min_version=0, max_version=0)])
+2023-05-05 01:13:35,242 DEBUG kafka.protocol.parser Thread-15 (process_request_thread) : Received correlation id: 2
+2023-05-05 01:13:35,242 DEBUG kafka.protocol.parser Thread-15 (process_request_thread) : Processing response MetadataResponse_v0
+2023-05-05 01:13:35,242 DEBUG kafka.conn Thread-15 (process_request_thread) : <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]> Response 2 (2.032041549682617 ms): MetadataResponse_v0(brokers=[(node_id=0, host='localhost', port=9092)], topics=[(error_code=0, topic='0xa3a5a05e1f85', partitions=[(error_code=0, partition=0, leader=0, replicas=[0], isr=[0])])])
+2023-05-05 01:13:35,242 INFO kafka.conn Thread-15 (process_request_thread) : Broker version identified as 2.5.0
+2023-05-05 01:13:35,242 INFO kafka.conn Thread-15 (process_request_thread) : Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+2023-05-05 01:13:35,244 DEBUG kafka.metrics.metrics Thread-15 (process_request_thread) : Added sensor with name bufferpool-wait-time
+2023-05-05 01:13:35,244 DEBUG kafka.metrics.metrics Thread-15 (process_request_thread) : Added sensor with name batch-size
+2023-05-05 01:13:35,244 DEBUG kafka.metrics.metrics Thread-15 (process_request_thread) : Added sensor with name compression-rate
+2023-05-05 01:13:35,244 DEBUG kafka.metrics.metrics Thread-15 (process_request_thread) : Added sensor with name queue-time
+2023-05-05 01:13:35,244 DEBUG kafka.metrics.metrics Thread-15 (process_request_thread) : Added sensor with name produce-throttle-time
+2023-05-05 01:13:35,244 DEBUG kafka.metrics.metrics Thread-15 (process_request_thread) : Added sensor with name records-per-request
+2023-05-05 01:13:35,244 DEBUG kafka.metrics.metrics Thread-15 (process_request_thread) : Added sensor with name bytes
+2023-05-05 01:13:35,244 DEBUG kafka.metrics.metrics Thread-15 (process_request_thread) : Added sensor with name record-retries
+2023-05-05 01:13:35,244 DEBUG kafka.metrics.metrics Thread-15 (process_request_thread) : Added sensor with name errors
+2023-05-05 01:13:35,244 DEBUG kafka.metrics.metrics Thread-15 (process_request_thread) : Added sensor with name record-size-max
+2023-05-05 01:13:35,244 DEBUG kafka.producer.sender kafka-python-producer-1-network-thread : Starting Kafka producer I/O thread.
+2023-05-05 01:13:35,245 DEBUG kafka.producer.kafka Thread-15 (process_request_thread) : Kafka producer started
+2023-05-05 01:13:35,245 DEBUG kafka.client kafka-python-producer-1-network-thread : Sending metadata request MetadataRequest_v1(topics=NULL) to node bootstrap-0
+2023-05-05 01:13:35,245 DEBUG kafka.protocol.parser kafka-python-producer-1-network-thread : Sending request MetadataRequest_v1(topics=NULL)
+2023-05-05 01:13:35,245 DEBUG kafka.producer.kafka Thread-15 (process_request_thread) : Requesting metadata update for topic 0xa3a5a05e1f85
+2023-05-05 01:13:35,245 DEBUG kafka.conn kafka-python-producer-1-network-thread : <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]> Request 3: MetadataRequest_v1(topics=NULL)
+2023-05-05 01:13:35,247 DEBUG kafka.protocol.parser kafka-python-producer-1-network-thread : Received correlation id: 3
+2023-05-05 01:13:35,247 DEBUG kafka.protocol.parser kafka-python-producer-1-network-thread : Processing response MetadataResponse_v1
+2023-05-05 01:13:35,247 DEBUG kafka.conn kafka-python-producer-1-network-thread : <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]> Response 3 (1.5933513641357422 ms): MetadataResponse_v1(brokers=[(node_id=0, host='localhost', port=9092, rack=None)], controller_id=0, topics=[(error_code=0, topic='0xa3a5a05e1f85', is_internal=False, partitions=[(error_code=0, partition=0, leader=0, replicas=[0], isr=[0])])])
+2023-05-05 01:13:35,247 DEBUG kafka.cluster kafka-python-producer-1-network-thread : Updated cluster metadata to ClusterMetadata(brokers: 1, topics: 1, groups: 0)
+2023-05-05 01:13:35,247 DEBUG kafka.producer.kafka Thread-15 (process_request_thread) : _wait_on_metadata woke after 0.0021219253540039062 secs.
+2023-05-05 01:13:35,247 DEBUG kafka.producer.kafka Thread-15 (process_request_thread) : Sending (key=None value={'_id': '644ece15809917bf2dc3956c', 'env-name': 'fjasldf', 'version': '1', 'os': 'ubuntu', 'languages': [{'language-name': 'python', 'libraries': ['numpy']}], 'resources': {'ram': '1G', 'cpu': '1.0', 'gpu': '1', 'storage': 54}, 'dataset': [{'category-name': 'ffs', 'db': [{'db-name': 'fsgr', 'dataset': [{'dataset-name': 'effr', 'version': '34'}]}]}], 'port-publish': [{'external': {'ports': '9000'}, 'internal': {'ports': '9000', 'protocol': 'tcp'}}, {'external': {'ports': '9080'}, 'internal': {'ports': '980', 'protocol': 'udp'}}], 'storage': [{'target': '/target', 'size': '1G', 'lifecycle': 'temporary'}], 'is_active': 1, 'config_id': 0} headers=[]) to TopicPartition(topic='0xa3a5a05e1f85', partition=0)
+2023-05-05 01:13:35,247 DEBUG kafka.producer.record_accumulator Thread-15 (process_request_thread) : Allocating a new 16384 byte message buffer for TopicPartition(topic='0xa3a5a05e1f85', partition=0)
+2023-05-05 01:13:35,248 DEBUG kafka.producer.kafka Thread-15 (process_request_thread) : Waking up the sender since TopicPartition(topic='0xa3a5a05e1f85', partition=0) is either full or getting a new batch
+2023-05-05 01:13:35,248 DEBUG kafka.producer.sender kafka-python-producer-1-network-thread : Node 0 not ready; delaying produce of accumulated batch
+2023-05-05 01:13:35,248 DEBUG kafka.client kafka-python-producer-1-network-thread : Initiating connection to node 0 at localhost:9092
+2023-05-05 01:13:35,248 DEBUG kafka.metrics.metrics kafka-python-producer-1-network-thread : Added sensor with name node-0.bytes-sent
+2023-05-05 01:13:35,248 DEBUG kafka.metrics.metrics kafka-python-producer-1-network-thread : Added sensor with name node-0.bytes-received
+2023-05-05 01:13:35,248 DEBUG kafka.metrics.metrics kafka-python-producer-1-network-thread : Added sensor with name node-0.latency
+2023-05-05 01:13:35,248 DEBUG kafka.conn kafka-python-producer-1-network-thread : <BrokerConnection node_id=0 host=localhost:9092 <disconnected> [unspecified None]>: creating new socket
+2023-05-05 01:13:35,248 DEBUG kafka.conn kafka-python-producer-1-network-thread : <BrokerConnection node_id=0 host=localhost:9092 <disconnected> [IPv4 ('127.0.0.1', 9092)]>: setting socket option (6, 1, 1)
+2023-05-05 01:13:35,248 INFO kafka.conn kafka-python-producer-1-network-thread : <BrokerConnection node_id=0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to localhost:9092 [('127.0.0.1', 9092) IPv4]
+2023-05-05 01:13:35,248 DEBUG kafka.conn kafka-python-producer-1-network-thread : <BrokerConnection node_id=0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: established TCP connection
+2023-05-05 01:13:35,248 INFO kafka.conn kafka-python-producer-1-network-thread : <BrokerConnection node_id=0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2023-05-05 01:13:35,248 DEBUG kafka.client kafka-python-producer-1-network-thread : Node 0 connected
+2023-05-05 01:13:35,248 INFO kafka.conn kafka-python-producer-1-network-thread : <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
+2023-05-05 01:13:35,249 DEBUG kafka.metrics.metrics kafka-python-producer-1-network-thread : Added sensor with name topic.0xa3a5a05e1f85.records-per-batch
+2023-05-05 01:13:35,249 DEBUG kafka.metrics.metrics kafka-python-producer-1-network-thread : Added sensor with name topic.0xa3a5a05e1f85.bytes
+2023-05-05 01:13:35,249 DEBUG kafka.metrics.metrics kafka-python-producer-1-network-thread : Added sensor with name topic.0xa3a5a05e1f85.compression-rate
+2023-05-05 01:13:35,249 DEBUG kafka.metrics.metrics kafka-python-producer-1-network-thread : Added sensor with name topic.0xa3a5a05e1f85.record-retries
+2023-05-05 01:13:35,249 DEBUG kafka.metrics.metrics kafka-python-producer-1-network-thread : Added sensor with name topic.0xa3a5a05e1f85.record-errors
+2023-05-05 01:13:35,249 DEBUG kafka.producer.sender kafka-python-producer-1-network-thread : Nodes with data ready to send: {0}
+2023-05-05 01:13:35,249 DEBUG kafka.producer.sender kafka-python-producer-1-network-thread : Created 1 produce requests: {0: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='0xa3a5a05e1f85', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\xbc\x00\x00\x00\x00\x026K\xf5H\x00\x00\x00\x00\x00\x00\x00\x00\x01\x87\xe8J\x97P\x00\x00\x01\x87\xe8J\x97P\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\x92\n\x00\x00\x00\x01\x84\n{"_id": "644ece15809917bf2dc395...')])])}
+2023-05-05 01:13:35,249 DEBUG kafka.producer.sender kafka-python-producer-1-network-thread : Sending Produce Request: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='0xa3a5a05e1f85', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\xbc\x00\x00\x00\x00\x026K\xf5H\x00\x00\x00\x00\x00\x00\x00\x00\x01\x87\xe8J\x97P\x00\x00\x01\x87\xe8J\x97P\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\x92\n\x00\x00\x00\x01\x84\n{"_id": "644ece15809917bf2dc395...')])])
+2023-05-05 01:13:35,250 DEBUG kafka.protocol.parser kafka-python-producer-1-network-thread : Sending request ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='0xa3a5a05e1f85', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\xbc\x00\x00\x00\x00\x026K\xf5H\x00\x00\x00\x00\x00\x00\x00\x00\x01\x87\xe8J\x97P\x00\x00\x01\x87\xe8J\x97P\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\x92\n\x00\x00\x00\x01\x84\n{"_id": "644ece15809917bf2dc395...')])])
+2023-05-05 01:13:35,250 DEBUG kafka.conn kafka-python-producer-1-network-thread : <BrokerConnection node_id=0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]> Request 1: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='0xa3a5a05e1f85', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\xbc\x00\x00\x00\x00\x026K\xf5H\x00\x00\x00\x00\x00\x00\x00\x00\x01\x87\xe8J\x97P\x00\x00\x01\x87\xe8J\x97P\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\x92\n\x00\x00\x00\x01\x84\n{"_id": "644ece15809917bf2dc395...')])])
+2023-05-05 01:13:35,252 DEBUG kafka.protocol.parser kafka-python-producer-1-network-thread : Received correlation id: 1
+2023-05-05 01:13:35,252 DEBUG kafka.protocol.parser kafka-python-producer-1-network-thread : Processing response ProduceResponse_v7
+2023-05-05 01:13:35,252 DEBUG kafka.conn kafka-python-producer-1-network-thread : <BrokerConnection node_id=0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]> Response 1 (2.7103424072265625 ms): ProduceResponse_v7(topics=[(topic='0xa3a5a05e1f85', partitions=[(partition=0, error_code=0, offset=3, timestamp=-1, log_start_offset=0)])], throttle_time_ms=0)
+2023-05-05 01:13:35,253 DEBUG kafka.producer.sender kafka-python-producer-1-network-thread : Parsing produce response: ProduceResponse_v7(topics=[(topic='0xa3a5a05e1f85', partitions=[(partition=0, error_code=0, offset=3, timestamp=-1, log_start_offset=0)])], throttle_time_ms=0)
+2023-05-05 01:13:35,253 DEBUG kafka.producer.record_accumulator kafka-python-producer-1-network-thread : Produced messages to topic-partition TopicPartition(topic='0xa3a5a05e1f85', partition=0) with base offset 3 log start offset 0 and error None.
+2023-05-05 01:13:36,250 INFO werkzeug Thread-15 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:13:36] "POST /provision/644ece15809917bf2dc3956c HTTP/1.1" 200 -
+2023-05-05 01:18:35,249 DEBUG kafka.client kafka-python-producer-1-network-thread : Sending metadata request MetadataRequest_v1(topics=['0xa3a5a05e1f85']) to node 0
+2023-05-05 01:18:35,249 DEBUG kafka.protocol.parser kafka-python-producer-1-network-thread : Sending request MetadataRequest_v1(topics=['0xa3a5a05e1f85'])
+2023-05-05 01:18:35,249 DEBUG kafka.conn kafka-python-producer-1-network-thread : <BrokerConnection node_id=0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]> Request 2: MetadataRequest_v1(topics=['0xa3a5a05e1f85'])
+2023-05-05 01:18:35,251 DEBUG kafka.protocol.parser kafka-python-producer-1-network-thread : Received correlation id: 2
+2023-05-05 01:18:35,251 DEBUG kafka.protocol.parser kafka-python-producer-1-network-thread : Processing response MetadataResponse_v1
+2023-05-05 01:18:35,251 DEBUG kafka.conn kafka-python-producer-1-network-thread : <BrokerConnection node_id=0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]> Response 2 (2.0742416381835938 ms): MetadataResponse_v1(brokers=[(node_id=0, host='localhost', port=9092, rack=None)], controller_id=0, topics=[(error_code=0, topic='0xa3a5a05e1f85', is_internal=False, partitions=[(error_code=0, partition=0, leader=0, replicas=[0], isr=[0])])])
+2023-05-05 01:18:35,252 DEBUG kafka.cluster kafka-python-producer-1-network-thread : Updated cluster metadata to ClusterMetadata(brokers: 1, topics: 1, groups: 0)
+2023-05-05 01:19:29,663 INFO werkzeug Thread-17 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:19:29] "OPTIONS /config HTTP/1.1" 200 -
+2023-05-05 01:19:29,668 INFO app Thread-18 (process_request_thread) : received request for get_env_config()
+2023-05-05 01:19:29,800 INFO app Thread-18 (process_request_thread) : no entry found in db for os 
+2023-05-05 01:19:29,801 INFO werkzeug Thread-18 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:19:29] "POST /config HTTP/1.1" 200 -
+2023-05-05 01:21:47,742 INFO werkzeug Thread-19 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:21:47] "OPTIONS /config HTTP/1.1" 200 -
+2023-05-05 01:21:47,747 INFO app Thread-20 (process_request_thread) : received request for get_env_config()
+2023-05-05 01:21:47,873 INFO app Thread-20 (process_request_thread) : no entry found in db for os 
+2023-05-05 01:21:47,874 INFO werkzeug Thread-20 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:21:47] "POST /config HTTP/1.1" 200 -
+2023-05-05 01:22:12,035 INFO werkzeug Thread-21 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:22:12] "OPTIONS /config HTTP/1.1" 200 -
+2023-05-05 01:22:12,040 INFO app Thread-22 (process_request_thread) : received request for get_env_config()
+2023-05-05 01:22:12,168 INFO app Thread-22 (process_request_thread) : no entry found in db for os 
+2023-05-05 01:22:12,169 INFO werkzeug Thread-22 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:22:12] "POST /config HTTP/1.1" 200 -
+2023-05-05 01:23:35,253 DEBUG kafka.client kafka-python-producer-1-network-thread : Sending metadata request MetadataRequest_v1(topics=['0xa3a5a05e1f85']) to node 0
+2023-05-05 01:23:35,254 DEBUG kafka.protocol.parser kafka-python-producer-1-network-thread : Sending request MetadataRequest_v1(topics=['0xa3a5a05e1f85'])
+2023-05-05 01:23:35,254 DEBUG kafka.conn kafka-python-producer-1-network-thread : <BrokerConnection node_id=0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]> Request 3: MetadataRequest_v1(topics=['0xa3a5a05e1f85'])
+2023-05-05 01:23:35,256 DEBUG kafka.protocol.parser kafka-python-producer-1-network-thread : Received correlation id: 3
+2023-05-05 01:23:35,256 DEBUG kafka.protocol.parser kafka-python-producer-1-network-thread : Processing response MetadataResponse_v1
+2023-05-05 01:23:35,256 DEBUG kafka.conn kafka-python-producer-1-network-thread : <BrokerConnection node_id=0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]> Response 3 (2.0923614501953125 ms): MetadataResponse_v1(brokers=[(node_id=0, host='localhost', port=9092, rack=None)], controller_id=0, topics=[(error_code=0, topic='0xa3a5a05e1f85', is_internal=False, partitions=[(error_code=0, partition=0, leader=0, replicas=[0], isr=[0])])])
+2023-05-05 01:23:35,256 DEBUG kafka.cluster kafka-python-producer-1-network-thread : Updated cluster metadata to ClusterMetadata(brokers: 1, topics: 1, groups: 0)
+2023-05-05 01:24:35,943 INFO kafka.producer.kafka MainThread : Closing the Kafka producer with 0 secs timeout.
+2023-05-05 01:24:35,943 INFO kafka.producer.kafka MainThread : Proceeding to force close the producer since pending requests could not be completed within timeout 0.
+2023-05-05 01:24:35,943 DEBUG kafka.producer.kafka MainThread : The Kafka producer has closed.
+2023-05-05 01:24:35,944 DEBUG kafka.producer.sender kafka-python-producer-1-network-thread : Beginning shutdown of Kafka producer I/O thread, sending remaining records.
+2023-05-05 01:24:35,944 INFO kafka.conn kafka-python-producer-1-network-thread : <BrokerConnection node_id=0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
+2023-05-05 01:24:35,944 DEBUG kafka.conn kafka-python-producer-1-network-thread : <BrokerConnection node_id=0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: reconnect backoff 0.048919399731285985 after 1 failures
+2023-05-05 01:24:35,944 DEBUG kafka.producer.sender kafka-python-producer-1-network-thread : Shutdown of Kafka producer I/O thread has completed.
+2023-05-05 01:40:02,451 INFO app MainThread : registering service dfs-server at ip 10.42.0.221
+2023-05-05 01:40:02,451 INFO app MainThread : found free port at 8001
+2023-05-05 01:40:02,885 INFO app MainThread : registering service dfs-server at ip 10.42.0.221 and port 8001
+2023-05-05 01:40:02,889 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://10.42.0.221:8001
+2023-05-05 01:40:02,889 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-05-05 01:40:20,953 INFO app Thread-1 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-05 01:40:20,998 INFO app Thread-1 (process_request_thread) : returning all configs list from db
+2023-05-05 01:40:21,000 INFO werkzeug Thread-1 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:40:21] "GET /configs HTTP/1.1" 200 -
+2023-05-05 01:40:24,536 INFO app Thread-2 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-05 01:40:24,582 INFO app Thread-2 (process_request_thread) : returning all configs list from db
+2023-05-05 01:40:24,584 INFO werkzeug Thread-2 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:40:24] "GET /configs HTTP/1.1" 200 -
+2023-05-05 01:40:54,643 INFO werkzeug Thread-3 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:40:54] "OPTIONS /provision/644ece15809917bf2dc3956c HTTP/1.1" 200 -
+2023-05-05 01:40:54,645 INFO werkzeug Thread-4 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:40:54] "[31m[1mGET /provision/644ece15809917bf2dc3956c HTTP/1.1[0m" 405 -
+2023-05-05 01:40:54,742 DEBUG urllib3.connectionpool Thread-5 (process_request_thread) : Starting new HTTP connection (1): 10.42.0.221:8003
+2023-05-05 01:40:54,743 ERROR app Thread-5 (process_request_thread) : Exception on /provision/644ece15809917bf2dc3956c [POST]
+Traceback (most recent call last):
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/usr/lib/python3.10/http/client.py", line 1282, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib/python3.10/http/client.py", line 1328, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.10/http/client.py", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.10/http/client.py", line 1037, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.10/http/client.py", line 975, in send
+    self.connect()
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fd208ee9300>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='10.42.0.221', port=8003): Max retries exceeded with url: /node_info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fd208ee9300>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/shlok/IIITH/DFS/SVM/dfs_server/app.py", line 187, in provision_env
+    deployable_node = post_response(node_manager_address, app.config["NODE_MANAGER_NODE_INFO_API"], request_stub)
+  File "/home/shlok/IIITH/DFS/SVM/dfs_server/helper.py", line 63, in post_response
+    ans = requests.post(ip_address + function, json=data).json()
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/adapters.py", line 565, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='10.42.0.221', port=8003): Max retries exceeded with url: /node_info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fd208ee9300>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2023-05-05 01:40:54,756 INFO werkzeug Thread-5 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:40:54] "[35m[1mPOST /provision/644ece15809917bf2dc3956c HTTP/1.1[0m" 500 -
+2023-05-05 01:41:27,103 INFO app Thread-6 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-05 01:41:27,144 INFO app Thread-6 (process_request_thread) : returning all configs list from db
+2023-05-05 01:41:27,147 INFO werkzeug Thread-6 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:41:27] "GET /configs HTTP/1.1" 200 -
+2023-05-05 01:41:29,824 INFO app Thread-7 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-05 01:41:29,864 INFO app Thread-7 (process_request_thread) : returning all configs list from db
+2023-05-05 01:41:29,866 INFO werkzeug Thread-7 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:41:29] "GET /configs HTTP/1.1" 200 -
+2023-05-05 01:41:31,404 INFO werkzeug Thread-8 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:41:31] "OPTIONS /provision/644ece15809917bf2dc3956c HTTP/1.1" 200 -
+2023-05-05 01:41:31,495 DEBUG urllib3.connectionpool Thread-9 (process_request_thread) : Starting new HTTP connection (1): 10.42.0.221:8003
+2023-05-05 01:41:31,496 ERROR app Thread-9 (process_request_thread) : Exception on /provision/644ece15809917bf2dc3956c [POST]
+Traceback (most recent call last):
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/usr/lib/python3.10/http/client.py", line 1282, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib/python3.10/http/client.py", line 1328, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.10/http/client.py", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.10/http/client.py", line 1037, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.10/http/client.py", line 975, in send
+    self.connect()
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fd208eebe20>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='10.42.0.221', port=8003): Max retries exceeded with url: /node_info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fd208eebe20>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/shlok/IIITH/DFS/SVM/dfs_server/app.py", line 187, in provision_env
+    deployable_node = post_response(node_manager_address, app.config["NODE_MANAGER_NODE_INFO_API"], request_stub)
+  File "/home/shlok/IIITH/DFS/SVM/dfs_server/helper.py", line 63, in post_response
+    ans = requests.post(ip_address + function, json=data).json()
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/adapters.py", line 565, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='10.42.0.221', port=8003): Max retries exceeded with url: /node_info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fd208eebe20>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2023-05-05 01:41:31,497 INFO werkzeug Thread-9 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:41:31] "[35m[1mPOST /provision/644ece15809917bf2dc3956c HTTP/1.1[0m" 500 -
+2023-05-05 01:42:49,535 INFO werkzeug Thread-10 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:42:49] "OPTIONS /provision/644ece15809917bf2dc3956c HTTP/1.1" 200 -
+2023-05-05 01:42:49,629 DEBUG urllib3.connectionpool Thread-11 (process_request_thread) : Starting new HTTP connection (1): 10.42.0.221:8003
+2023-05-05 01:42:49,630 ERROR app Thread-11 (process_request_thread) : Exception on /provision/644ece15809917bf2dc3956c [POST]
+Traceback (most recent call last):
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/usr/lib/python3.10/http/client.py", line 1282, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib/python3.10/http/client.py", line 1328, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.10/http/client.py", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.10/http/client.py", line 1037, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.10/http/client.py", line 975, in send
+    self.connect()
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fd208f34070>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='10.42.0.221', port=8003): Max retries exceeded with url: /node_info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fd208f34070>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/shlok/IIITH/DFS/SVM/dfs_server/app.py", line 187, in provision_env
+    deployable_node = post_response(node_manager_address, app.config["NODE_MANAGER_NODE_INFO_API"], request_stub)
+  File "/home/shlok/IIITH/DFS/SVM/dfs_server/helper.py", line 63, in post_response
+    ans = requests.post(ip_address + function, json=data).json()
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/adapters.py", line 565, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='10.42.0.221', port=8003): Max retries exceeded with url: /node_info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fd208f34070>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2023-05-05 01:42:49,630 INFO werkzeug Thread-11 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:42:49] "[35m[1mPOST /provision/644ece15809917bf2dc3956c HTTP/1.1[0m" 500 -
+2023-05-05 01:43:52,259 INFO werkzeug Thread-12 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:43:52] "OPTIONS /provision/644ece15809917bf2dc3956c HTTP/1.1" 200 -
+2023-05-05 01:43:52,347 DEBUG urllib3.connectionpool Thread-13 (process_request_thread) : Starting new HTTP connection (1): 10.42.0.221:8003
+2023-05-05 01:43:52,348 ERROR app Thread-13 (process_request_thread) : Exception on /provision/644ece15809917bf2dc3956c [POST]
+Traceback (most recent call last):
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/usr/lib/python3.10/http/client.py", line 1282, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib/python3.10/http/client.py", line 1328, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.10/http/client.py", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.10/http/client.py", line 1037, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.10/http/client.py", line 975, in send
+    self.connect()
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fd208ee9b70>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='10.42.0.221', port=8003): Max retries exceeded with url: /node_info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fd208ee9b70>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/shlok/IIITH/DFS/SVM/dfs_server/app.py", line 187, in provision_env
+    deployable_node = post_response(node_manager_address, app.config["NODE_MANAGER_NODE_INFO_API"], request_stub)
+  File "/home/shlok/IIITH/DFS/SVM/dfs_server/helper.py", line 63, in post_response
+    ans = requests.post(ip_address + function, json=data).json()
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/adapters.py", line 565, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='10.42.0.221', port=8003): Max retries exceeded with url: /node_info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fd208ee9b70>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2023-05-05 01:43:52,348 INFO werkzeug Thread-13 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:43:52] "[35m[1mPOST /provision/644ece15809917bf2dc3956c HTTP/1.1[0m" 500 -
+2023-05-05 01:43:57,223 INFO app Thread-14 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-05 01:43:57,266 INFO app Thread-14 (process_request_thread) : returning all configs list from db
+2023-05-05 01:43:57,267 INFO werkzeug Thread-14 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:43:57] "GET /configs HTTP/1.1" 200 -
+2023-05-05 01:43:58,759 INFO werkzeug Thread-15 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:43:58] "OPTIONS /provision/644ece15809917bf2dc3956c HTTP/1.1" 200 -
+2023-05-05 01:43:58,850 DEBUG urllib3.connectionpool Thread-16 (process_request_thread) : Starting new HTTP connection (1): 10.42.0.221:8003
+2023-05-05 01:43:58,851 ERROR app Thread-16 (process_request_thread) : Exception on /provision/644ece15809917bf2dc3956c [POST]
+Traceback (most recent call last):
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/usr/lib/python3.10/http/client.py", line 1282, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib/python3.10/http/client.py", line 1328, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.10/http/client.py", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.10/http/client.py", line 1037, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.10/http/client.py", line 975, in send
+    self.connect()
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fd208610070>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='10.42.0.221', port=8003): Max retries exceeded with url: /node_info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fd208610070>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/shlok/IIITH/DFS/SVM/dfs_server/app.py", line 187, in provision_env
+    deployable_node = post_response(node_manager_address, app.config["NODE_MANAGER_NODE_INFO_API"], request_stub)
+  File "/home/shlok/IIITH/DFS/SVM/dfs_server/helper.py", line 63, in post_response
+    ans = requests.post(ip_address + function, json=data).json()
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/adapters.py", line 565, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='10.42.0.221', port=8003): Max retries exceeded with url: /node_info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fd208610070>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2023-05-05 01:43:58,853 INFO werkzeug Thread-16 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:43:58] "[35m[1mPOST /provision/644ece15809917bf2dc3956c HTTP/1.1[0m" 500 -
+2023-05-05 01:46:58,572 INFO werkzeug Thread-17 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:46:58] "OPTIONS /provision/644ece15809917bf2dc3956c HTTP/1.1" 200 -
+2023-05-05 01:46:58,669 DEBUG urllib3.connectionpool Thread-18 (process_request_thread) : Starting new HTTP connection (1): 10.42.0.221:8003
+2023-05-05 01:46:58,670 ERROR app Thread-18 (process_request_thread) : Exception on /provision/644ece15809917bf2dc3956c [POST]
+Traceback (most recent call last):
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/usr/lib/python3.10/http/client.py", line 1282, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib/python3.10/http/client.py", line 1328, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.10/http/client.py", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.10/http/client.py", line 1037, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.10/http/client.py", line 975, in send
+    self.connect()
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fd208eeb970>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='10.42.0.221', port=8003): Max retries exceeded with url: /node_info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fd208eeb970>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/shlok/IIITH/DFS/SVM/dfs_server/app.py", line 187, in provision_env
+    deployable_node = post_response(node_manager_address, app.config["NODE_MANAGER_NODE_INFO_API"], request_stub)
+  File "/home/shlok/IIITH/DFS/SVM/dfs_server/helper.py", line 63, in post_response
+    ans = requests.post(ip_address + function, json=data).json()
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/adapters.py", line 565, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='10.42.0.221', port=8003): Max retries exceeded with url: /node_info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fd208eeb970>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2023-05-05 01:46:58,670 INFO werkzeug Thread-18 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:46:58] "[35m[1mPOST /provision/644ece15809917bf2dc3956c HTTP/1.1[0m" 500 -
+2023-05-05 01:47:03,690 INFO app Thread-19 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-05 01:47:03,731 INFO app Thread-19 (process_request_thread) : returning all configs list from db
+2023-05-05 01:47:03,734 INFO werkzeug Thread-19 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:47:03] "GET /configs HTTP/1.1" 200 -
+2023-05-05 01:47:04,918 INFO werkzeug Thread-20 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:47:04] "OPTIONS /provision/644ece15809917bf2dc3956c HTTP/1.1" 200 -
+2023-05-05 01:47:05,007 DEBUG urllib3.connectionpool Thread-21 (process_request_thread) : Starting new HTTP connection (1): 10.42.0.221:8003
+2023-05-05 01:47:05,008 ERROR app Thread-21 (process_request_thread) : Exception on /provision/644ece15809917bf2dc3956c [POST]
+Traceback (most recent call last):
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/usr/lib/python3.10/http/client.py", line 1282, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib/python3.10/http/client.py", line 1328, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.10/http/client.py", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.10/http/client.py", line 1037, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.10/http/client.py", line 975, in send
+    self.connect()
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fd208ee84c0>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='10.42.0.221', port=8003): Max retries exceeded with url: /node_info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fd208ee84c0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/shlok/IIITH/DFS/SVM/dfs_server/app.py", line 187, in provision_env
+    deployable_node = post_response(node_manager_address, app.config["NODE_MANAGER_NODE_INFO_API"], request_stub)
+  File "/home/shlok/IIITH/DFS/SVM/dfs_server/helper.py", line 63, in post_response
+    ans = requests.post(ip_address + function, json=data).json()
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/adapters.py", line 565, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='10.42.0.221', port=8003): Max retries exceeded with url: /node_info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fd208ee84c0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2023-05-05 01:47:05,010 INFO werkzeug Thread-21 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:47:05] "[35m[1mPOST /provision/644ece15809917bf2dc3956c HTTP/1.1[0m" 500 -
+2023-05-05 01:48:29,504 INFO app Thread-22 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-05 01:48:29,546 INFO app Thread-22 (process_request_thread) : returning all configs list from db
+2023-05-05 01:48:29,547 INFO werkzeug Thread-22 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:48:29] "GET /configs HTTP/1.1" 200 -
+2023-05-05 01:48:30,416 INFO werkzeug Thread-23 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:48:30] "OPTIONS /provision/644ece15809917bf2dc3956c HTTP/1.1" 200 -
+2023-05-05 01:48:30,504 DEBUG urllib3.connectionpool Thread-24 (process_request_thread) : Starting new HTTP connection (1): 10.42.0.221:8003
+2023-05-05 01:48:30,504 ERROR app Thread-24 (process_request_thread) : Exception on /provision/644ece15809917bf2dc3956c [POST]
+Traceback (most recent call last):
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/usr/lib/python3.10/http/client.py", line 1282, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib/python3.10/http/client.py", line 1328, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.10/http/client.py", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.10/http/client.py", line 1037, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.10/http/client.py", line 975, in send
+    self.connect()
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fd208eea3e0>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='10.42.0.221', port=8003): Max retries exceeded with url: /node_info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fd208eea3e0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/shlok/IIITH/DFS/SVM/dfs_server/app.py", line 187, in provision_env
+    deployable_node = post_response(node_manager_address, app.config["NODE_MANAGER_NODE_INFO_API"], request_stub)
+  File "/home/shlok/IIITH/DFS/SVM/dfs_server/helper.py", line 63, in post_response
+    ans = requests.post(ip_address + function, json=data).json()
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/adapters.py", line 565, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='10.42.0.221', port=8003): Max retries exceeded with url: /node_info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fd208eea3e0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2023-05-05 01:48:30,505 INFO werkzeug Thread-24 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:48:30] "[35m[1mPOST /provision/644ece15809917bf2dc3956c HTTP/1.1[0m" 500 -
+2023-05-05 01:48:58,460 INFO app Thread-25 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-05 01:48:58,501 INFO app Thread-25 (process_request_thread) : returning all configs list from db
+2023-05-05 01:48:58,504 INFO werkzeug Thread-25 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:48:58] "GET /configs HTTP/1.1" 200 -
+2023-05-05 01:48:59,809 INFO app Thread-26 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-05 01:48:59,850 INFO app Thread-26 (process_request_thread) : returning all configs list from db
+2023-05-05 01:48:59,852 INFO werkzeug Thread-26 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:48:59] "GET /configs HTTP/1.1" 200 -
+2023-05-05 01:49:02,778 INFO werkzeug Thread-27 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:49:02] "OPTIONS /provision/644ece15809917bf2dc3956c HTTP/1.1" 200 -
+2023-05-05 01:49:02,864 DEBUG urllib3.connectionpool Thread-28 (process_request_thread) : Starting new HTTP connection (1): 10.42.0.221:8003
+2023-05-05 01:49:02,865 ERROR app Thread-28 (process_request_thread) : Exception on /provision/644ece15809917bf2dc3956c [POST]
+Traceback (most recent call last):
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/usr/lib/python3.10/http/client.py", line 1282, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib/python3.10/http/client.py", line 1328, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.10/http/client.py", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.10/http/client.py", line 1037, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.10/http/client.py", line 975, in send
+    self.connect()
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fd208610430>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='10.42.0.221', port=8003): Max retries exceeded with url: /node_info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fd208610430>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/shlok/IIITH/DFS/SVM/dfs_server/app.py", line 187, in provision_env
+    deployable_node = post_response(node_manager_address, app.config["NODE_MANAGER_NODE_INFO_API"], request_stub)
+  File "/home/shlok/IIITH/DFS/SVM/dfs_server/helper.py", line 63, in post_response
+    ans = requests.post(ip_address + function, json=data).json()
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/adapters.py", line 565, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='10.42.0.221', port=8003): Max retries exceeded with url: /node_info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fd208610430>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2023-05-05 01:49:02,866 INFO werkzeug Thread-28 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:49:02] "[35m[1mPOST /provision/644ece15809917bf2dc3956c HTTP/1.1[0m" 500 -
+2023-05-05 01:49:24,187 INFO app Thread-29 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-05 01:49:24,229 INFO app Thread-29 (process_request_thread) : returning all configs list from db
+2023-05-05 01:49:24,231 INFO werkzeug Thread-29 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:49:24] "GET /configs HTTP/1.1" 200 -
+2023-05-05 01:49:25,511 INFO werkzeug Thread-30 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:49:25] "OPTIONS /provision/644ece15809917bf2dc3956c HTTP/1.1" 200 -
+2023-05-05 01:49:25,598 DEBUG urllib3.connectionpool Thread-31 (process_request_thread) : Starting new HTTP connection (1): 10.42.0.221:8003
+2023-05-05 01:49:25,599 ERROR app Thread-31 (process_request_thread) : Exception on /provision/644ece15809917bf2dc3956c [POST]
+Traceback (most recent call last):
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/usr/lib/python3.10/http/client.py", line 1282, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib/python3.10/http/client.py", line 1328, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.10/http/client.py", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.10/http/client.py", line 1037, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.10/http/client.py", line 975, in send
+    self.connect()
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fd208eea170>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='10.42.0.221', port=8003): Max retries exceeded with url: /node_info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fd208eea170>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/shlok/IIITH/DFS/SVM/dfs_server/app.py", line 187, in provision_env
+    deployable_node = post_response(node_manager_address, app.config["NODE_MANAGER_NODE_INFO_API"], request_stub)
+  File "/home/shlok/IIITH/DFS/SVM/dfs_server/helper.py", line 63, in post_response
+    ans = requests.post(ip_address + function, json=data).json()
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/adapters.py", line 565, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='10.42.0.221', port=8003): Max retries exceeded with url: /node_info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fd208eea170>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2023-05-05 01:49:25,599 INFO werkzeug Thread-31 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:49:25] "[35m[1mPOST /provision/644ece15809917bf2dc3956c HTTP/1.1[0m" 500 -
+2023-05-05 01:49:34,833 INFO werkzeug Thread-32 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:49:34] "OPTIONS /provision/644ece15809917bf2dc3956c HTTP/1.1" 200 -
+2023-05-05 01:49:34,918 DEBUG urllib3.connectionpool Thread-33 (process_request_thread) : Starting new HTTP connection (1): 10.42.0.221:8003
+2023-05-05 01:49:34,919 ERROR app Thread-33 (process_request_thread) : Exception on /provision/644ece15809917bf2dc3956c [POST]
+Traceback (most recent call last):
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/usr/lib/python3.10/http/client.py", line 1282, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib/python3.10/http/client.py", line 1328, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.10/http/client.py", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.10/http/client.py", line 1037, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.10/http/client.py", line 975, in send
+    self.connect()
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fd208eebbe0>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='10.42.0.221', port=8003): Max retries exceeded with url: /node_info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fd208eebbe0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/shlok/IIITH/DFS/SVM/dfs_server/app.py", line 187, in provision_env
+    deployable_node = post_response(node_manager_address, app.config["NODE_MANAGER_NODE_INFO_API"], request_stub)
+  File "/home/shlok/IIITH/DFS/SVM/dfs_server/helper.py", line 63, in post_response
+    ans = requests.post(ip_address + function, json=data).json()
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/adapters.py", line 565, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='10.42.0.221', port=8003): Max retries exceeded with url: /node_info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fd208eebbe0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2023-05-05 01:49:34,920 INFO werkzeug Thread-33 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:49:34] "[35m[1mPOST /provision/644ece15809917bf2dc3956c HTTP/1.1[0m" 500 -
+2023-05-05 01:50:06,383 INFO app Thread-34 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-05 01:50:06,424 INFO app Thread-34 (process_request_thread) : returning all configs list from db
+2023-05-05 01:50:06,426 INFO werkzeug Thread-34 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:50:06] "GET /configs HTTP/1.1" 200 -
+2023-05-05 01:50:07,910 INFO werkzeug Thread-35 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:50:07] "OPTIONS /provision/644ece15809917bf2dc3956c HTTP/1.1" 200 -
+2023-05-05 01:50:08,002 DEBUG urllib3.connectionpool Thread-36 (process_request_thread) : Starting new HTTP connection (1): 10.42.0.221:8003
+2023-05-05 01:50:08,003 ERROR app Thread-36 (process_request_thread) : Exception on /provision/644ece15809917bf2dc3956c [POST]
+Traceback (most recent call last):
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/usr/lib/python3.10/http/client.py", line 1282, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib/python3.10/http/client.py", line 1328, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.10/http/client.py", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.10/http/client.py", line 1037, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.10/http/client.py", line 975, in send
+    self.connect()
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fd208ee9ab0>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='10.42.0.221', port=8003): Max retries exceeded with url: /node_info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fd208ee9ab0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/shlok/IIITH/DFS/SVM/dfs_server/app.py", line 187, in provision_env
+    deployable_node = post_response(node_manager_address, app.config["NODE_MANAGER_NODE_INFO_API"], request_stub)
+  File "/home/shlok/IIITH/DFS/SVM/dfs_server/helper.py", line 63, in post_response
+    ans = requests.post(ip_address + function, json=data).json()
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/adapters.py", line 565, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='10.42.0.221', port=8003): Max retries exceeded with url: /node_info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fd208ee9ab0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2023-05-05 01:50:08,004 INFO werkzeug Thread-36 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:50:08] "[35m[1mPOST /provision/644ece15809917bf2dc3956c HTTP/1.1[0m" 500 -
+2023-05-05 01:50:49,657 INFO app Thread-37 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-05 01:50:49,698 INFO app Thread-37 (process_request_thread) : returning all configs list from db
+2023-05-05 01:50:49,700 INFO werkzeug Thread-37 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:50:49] "GET /configs HTTP/1.1" 200 -
+2023-05-05 01:50:53,219 INFO app Thread-38 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-05 01:50:53,261 INFO app Thread-38 (process_request_thread) : returning all configs list from db
+2023-05-05 01:50:53,263 INFO werkzeug Thread-38 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:50:53] "GET /configs HTTP/1.1" 200 -
+2023-05-05 01:50:54,063 INFO werkzeug Thread-39 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:50:54] "OPTIONS /provision/644ece15809917bf2dc3956c HTTP/1.1" 200 -
+2023-05-05 01:50:54,152 DEBUG urllib3.connectionpool Thread-40 (process_request_thread) : Starting new HTTP connection (1): 10.42.0.221:8003
+2023-05-05 01:50:54,153 ERROR app Thread-40 (process_request_thread) : Exception on /provision/644ece15809917bf2dc3956c [POST]
+Traceback (most recent call last):
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/usr/lib/python3.10/http/client.py", line 1282, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib/python3.10/http/client.py", line 1328, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.10/http/client.py", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.10/http/client.py", line 1037, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.10/http/client.py", line 975, in send
+    self.connect()
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fd208610d90>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='10.42.0.221', port=8003): Max retries exceeded with url: /node_info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fd208610d90>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/shlok/IIITH/DFS/SVM/dfs_server/app.py", line 187, in provision_env
+    deployable_node = post_response(node_manager_address, app.config["NODE_MANAGER_NODE_INFO_API"], request_stub)
+  File "/home/shlok/IIITH/DFS/SVM/dfs_server/helper.py", line 63, in post_response
+    ans = requests.post(ip_address + function, json=data).json()
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/shlok/IIITH/DFS/dir_env/env1/lib/python3.10/site-packages/requests/adapters.py", line 565, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='10.42.0.221', port=8003): Max retries exceeded with url: /node_info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fd208610d90>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2023-05-05 01:50:54,154 INFO werkzeug Thread-40 (process_request_thread) : 10.42.0.1 - - [05/May/2023 01:50:54] "[35m[1mPOST /provision/644ece15809917bf2dc3956c HTTP/1.1[0m" 500 -

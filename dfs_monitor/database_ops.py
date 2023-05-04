@@ -171,3 +171,17 @@ def register_service(db_obj, collection, service_name, ip, port):
     except Exception as e:
         print("An exception occurred ::", e)
         return False
+
+def get_config_status(db_obj,collection,config_id):
+    # print(type(config_id))
+    config_id = ObjectId(config_id)
+    myquery = {'config_id' : config_id}
+    try:
+        col_obj = db_obj[collection]
+        # print("connected")
+        result = col_obj.find_one(myquery)
+        # print(result)
+        return {'status':result['status']}
+    except Exception as e:
+        print("An exception occurred ::", e)
+        return {'status':-1}

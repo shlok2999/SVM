@@ -9,11 +9,14 @@ from constants import *
 import bson.json_util as json_util
 import logging
 import public_ip as ip
+from flask_cors import CORS
+
 
 logging.basicConfig(filename='record.log', 
                     level=logging.DEBUG, format=f'%(asctime)s %(levelname)s %(name)s %(threadName)s : %(message)s')
 app = Flask(__name__)
 app.config.from_object(DevelopmentConfig())
+CORS(app)
 
 mongo_client = MongoClient(app.config['MONGO_URL'])
 db = mongo_client.get_database(app.config['MONGO_DB'])
@@ -22,6 +25,7 @@ db = mongo_client.get_database(app.config['MONGO_DB'])
 @app.route("/config", methods=["POST"])
 def get_env_config():
     user_config_contract = request.get_json()
+    print(user_config_contract)
     
     app.logger.info(f"received request for get_env_config()")
     

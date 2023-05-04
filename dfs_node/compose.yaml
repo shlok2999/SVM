@@ -1,7 +1,7 @@
 version: '3.9'
 services:
-  fjasldf:
-    container_name: fjasldf
+  fjasldf_644ece15809917bf2dc3956c:
+    container_name: fjasldf_644ece15809917bf2dc3956c
     build:
       context: .
     ports:
