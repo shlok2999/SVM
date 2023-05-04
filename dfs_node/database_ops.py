@@ -137,3 +137,17 @@ def get_kafka_service(db_obj, collection, service_name):
     except Exception as e:
         print("An exception occurred ::", e)
         return None
+
+def get_installation_steps(db_obj, collection):
+    try:
+        installation_steps = {}
+        col_obj = db_obj[collection]
+        library_obj = col_obj.find({})
+        for stub in library_obj:
+            key = stub["os"]
+            installation_steps[key] = stub
+
+        return installation_steps
+    except Exception as e:
+        print("An exception occurred ::", e)
+        return None

@@ -11,6 +11,7 @@ MONGO_URL = "mongodb+srv://dfs-user:dfssvm2023@dfs-cluster0.qbwo159.mongodb.net/
 MONGO_DB = "dfs_db"
 SERVICES_COLL = "services"
 KAFKA_SERVICE = "kafka"
+LIBRARY_COLL = "library"
 
 mongo_client = MongoClient(MONGO_URL)
 db = mongo_client.get_database(MONGO_DB)
@@ -31,13 +32,12 @@ if __name__ == '__main__':
     topic = str(hex(uuid.getnode()))
     # print(topic) 
     kafka_consumer_obj = Kafka_Consumer(topic)
-    file_desc = open('env_install_schema.json', 'r')
-    installation_steps = json.load(file_desc)
-    file_desc.close()
+    installation_steps = get_installation_steps(db, LIBRARY_COLL)
 
     for message in kafka_consumer_obj.consumer:
         print(json.loads(message.value))
         # print(type(message.value))
         json_data = json.loads(message.value)
-        init_env_setup_steps(installation_steps, json_data)
+        os_name = json_data["os"]
+        init_env_setup_steps(installation_steps[os_name], json_data)
 

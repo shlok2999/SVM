@@ -4,9 +4,8 @@ from python_on_whales import docker, DockerClient
 from utils import *
 import os
 
-def install_os(os, installation_steps):
-	os_name = os['image-name']
-	os_tags = os['tags']
+def install_os(os_name, installation_steps):
+	os_tags = "latest"
 
 	dockerfile_content = []
 	dockerfile_content.append(f"""FROM {os_name}:{os_tags}\n""")
@@ -106,8 +105,6 @@ def init_env_setup_steps(installation_steps, data):
 	os = None
 	if 'os' in data:
 		os = data['os']
-		if os in installation_steps:
-			installation_steps = installation_steps[os]
 		
 
 	languages = None
@@ -133,7 +130,7 @@ def init_env_setup_steps(installation_steps, data):
 	docker_file_desc = open("Dockerfile",'w')
 
 	os_dockerfile_content = install_os(os, installation_steps)
-	languages_dockerfile_content = install_language_and_library(languages, installation_steps)
+	languages_dockerfile_content = install_language_and_library(languages, installation_steps["specifications"])
 	# resources_dockerfile_content = extract_resource_requirements(resources)
 	ram, cpu, gpu = extract_resource_requirements(resources)
 	port_mapping_content = extract_port_mapping(port_mappings)
