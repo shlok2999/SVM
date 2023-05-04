@@ -19,7 +19,7 @@ node_usage_status = dict() # Used to know how much resource of each node is alre
 environment_details = get_environment_details()
 db = None
 
-def get_health(thread_name):
+def get_health(thread_name,db,config):
     '''
     Fetch IPs from central DB
     And get health of all new Nodes Available
@@ -36,18 +36,24 @@ def get_health(thread_name):
             topic = None
             try:
                 # print('sending request to :',agent['ip'])
-                response = get_response(node_status_api_path,None)
+                response = get_response(node_status_api_path,"",None)
                 # print('got response',response)
                 topic = response['topic']
+                # print("topic:",topic)
                 current_status[response['topic']] = response
-                # print(current_status)
+                # print("current status",current_status)
                 if response['topic'] not in node_usage_status:
-                    node_usage_status[response['topic']] = get_response(environment_details['node_monitor'],'/topic_usage',{'topic':response['topic']})
+                    node_monitor_url = get_service(db, config['SERVICES_COLL'], 'node-monitor')
+                    node_usage_status[response['topic']] = get_response(node_monitor_url,'/topic_usage',{'topic':response['topic']})
+                # print("Upadted Successfully")
             except:
                 if topic is not None:
-                    del node_usage_status[topic]
-        
-        for topic in node_usage_status.keys():
+                    if topic in node_usage_status.keys():
+                        del node_usage_status[topic]
+                    if topic in  current_status.keys():
+                        del current_status[topic]
+        # print(current_status)        
+        for topic in current_status.keys():
             current_status[topic]['cpu_count'] -= node_usage_status[topic]['cpu']
             current_status[topic]['gpu_count'] -= node_usage_status[topic]['gpu']
             current_status[topic]['free_ram'] -= node_usage_status[topic]['ram']
@@ -76,6 +82,7 @@ def select_node(data,cached_data):
     response['resource_available'] = False
     response['topic'] = None
     Node = None
+    print(cached_data)
     for node in cached_data.keys():
         print(cached_data[node])
         if data['ram'] <= cached_data[node]['free_ram'] and data['cpu'] <= cached_data[node]['cpu_count'] and data['gpu'] <= cached_data[node]['gpu_count'] and data['storage'] <= cached_data[node]['free_disk_space']:
@@ -159,7 +166,7 @@ def create_app():
     def initiate(db, config, logger):
         initiate_the_usage(db, config, logger)
         global health_thread
-        health_thread = Thread(target=get_health, args=('health',))
+        health_thread = Thread(target=get_health, args=('health',db,config,))
         health_thread.start()
 
     def inter():

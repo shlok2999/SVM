@@ -9,7 +9,7 @@ def get_response(ip_address,data):
 
 def get_response(ip_address,function,data):
     final_url = f'{ip_address}{function}'
-    print(final_url)
+    # print(final_url)
     ans = requests.get(final_url, params=data).content.decode()
     ans = json.loads(ans)
     return ans

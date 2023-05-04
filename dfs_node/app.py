@@ -51,7 +51,7 @@ def get_gpu_memory():
     memory_free_values = [int(x.split()[0]) for i, x in enumerate(memory_free_info)]
     return memory_free_values
 
-@app.route('/node_status')
+@app.route('/status')
 def get_node_status():
     cpu_usage = psutil.cpu_percent(interval = 2)
     cpu_usage_per_proccesor = psutil.cpu_percent(interval = 2,percpu= True)
@@ -71,9 +71,10 @@ def get_node_status():
                 'free_ram':free_ram,
                 'free_disk_space':free_disk_space,
                 'topic': str(hex(uuid.getnode()))}
-    print(response)
+    # print(response)
     return jsonify(response)
 
 if __name__ == '__main__':
     ip, port = register_self()
+    print(str(hex(uuid.getnode())))
     app.run(host=ip, port=port, debug=False)

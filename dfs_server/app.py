@@ -181,7 +181,7 @@ def provision_env(config_id):
     request_stub['_id'] = str(config_obj['_id'])
     request_stub['storage'] = config_obj['storage']
     deployable_node = post_response(node_manager_address, app.config["NODE_MANAGER_NODE_INFO_API"], request_stub)
-    
+    print(deployable_node)
     if deployable_node['resource_available'] == False:
         app.logger.error(f"failed to find enough free resources for config id {config_id}")
         return create_response(INTERNAL_SERVER_ERROR), 500
@@ -197,7 +197,13 @@ def provision_env(config_id):
     # config_obj[0]['deployment_id'] = deployment_id
     
     kafka_producer_obj = Kafka_Producer(deployable_node['topic'])
-    kafka_producer_obj.send_valid_config(config_obj)
+    config_obj_data = config_obj
+    del config_obj_data['creation_time']
+    del config_obj_data['last_updation_time']
+    config_obj_data['_id'] = str(config_obj_data['_id'])
+    print(config_obj_data)
+    kafka_producer_obj.send_valid_config(config_obj_data)
+    return jsonify({'status':200})
 
 if __name__ == "__main__":
     ip, port = register_self()
