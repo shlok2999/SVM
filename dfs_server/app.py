@@ -52,20 +52,20 @@ def get_env_config():
         library_obj =  get_library(db, app.config['LIBRARY_COLL'], user_config_contract["os"])
         if validate_config_entries(library_obj, user_config_contract):
             if not save_in_db(db, app.config['CONFIGS_COLL'], user_config_contract):
-                app.logger.error(f"db operation failed for os {os_name}")
+                app.logger.error(f"db operation failed for os ")
                 return create_response(INTERNAL_SERVER_ERROR), 500
 
             # node_manager_url = get_node_manager(db_object)
             # ans = get_response(f'{node_manager_url}/node_info',data['resources'])
             # kafka_producer_obj = Kafka_Producer(ans['topic'])
             # kafka_producer_obj.send_valid_config(data)
-            app.logger.info(f"no entry found in db for os {os_name}")
+            app.logger.info(f"no entry found in db for os ")
             return create_response(VALID_CONFIG), 200
         
-        app.logger.error(f"no entry found in db for os {os_name}")
+        app.logger.error(f"no entry found in db for os ")
         return create_response(INVALID_CONFIG), 403
     
-    app.logger.error(f"no entry found in db for os {os_name}")
+    app.logger.error(f"no entry found in db for os ")
     return create_response(INVALID_CONFIG), 403
 
 

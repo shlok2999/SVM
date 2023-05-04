@@ -95,7 +95,7 @@ def extract_temp_filesystem(storage_req):
 
 def init_env_setup_steps(installation_steps, data):
 	env_name = None
-	if 'env_name' in data:
+	if 'env-name' in data:
 		env_name = data['env-name']
 
 	version = None
@@ -141,7 +141,7 @@ def init_env_setup_steps(installation_steps, data):
 	write_to_dockerfile(docker_file_desc, ["USER root"])
 	docker_file_desc.close()
 
-	create_compose_file("demo_svm", ram, cpu, gpu, port_mapping_content, temp_filesystem)
+	create_compose_file(env_name + "_"+ data['_id'], ram, cpu, gpu, port_mapping_content, temp_filesystem)
 
 	# with open("output.log", "w") as output:
 	# 	subprocess.call("sudo docker compose --compatibility up -d", shell=True, stdout=output, stderr=output)

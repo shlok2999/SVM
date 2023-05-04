@@ -29,30 +29,30 @@ def get_health(thread_name,db,config):
     print('in get health')
     while(killed):
         node_agents = get_node_agents_list()
-        # print(node_agents)
+        print(node_agents)
         current_status = dict()
         for agent in node_agents:
             node_status_api_path = f'{agent["ip"]}:{agent["port"]}{app.config["NODE_AGENT_STATUS_API"]}'
             topic = None
             try:
-                # print('sending request to :',agent['ip'])
+                print('sending request to :',agent['ip'])
                 response = get_response(node_status_api_path,"",None)
-                # print('got response',response)
+                print('got response',response)
                 topic = response['topic']
-                # print("topic:",topic)
+                print("topic:",topic)
                 current_status[response['topic']] = response
-                # print("current status",current_status)
+                print("current status",current_status)
                 if response['topic'] not in node_usage_status:
                     node_monitor_url = get_service(db, config['SERVICES_COLL'], 'node-monitor')
                     node_usage_status[response['topic']] = get_response(node_monitor_url,'/topic_usage',{'topic':response['topic']})
-                # print("Upadted Successfully")
+                print("Upadted Successfully")
             except:
                 if topic is not None:
                     if topic in node_usage_status.keys():
                         del node_usage_status[topic]
                     if topic in  current_status.keys():
                         del current_status[topic]
-        # print(current_status)        
+        print(current_status)        
         for topic in current_status.keys():
             current_status[topic]['cpu_count'] -= node_usage_status[topic]['cpu']
             current_status[topic]['gpu_count'] -= node_usage_status[topic]['gpu']
@@ -60,7 +60,7 @@ def get_health(thread_name,db,config):
 
         cached_status = current_status
         # print(node_usage_status)
-        # print(cached_status)
+        print(cached_status)
         time.sleep(5)
 
 

@@ -11,8 +11,10 @@ import bson.json_util as json_util
 import logging
 import public_ip as ip
 from helper import *
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 app.config.from_object(DevelopmentConfig())
 
 mongo_client = MongoClient(app.config['MONGO_URL'])
