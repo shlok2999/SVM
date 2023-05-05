@@ -21,6 +21,11 @@ def create_compose_file(env_name, ram, cpu, gpu, port_mapping_content, temp_file
         temp_object['tmpfs']['size'] = filesys['size']
         temp_volumes_list.append(temp_object)
 
+    permanent_obj = {}
+    permanent_obj['type'] = "volume"
+    permanent_obj['source'] = env_name
+    permanent_obj['target'] = '/'+env_name
+    temp_volumes_list.append(permanent_obj)
     services_dict[env_name]['volumes'] = temp_volumes_list
 
     deploy_config_dict = {}
@@ -49,6 +54,7 @@ def create_compose_file(env_name, ram, cpu, gpu, port_mapping_content, temp_file
         services_dict[env_name]['deploy'] = deploy_config_dict
 
     compose_file_content['services'] = services_dict
+    compose_file_content['volumes'] = {env_name:{}}
 
     file=open("compose.yaml","w")
     yaml.dump(compose_file_content, file, sort_keys=False,  default_flow_style=False)

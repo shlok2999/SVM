@@ -13,6 +13,9 @@ services:
       target: /target
       tmpfs:
         size: 1G
+    - type: volume
+      source: fjasldf_644ece15809917bf2dc3956c
+      target: /fjasldf_644ece15809917bf2dc3956c
     deploy:
       resources:
         limits:
@@ -24,3 +27,5 @@ services:
             count: 1
             capabilities:
             - gpu
+volumes:
+  fjasldf_644ece15809917bf2dc3956c: {}
