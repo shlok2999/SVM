@@ -3398,3 +3398,247 @@ requests.exceptions.ConnectionError: HTTPConnectionPool(host='10.42.0.221', port
 2023-05-05 17:07:42,386 INFO kafka.conn kafka-python-producer-1-network-thread : <BrokerConnection node_id=0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
 2023-05-05 17:07:42,386 DEBUG kafka.conn kafka-python-producer-1-network-thread : <BrokerConnection node_id=0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: reconnect backoff 0.04952156921223645 after 1 failures
 2023-05-05 17:07:42,386 DEBUG kafka.producer.sender kafka-python-producer-1-network-thread : Shutdown of Kafka producer I/O thread has completed.
+2023-05-06 00:20:03,013 INFO app MainThread : registering service dfs-server at ip 192.168.137.124
+2023-05-06 00:20:03,014 INFO app MainThread : found free port at 8003
+2023-05-06 00:20:04,132 INFO app MainThread : registering service dfs-server at ip 192.168.137.124 and port 8003
+2023-05-06 00:20:04,139 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://192.168.137.124:8003
+2023-05-06 00:20:04,139 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-05-06 00:23:10,402 INFO app Thread-1 (process_request_thread) : received request for get_templates()
+2023-05-06 00:23:10,463 INFO app Thread-1 (process_request_thread) : returning all templates list from db
+2023-05-06 00:23:10,464 INFO werkzeug Thread-1 (process_request_thread) : 192.168.137.23 - - [06/May/2023 00:23:10] "GET /templates HTTP/1.1" 200 -
+2023-05-06 00:27:01,042 INFO app Thread-3 (process_request_thread) : received request for get_templates()
+2023-05-06 00:27:01,116 INFO app Thread-3 (process_request_thread) : returning all templates list from db
+2023-05-06 00:27:01,117 INFO werkzeug Thread-3 (process_request_thread) : 192.168.137.124 - - [06/May/2023 00:27:01] "GET /templates HTTP/1.1" 200 -
+2023-05-06 00:27:52,197 INFO app Thread-4 (process_request_thread) : received request for get_templates()
+2023-05-06 00:27:52,343 INFO app Thread-4 (process_request_thread) : returning all templates list from db
+2023-05-06 00:27:52,344 INFO werkzeug Thread-4 (process_request_thread) : 192.168.137.23 - - [06/May/2023 00:27:52] "GET /templates HTTP/1.1" 200 -
+2023-05-06 00:27:55,310 INFO app Thread-5 (process_request_thread) : received request for get_templates()
+2023-05-06 00:27:55,356 INFO app Thread-5 (process_request_thread) : returning all templates list from db
+2023-05-06 00:27:55,356 INFO werkzeug Thread-5 (process_request_thread) : 192.168.137.23 - - [06/May/2023 00:27:55] "GET /templates HTTP/1.1" 200 -
+2023-05-06 00:28:35,421 INFO app Thread-6 (process_request_thread) : received request for get_templates()
+2023-05-06 00:28:35,470 INFO app Thread-6 (process_request_thread) : returning all templates list from db
+2023-05-06 00:28:35,471 INFO werkzeug Thread-6 (process_request_thread) : 192.168.137.23 - - [06/May/2023 00:28:35] "GET /templates HTTP/1.1" 200 -
+2023-05-06 00:32:25,840 INFO app Thread-7 (process_request_thread) : received request for get_templates()
+2023-05-06 00:32:25,884 INFO app Thread-7 (process_request_thread) : returning all templates list from db
+2023-05-06 00:32:25,885 INFO werkzeug Thread-7 (process_request_thread) : 192.168.137.23 - - [06/May/2023 00:32:25] "GET /templates HTTP/1.1" 200 -
+2023-05-06 00:32:30,319 INFO app Thread-8 (process_request_thread) : received request for get_templates()
+2023-05-06 00:32:30,365 INFO app Thread-8 (process_request_thread) : returning all templates list from db
+2023-05-06 00:32:30,365 INFO werkzeug Thread-8 (process_request_thread) : 192.168.137.23 - - [06/May/2023 00:32:30] "GET /templates HTTP/1.1" 200 -
+2023-05-06 00:34:36,237 INFO app Thread-9 (process_request_thread) : received request for get_templates()
+2023-05-06 00:34:36,284 INFO app Thread-9 (process_request_thread) : returning all templates list from db
+2023-05-06 00:34:36,284 INFO werkzeug Thread-9 (process_request_thread) : 192.168.137.23 - - [06/May/2023 00:34:36] "GET /templates HTTP/1.1" 200 -
+2023-05-06 00:34:39,247 INFO app Thread-10 (process_request_thread) : received request for get_templates()
+2023-05-06 00:34:39,292 INFO app Thread-10 (process_request_thread) : returning all templates list from db
+2023-05-06 00:34:39,292 INFO werkzeug Thread-10 (process_request_thread) : 192.168.137.23 - - [06/May/2023 00:34:39] "GET /templates HTTP/1.1" 200 -
+2023-05-06 00:35:01,778 INFO app Thread-11 (process_request_thread) : received request for get_templates()
+2023-05-06 00:35:01,823 INFO app Thread-11 (process_request_thread) : returning all templates list from db
+2023-05-06 00:35:01,824 INFO werkzeug Thread-11 (process_request_thread) : 192.168.137.23 - - [06/May/2023 00:35:01] "GET /templates HTTP/1.1" 200 -
+2023-05-06 00:35:03,777 INFO app Thread-12 (process_request_thread) : received request for get_templates()
+2023-05-06 00:35:03,821 INFO app Thread-12 (process_request_thread) : returning all templates list from db
+2023-05-06 00:35:03,822 INFO werkzeug Thread-12 (process_request_thread) : 192.168.137.23 - - [06/May/2023 00:35:03] "GET /templates HTTP/1.1" 200 -
+2023-05-06 00:35:37,115 INFO app Thread-13 (process_request_thread) : received request for get_templates()
+2023-05-06 00:35:37,184 INFO app Thread-13 (process_request_thread) : returning all templates list from db
+2023-05-06 00:35:37,185 INFO werkzeug Thread-13 (process_request_thread) : 192.168.137.23 - - [06/May/2023 00:35:37] "GET /templates HTTP/1.1" 200 -
+2023-05-06 00:35:39,017 INFO app Thread-14 (process_request_thread) : received request for get_templates()
+2023-05-06 00:35:39,173 INFO app Thread-14 (process_request_thread) : returning all templates list from db
+2023-05-06 00:35:39,174 INFO werkzeug Thread-14 (process_request_thread) : 192.168.137.23 - - [06/May/2023 00:35:39] "GET /templates HTTP/1.1" 200 -
+2023-05-06 00:36:05,814 INFO app Thread-15 (process_request_thread) : received request for get_templates()
+2023-05-06 00:36:05,951 INFO app Thread-15 (process_request_thread) : returning all templates list from db
+2023-05-06 00:36:05,952 INFO werkzeug Thread-15 (process_request_thread) : 192.168.137.23 - - [06/May/2023 00:36:05] "GET /templates HTTP/1.1" 200 -
+2023-05-06 00:36:10,415 INFO app Thread-16 (process_request_thread) : received request for get_templates()
+2023-05-06 00:36:10,460 INFO app Thread-16 (process_request_thread) : returning all templates list from db
+2023-05-06 00:36:10,461 INFO werkzeug Thread-16 (process_request_thread) : 192.168.137.23 - - [06/May/2023 00:36:10] "GET /templates HTTP/1.1" 200 -
+2023-05-06 00:36:24,317 INFO app Thread-17 (process_request_thread) : received request for get_templates()
+2023-05-06 00:36:24,550 INFO app Thread-17 (process_request_thread) : returning all templates list from db
+2023-05-06 00:36:24,551 INFO werkzeug Thread-17 (process_request_thread) : 192.168.137.23 - - [06/May/2023 00:36:24] "GET /templates HTTP/1.1" 200 -
+2023-05-06 00:36:28,133 INFO app Thread-18 (process_request_thread) : received request for get_templates()
+2023-05-06 00:36:28,205 INFO app Thread-18 (process_request_thread) : returning all templates list from db
+2023-05-06 00:36:28,207 INFO werkzeug Thread-18 (process_request_thread) : 192.168.137.23 - - [06/May/2023 00:36:28] "GET /templates HTTP/1.1" 200 -
+2023-05-06 00:36:36,013 INFO app Thread-19 (process_request_thread) : received request for get_templates()
+2023-05-06 00:36:36,064 INFO app Thread-19 (process_request_thread) : returning all templates list from db
+2023-05-06 00:36:36,065 INFO werkzeug Thread-19 (process_request_thread) : 192.168.137.23 - - [06/May/2023 00:36:36] "GET /templates HTTP/1.1" 200 -
+2023-05-06 00:36:38,541 INFO app Thread-20 (process_request_thread) : received request for get_templates()
+2023-05-06 00:36:38,589 INFO app Thread-20 (process_request_thread) : returning all templates list from db
+2023-05-06 00:36:38,590 INFO werkzeug Thread-20 (process_request_thread) : 192.168.137.23 - - [06/May/2023 00:36:38] "GET /templates HTTP/1.1" 200 -
+2023-05-06 00:36:46,679 INFO app Thread-21 (process_request_thread) : received request for get_templates()
+2023-05-06 00:36:46,752 INFO app Thread-21 (process_request_thread) : returning all templates list from db
+2023-05-06 00:36:46,753 INFO werkzeug Thread-21 (process_request_thread) : 192.168.137.23 - - [06/May/2023 00:36:46] "GET /templates HTTP/1.1" 200 -
+2023-05-06 00:36:49,388 INFO app Thread-22 (process_request_thread) : received request for get_templates()
+2023-05-06 00:36:49,433 INFO app Thread-22 (process_request_thread) : returning all templates list from db
+2023-05-06 00:36:49,433 INFO werkzeug Thread-22 (process_request_thread) : 192.168.137.23 - - [06/May/2023 00:36:49] "GET /templates HTTP/1.1" 200 -
+2023-05-06 00:39:50,106 INFO app Thread-23 (process_request_thread) : received request for get_templates()
+2023-05-06 00:39:50,151 INFO app Thread-23 (process_request_thread) : returning all templates list from db
+2023-05-06 00:39:50,151 INFO werkzeug Thread-23 (process_request_thread) : 192.168.137.23 - - [06/May/2023 00:39:50] "GET /templates HTTP/1.1" 200 -
+2023-05-06 00:39:52,653 INFO werkzeug Thread-24 (process_request_thread) : 192.168.137.23 - - [06/May/2023 00:39:52] "OPTIONS /config HTTP/1.1" 200 -
+2023-05-06 00:39:52,669 INFO app Thread-25 (process_request_thread) : received request for get_env_config()
+2023-05-06 00:39:52,669 INFO app Thread-25 (process_request_thread) : found template-id 6434e155017def77978fb709" in config
+2023-05-06 00:39:52,669 ERROR app Thread-25 (process_request_thread) : failed to query db or record doesnt exist for template-id 6434e155017def77978fb709"
+2023-05-06 00:39:52,669 INFO werkzeug Thread-25 (process_request_thread) : 192.168.137.23 - - [06/May/2023 00:39:52] "[35m[1mPOST /config HTTP/1.1[0m" 500 -
+2023-05-06 00:40:59,346 INFO app Thread-26 (process_request_thread) : received request for get_templates()
+2023-05-06 00:40:59,391 INFO app Thread-26 (process_request_thread) : returning all templates list from db
+2023-05-06 00:40:59,392 INFO werkzeug Thread-26 (process_request_thread) : 192.168.137.23 - - [06/May/2023 00:40:59] "GET /templates HTTP/1.1" 200 -
+2023-05-06 00:41:02,627 INFO app Thread-27 (process_request_thread) : received request for get_templates()
+2023-05-06 00:41:02,671 INFO app Thread-27 (process_request_thread) : returning all templates list from db
+2023-05-06 00:41:02,672 INFO werkzeug Thread-27 (process_request_thread) : 192.168.137.23 - - [06/May/2023 00:41:02] "GET /templates HTTP/1.1" 200 -
+2023-05-06 00:41:31,563 INFO werkzeug Thread-28 (process_request_thread) : 192.168.137.23 - - [06/May/2023 00:41:31] "OPTIONS /config HTTP/1.1" 200 -
+2023-05-06 00:41:31,572 INFO app Thread-29 (process_request_thread) : received request for get_env_config()
+2023-05-06 00:41:31,572 INFO app Thread-29 (process_request_thread) : found template-id 34e155017def77978fb709 in config
+2023-05-06 00:41:31,572 ERROR app Thread-29 (process_request_thread) : failed to query db or record doesnt exist for template-id 34e155017def77978fb709
+2023-05-06 00:41:31,573 INFO werkzeug Thread-29 (process_request_thread) : 192.168.137.23 - - [06/May/2023 00:41:31] "[35m[1mPOST /config HTTP/1.1[0m" 500 -
+2023-05-06 00:41:50,978 INFO app Thread-30 (process_request_thread) : received request for get_templates()
+2023-05-06 00:41:51,022 INFO app Thread-30 (process_request_thread) : returning all templates list from db
+2023-05-06 00:41:51,023 INFO werkzeug Thread-30 (process_request_thread) : 192.168.137.23 - - [06/May/2023 00:41:51] "GET /templates HTTP/1.1" 200 -
+2023-05-06 00:41:55,857 INFO app Thread-31 (process_request_thread) : received request for get_templates()
+2023-05-06 00:41:55,903 INFO app Thread-31 (process_request_thread) : returning all templates list from db
+2023-05-06 00:41:55,904 INFO werkzeug Thread-31 (process_request_thread) : 192.168.137.23 - - [06/May/2023 00:41:55] "GET /templates HTTP/1.1" 200 -
+2023-05-06 00:42:19,615 INFO werkzeug Thread-32 (process_request_thread) : 192.168.137.23 - - [06/May/2023 00:42:19] "OPTIONS /config HTTP/1.1" 200 -
+2023-05-06 00:42:19,624 INFO app Thread-33 (process_request_thread) : received request for get_env_config()
+2023-05-06 00:42:19,624 INFO app Thread-33 (process_request_thread) : found template-id 6434e155017def77978fb709 in config
+2023-05-06 00:42:19,940 INFO app Thread-33 (process_request_thread) : no entry found in db for os 
+2023-05-06 00:42:19,941 INFO werkzeug Thread-33 (process_request_thread) : 192.168.137.23 - - [06/May/2023 00:42:19] "POST /config HTTP/1.1" 200 -
+2023-05-06 00:48:14,774 INFO app Thread-34 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-06 00:48:14,820 INFO app Thread-34 (process_request_thread) : returning all configs list from db
+2023-05-06 00:48:14,821 INFO werkzeug Thread-34 (process_request_thread) : 192.168.137.23 - - [06/May/2023 00:48:14] "GET /configs HTTP/1.1" 200 -
+2023-05-06 00:49:56,008 INFO app Thread-35 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-06 00:49:56,053 INFO app Thread-35 (process_request_thread) : returning all configs list from db
+2023-05-06 00:49:56,055 INFO werkzeug Thread-35 (process_request_thread) : 192.168.137.23 - - [06/May/2023 00:49:56] "GET /configs HTTP/1.1" 200 -
+2023-05-06 00:49:59,402 INFO app Thread-36 (process_request_thread) : received request for retireieve_all_configs()
+2023-05-06 00:49:59,447 INFO app Thread-36 (process_request_thread) : returning all configs list from db
+2023-05-06 00:49:59,448 INFO werkzeug Thread-36 (process_request_thread) : 192.168.137.23 - - [06/May/2023 00:49:59] "GET /configs HTTP/1.1" 200 -
+2023-05-06 00:51:34,943 INFO werkzeug Thread-37 (process_request_thread) : 192.168.137.23 - - [06/May/2023 00:51:34] "OPTIONS /provision/644ece15809917bf2dc3956c HTTP/1.1" 200 -
+2023-05-06 00:51:35,135 DEBUG urllib3.connectionpool Thread-38 (process_request_thread) : Starting new HTTP connection (1): 192.168.137.124:8002
+2023-05-06 00:51:35,321 DEBUG urllib3.connectionpool Thread-38 (process_request_thread) : http://192.168.137.124:8002 "POST /node_info HTTP/1.1" 200 53
+2023-05-06 00:51:35,323 DEBUG kafka.producer.kafka Thread-38 (process_request_thread) : Starting the Kafka producer
+2023-05-06 00:51:35,323 DEBUG kafka.metrics.metrics Thread-38 (process_request_thread) : Added sensor with name connections-closed
+2023-05-06 00:51:35,323 DEBUG kafka.metrics.metrics Thread-38 (process_request_thread) : Added sensor with name connections-created
+2023-05-06 00:51:35,323 DEBUG kafka.metrics.metrics Thread-38 (process_request_thread) : Added sensor with name select-time
+2023-05-06 00:51:35,323 DEBUG kafka.metrics.metrics Thread-38 (process_request_thread) : Added sensor with name io-time
+2023-05-06 00:51:35,323 DEBUG kafka.client Thread-38 (process_request_thread) : Initiating connection to node bootstrap-0 at localhost:9092
+2023-05-06 00:51:35,323 DEBUG kafka.metrics.metrics Thread-38 (process_request_thread) : Added sensor with name bytes-sent-received
+2023-05-06 00:51:35,323 DEBUG kafka.metrics.metrics Thread-38 (process_request_thread) : Added sensor with name bytes-sent
+2023-05-06 00:51:35,323 DEBUG kafka.metrics.metrics Thread-38 (process_request_thread) : Added sensor with name bytes-received
+2023-05-06 00:51:35,323 DEBUG kafka.metrics.metrics Thread-38 (process_request_thread) : Added sensor with name request-latency
+2023-05-06 00:51:35,323 DEBUG kafka.metrics.metrics Thread-38 (process_request_thread) : Added sensor with name node-bootstrap-0.bytes-sent
+2023-05-06 00:51:35,323 DEBUG kafka.metrics.metrics Thread-38 (process_request_thread) : Added sensor with name node-bootstrap-0.bytes-received
+2023-05-06 00:51:35,323 DEBUG kafka.metrics.metrics Thread-38 (process_request_thread) : Added sensor with name node-bootstrap-0.latency
+2023-05-06 00:51:35,324 DEBUG kafka.conn Thread-38 (process_request_thread) : <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <disconnected> [unspecified None]>: creating new socket
+2023-05-06 00:51:35,324 DEBUG kafka.conn Thread-38 (process_request_thread) : <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <disconnected> [IPv4 ('127.0.0.1', 9092)]>: setting socket option (6, 1, 1)
+2023-05-06 00:51:35,324 INFO kafka.conn Thread-38 (process_request_thread) : <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to localhost:9092 [('127.0.0.1', 9092) IPv4]
+2023-05-06 00:51:35,324 INFO kafka.conn Thread-38 (process_request_thread) : Probing node bootstrap-0 broker version
+2023-05-06 00:51:35,324 DEBUG kafka.conn Thread-38 (process_request_thread) : <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: established TCP connection
+2023-05-06 00:51:35,324 INFO kafka.conn Thread-38 (process_request_thread) : <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2023-05-06 00:51:35,324 DEBUG kafka.client Thread-38 (process_request_thread) : Node bootstrap-0 connected
+2023-05-06 00:51:35,324 DEBUG kafka.protocol.parser Thread-38 (process_request_thread) : Sending request ApiVersionRequest_v0()
+2023-05-06 00:51:35,324 DEBUG kafka.conn Thread-38 (process_request_thread) : <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]> Request 1: ApiVersionRequest_v0()
+2023-05-06 00:51:35,425 DEBUG kafka.protocol.parser Thread-38 (process_request_thread) : Sending request MetadataRequest_v0(topics=[])
+2023-05-06 00:51:35,425 DEBUG kafka.conn Thread-38 (process_request_thread) : <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]> Request 2: MetadataRequest_v0(topics=[])
+2023-05-06 00:51:35,425 DEBUG kafka.protocol.parser Thread-38 (process_request_thread) : Received correlation id: 1
+2023-05-06 00:51:35,426 DEBUG kafka.protocol.parser Thread-38 (process_request_thread) : Processing response ApiVersionResponse_v0
+2023-05-06 00:51:35,426 DEBUG kafka.conn Thread-38 (process_request_thread) : <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]> Response 1 (102.12182998657227 ms): ApiVersionResponse_v0(error_code=0, api_versions=[(api_key=0, min_version=0, max_version=9), (api_key=1, min_version=0, max_version=13), (api_key=2, min_version=0, max_version=7), (api_key=3, min_version=0, max_version=12), (api_key=4, min_version=0, max_version=7), (api_key=5, min_version=0, max_version=4), (api_key=6, min_version=0, max_version=8), (api_key=7, min_version=0, max_version=3), (api_key=8, min_version=0, max_version=8), (api_key=9, min_version=0, max_version=8), (api_key=10, min_version=0, max_version=4), (api_key=11, min_version=0, max_version=9), (api_key=12, min_version=0, max_version=4), (api_key=13, min_version=0, max_version=5), (api_key=14, min_version=0, max_version=5), (api_key=15, min_version=0, max_version=5), (api_key=16, min_version=0, max_version=4), (api_key=17, min_version=0, max_version=1), (api_key=18, min_version=0, max_version=3), (api_key=19, min_version=0, max_version=7), (api_key=20, min_version=0, max_version=6), (api_key=21, min_version=0, max_version=2), (api_key=22, min_version=0, max_version=4), (api_key=23, min_version=0, max_version=4), (api_key=24, min_version=0, max_version=3), (api_key=25, min_version=0, max_version=3), (api_key=26, min_version=0, max_version=3), (api_key=27, min_version=0, max_version=1), (api_key=28, min_version=0, max_version=3), (api_key=29, min_version=0, max_version=3), (api_key=30, min_version=0, max_version=3), (api_key=31, min_version=0, max_version=3), (api_key=32, min_version=0, max_version=4), (api_key=33, min_version=0, max_version=2), (api_key=34, min_version=0, max_version=2), (api_key=35, min_version=0, max_version=4), (api_key=36, min_version=0, max_version=2), (api_key=37, min_version=0, max_version=3), (api_key=38, min_version=0, max_version=3), (api_key=39, min_version=0, max_version=2), (api_key=40, min_version=0, max_version=2), (api_key=41, min_version=0, max_version=3), (api_key=42, min_version=0, max_version=2), (api_key=43, min_version=0, max_version=2), (api_key=44, min_version=0, max_version=1), (api_key=45, min_version=0, max_version=0), (api_key=46, min_version=0, max_version=0), (api_key=47, min_version=0, max_version=0), (api_key=48, min_version=0, max_version=1), (api_key=49, min_version=0, max_version=1), (api_key=50, min_version=0, max_version=0), (api_key=51, min_version=0, max_version=0), (api_key=56, min_version=0, max_version=2), (api_key=57, min_version=0, max_version=1), (api_key=58, min_version=0, max_version=0), (api_key=60, min_version=0, max_version=0), (api_key=61, min_version=0, max_version=0), (api_key=65, min_version=0, max_version=0), (api_key=66, min_version=0, max_version=0), (api_key=67, min_version=0, max_version=0)])
+2023-05-06 00:51:35,427 DEBUG kafka.protocol.parser Thread-38 (process_request_thread) : Received correlation id: 2
+2023-05-06 00:51:35,427 DEBUG kafka.protocol.parser Thread-38 (process_request_thread) : Processing response MetadataResponse_v0
+2023-05-06 00:51:35,427 DEBUG kafka.conn Thread-38 (process_request_thread) : <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]> Response 2 (2.1626949310302734 ms): MetadataResponse_v0(brokers=[(node_id=0, host='localhost', port=9092)], topics=[(error_code=0, topic='0x294095d04151', partitions=[(error_code=0, partition=0, leader=0, replicas=[0], isr=[0])])])
+2023-05-06 00:51:35,427 INFO kafka.conn Thread-38 (process_request_thread) : Broker version identified as 2.5.0
+2023-05-06 00:51:35,428 INFO kafka.conn Thread-38 (process_request_thread) : Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+2023-05-06 00:51:35,428 DEBUG kafka.metrics.metrics Thread-38 (process_request_thread) : Added sensor with name bufferpool-wait-time
+2023-05-06 00:51:35,429 DEBUG kafka.metrics.metrics Thread-38 (process_request_thread) : Added sensor with name batch-size
+2023-05-06 00:51:35,429 DEBUG kafka.metrics.metrics Thread-38 (process_request_thread) : Added sensor with name compression-rate
+2023-05-06 00:51:35,429 DEBUG kafka.metrics.metrics Thread-38 (process_request_thread) : Added sensor with name queue-time
+2023-05-06 00:51:35,429 DEBUG kafka.metrics.metrics Thread-38 (process_request_thread) : Added sensor with name produce-throttle-time
+2023-05-06 00:51:35,429 DEBUG kafka.metrics.metrics Thread-38 (process_request_thread) : Added sensor with name records-per-request
+2023-05-06 00:51:35,429 DEBUG kafka.metrics.metrics Thread-38 (process_request_thread) : Added sensor with name bytes
+2023-05-06 00:51:35,429 DEBUG kafka.metrics.metrics Thread-38 (process_request_thread) : Added sensor with name record-retries
+2023-05-06 00:51:35,429 DEBUG kafka.metrics.metrics Thread-38 (process_request_thread) : Added sensor with name errors
+2023-05-06 00:51:35,430 DEBUG kafka.metrics.metrics Thread-38 (process_request_thread) : Added sensor with name record-size-max
+2023-05-06 00:51:35,430 DEBUG kafka.producer.sender kafka-python-producer-1-network-thread : Starting Kafka producer I/O thread.
+2023-05-06 00:51:35,430 DEBUG kafka.producer.kafka Thread-38 (process_request_thread) : Kafka producer started
+2023-05-06 00:51:35,430 DEBUG kafka.client kafka-python-producer-1-network-thread : Sending metadata request MetadataRequest_v1(topics=NULL) to node bootstrap-0
+2023-05-06 00:51:35,431 DEBUG kafka.protocol.parser kafka-python-producer-1-network-thread : Sending request MetadataRequest_v1(topics=NULL)
+2023-05-06 00:51:35,431 DEBUG kafka.producer.kafka Thread-38 (process_request_thread) : Requesting metadata update for topic 0x294095d04151
+2023-05-06 00:51:35,431 DEBUG kafka.conn kafka-python-producer-1-network-thread : <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]> Request 3: MetadataRequest_v1(topics=NULL)
+2023-05-06 00:51:35,432 DEBUG kafka.protocol.parser kafka-python-producer-1-network-thread : Received correlation id: 3
+2023-05-06 00:51:35,432 DEBUG kafka.protocol.parser kafka-python-producer-1-network-thread : Processing response MetadataResponse_v1
+2023-05-06 00:51:35,432 DEBUG kafka.conn kafka-python-producer-1-network-thread : <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]> Response 3 (1.1992454528808594 ms): MetadataResponse_v1(brokers=[(node_id=0, host='localhost', port=9092, rack=None)], controller_id=0, topics=[(error_code=0, topic='0x294095d04151', is_internal=False, partitions=[(error_code=0, partition=0, leader=0, replicas=[0], isr=[0])])])
+2023-05-06 00:51:35,433 DEBUG kafka.cluster kafka-python-producer-1-network-thread : Updated cluster metadata to ClusterMetadata(brokers: 1, topics: 1, groups: 0)
+2023-05-06 00:51:35,433 DEBUG kafka.producer.kafka Thread-38 (process_request_thread) : _wait_on_metadata woke after 0.0018701553344726562 secs.
+2023-05-06 00:51:35,433 DEBUG kafka.producer.kafka Thread-38 (process_request_thread) : Sending (key=None value={'_id': '644ece15809917bf2dc3956c', 'env-name': 'fjasldf', 'version': '1', 'os': 'ubuntu', 'languages': [{'language-name': 'python', 'libraries': ['numpy']}], 'resources': {'ram': '1G', 'cpu': '1.0', 'gpu': '1', 'storage': 54}, 'dataset': [{'category-name': 'ffs', 'db': [{'db-name': 'fsgr', 'dataset': [{'dataset-name': 'effr', 'version': '34'}]}]}], 'port-publish': [{'external': {'ports': '9000'}, 'internal': {'ports': '9000', 'protocol': 'tcp'}}, {'external': {'ports': '9080'}, 'internal': {'ports': '980', 'protocol': 'udp'}}], 'storage': [{'target': '/target', 'size': '1G', 'lifecycle': 'temporary'}], 'is_active': 1, 'config_id': 0} headers=[]) to TopicPartition(topic='0x294095d04151', partition=0)
+2023-05-06 00:51:35,433 DEBUG kafka.producer.record_accumulator Thread-38 (process_request_thread) : Allocating a new 16384 byte message buffer for TopicPartition(topic='0x294095d04151', partition=0)
+2023-05-06 00:51:35,433 DEBUG kafka.producer.kafka Thread-38 (process_request_thread) : Waking up the sender since TopicPartition(topic='0x294095d04151', partition=0) is either full or getting a new batch
+2023-05-06 00:51:35,434 DEBUG kafka.producer.sender kafka-python-producer-1-network-thread : Node 0 not ready; delaying produce of accumulated batch
+2023-05-06 00:51:35,434 DEBUG kafka.client kafka-python-producer-1-network-thread : Initiating connection to node 0 at localhost:9092
+2023-05-06 00:51:35,434 DEBUG kafka.metrics.metrics kafka-python-producer-1-network-thread : Added sensor with name node-0.bytes-sent
+2023-05-06 00:51:35,434 DEBUG kafka.metrics.metrics kafka-python-producer-1-network-thread : Added sensor with name node-0.bytes-received
+2023-05-06 00:51:35,434 DEBUG kafka.metrics.metrics kafka-python-producer-1-network-thread : Added sensor with name node-0.latency
+2023-05-06 00:51:35,434 DEBUG kafka.conn kafka-python-producer-1-network-thread : <BrokerConnection node_id=0 host=localhost:9092 <disconnected> [unspecified None]>: creating new socket
+2023-05-06 00:51:35,434 DEBUG kafka.conn kafka-python-producer-1-network-thread : <BrokerConnection node_id=0 host=localhost:9092 <disconnected> [IPv4 ('127.0.0.1', 9092)]>: setting socket option (6, 1, 1)
+2023-05-06 00:51:35,434 INFO kafka.conn kafka-python-producer-1-network-thread : <BrokerConnection node_id=0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to localhost:9092 [('127.0.0.1', 9092) IPv4]
+2023-05-06 00:51:35,434 DEBUG kafka.conn kafka-python-producer-1-network-thread : <BrokerConnection node_id=0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: established TCP connection
+2023-05-06 00:51:35,434 INFO kafka.conn kafka-python-producer-1-network-thread : <BrokerConnection node_id=0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2023-05-06 00:51:35,434 DEBUG kafka.client kafka-python-producer-1-network-thread : Node 0 connected
+2023-05-06 00:51:35,434 INFO kafka.conn kafka-python-producer-1-network-thread : <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
+2023-05-06 00:51:35,435 DEBUG kafka.metrics.metrics kafka-python-producer-1-network-thread : Added sensor with name topic.0x294095d04151.records-per-batch
+2023-05-06 00:51:35,435 DEBUG kafka.metrics.metrics kafka-python-producer-1-network-thread : Added sensor with name topic.0x294095d04151.bytes
+2023-05-06 00:51:35,435 DEBUG kafka.metrics.metrics kafka-python-producer-1-network-thread : Added sensor with name topic.0x294095d04151.compression-rate
+2023-05-06 00:51:35,435 DEBUG kafka.metrics.metrics kafka-python-producer-1-network-thread : Added sensor with name topic.0x294095d04151.record-retries
+2023-05-06 00:51:35,435 DEBUG kafka.metrics.metrics kafka-python-producer-1-network-thread : Added sensor with name topic.0x294095d04151.record-errors
+2023-05-06 00:51:35,435 DEBUG kafka.producer.sender kafka-python-producer-1-network-thread : Nodes with data ready to send: {0}
+2023-05-06 00:51:35,435 DEBUG kafka.producer.sender kafka-python-producer-1-network-thread : Created 1 produce requests: {0: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='0x294095d04151', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\xbc\x00\x00\x00\x00\x02\xd7\xd0\xaa\xc2\x00\x00\x00\x00\x00\x00\x00\x00\x01\x87\xed\\\xcf\xc9\x00\x00\x01\x87\xed\\\xcf\xc9\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\x92\n\x00\x00\x00\x01\x84\n{"_id": "644ece15809917bf2dc395...')])])}
+2023-05-06 00:51:35,435 DEBUG kafka.producer.sender kafka-python-producer-1-network-thread : Sending Produce Request: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='0x294095d04151', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\xbc\x00\x00\x00\x00\x02\xd7\xd0\xaa\xc2\x00\x00\x00\x00\x00\x00\x00\x00\x01\x87\xed\\\xcf\xc9\x00\x00\x01\x87\xed\\\xcf\xc9\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\x92\n\x00\x00\x00\x01\x84\n{"_id": "644ece15809917bf2dc395...')])])
+2023-05-06 00:51:35,435 DEBUG kafka.protocol.parser kafka-python-producer-1-network-thread : Sending request ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='0x294095d04151', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\xbc\x00\x00\x00\x00\x02\xd7\xd0\xaa\xc2\x00\x00\x00\x00\x00\x00\x00\x00\x01\x87\xed\\\xcf\xc9\x00\x00\x01\x87\xed\\\xcf\xc9\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\x92\n\x00\x00\x00\x01\x84\n{"_id": "644ece15809917bf2dc395...')])])
+2023-05-06 00:51:35,435 DEBUG kafka.conn kafka-python-producer-1-network-thread : <BrokerConnection node_id=0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]> Request 1: ProduceRequest_v7(transactional_id=None, required_acks=1, timeout=30000, topics=[(topic='0x294095d04151', partitions=[(partition=0, messages=b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\xbc\x00\x00\x00\x00\x02\xd7\xd0\xaa\xc2\x00\x00\x00\x00\x00\x00\x00\x00\x01\x87\xed\\\xcf\xc9\x00\x00\x01\x87\xed\\\xcf\xc9\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x01\x92\n\x00\x00\x00\x01\x84\n{"_id": "644ece15809917bf2dc395...')])])
+2023-05-06 00:51:35,494 DEBUG kafka.protocol.parser kafka-python-producer-1-network-thread : Received correlation id: 1
+2023-05-06 00:51:35,494 DEBUG kafka.protocol.parser kafka-python-producer-1-network-thread : Processing response ProduceResponse_v7
+2023-05-06 00:51:35,494 DEBUG kafka.conn kafka-python-producer-1-network-thread : <BrokerConnection node_id=0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]> Response 1 (58.85958671569824 ms): ProduceResponse_v7(topics=[(topic='0x294095d04151', partitions=[(partition=0, error_code=0, offset=0, timestamp=-1, log_start_offset=0)])], throttle_time_ms=0)
+2023-05-06 00:51:35,494 DEBUG kafka.producer.sender kafka-python-producer-1-network-thread : Parsing produce response: ProduceResponse_v7(topics=[(topic='0x294095d04151', partitions=[(partition=0, error_code=0, offset=0, timestamp=-1, log_start_offset=0)])], throttle_time_ms=0)
+2023-05-06 00:51:35,495 DEBUG kafka.producer.record_accumulator kafka-python-producer-1-network-thread : Produced messages to topic-partition TopicPartition(topic='0x294095d04151', partition=0) with base offset 0 log start offset 0 and error None.
+2023-05-06 00:51:36,436 INFO werkzeug Thread-38 (process_request_thread) : 192.168.137.23 - - [06/May/2023 00:51:36] "POST /provision/644ece15809917bf2dc3956c HTTP/1.1" 200 -
+2023-05-06 00:56:35,434 DEBUG kafka.client kafka-python-producer-1-network-thread : Sending metadata request MetadataRequest_v1(topics=['0x294095d04151']) to node 0
+2023-05-06 00:56:35,434 DEBUG kafka.protocol.parser kafka-python-producer-1-network-thread : Sending request MetadataRequest_v1(topics=['0x294095d04151'])
+2023-05-06 00:56:35,434 DEBUG kafka.conn kafka-python-producer-1-network-thread : <BrokerConnection node_id=0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]> Request 2: MetadataRequest_v1(topics=['0x294095d04151'])
+2023-05-06 00:56:35,436 DEBUG kafka.protocol.parser kafka-python-producer-1-network-thread : Received correlation id: 2
+2023-05-06 00:56:35,436 DEBUG kafka.protocol.parser kafka-python-producer-1-network-thread : Processing response MetadataResponse_v1
+2023-05-06 00:56:35,436 DEBUG kafka.conn kafka-python-producer-1-network-thread : <BrokerConnection node_id=0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]> Response 2 (2.112150192260742 ms): MetadataResponse_v1(brokers=[(node_id=0, host='localhost', port=9092, rack=None)], controller_id=0, topics=[(error_code=0, topic='0x294095d04151', is_internal=False, partitions=[(error_code=0, partition=0, leader=0, replicas=[0], isr=[0])])])
+2023-05-06 00:56:35,436 DEBUG kafka.cluster kafka-python-producer-1-network-thread : Updated cluster metadata to ClusterMetadata(brokers: 1, topics: 1, groups: 0)
+2023-05-06 01:01:35,438 DEBUG kafka.client kafka-python-producer-1-network-thread : Sending metadata request MetadataRequest_v1(topics=['0x294095d04151']) to node 0
+2023-05-06 01:01:35,438 DEBUG kafka.protocol.parser kafka-python-producer-1-network-thread : Sending request MetadataRequest_v1(topics=['0x294095d04151'])
+2023-05-06 01:01:35,439 DEBUG kafka.conn kafka-python-producer-1-network-thread : <BrokerConnection node_id=0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]> Request 3: MetadataRequest_v1(topics=['0x294095d04151'])
+2023-05-06 01:01:35,441 DEBUG kafka.protocol.parser kafka-python-producer-1-network-thread : Received correlation id: 3
+2023-05-06 01:01:35,441 DEBUG kafka.protocol.parser kafka-python-producer-1-network-thread : Processing response MetadataResponse_v1
+2023-05-06 01:01:35,441 DEBUG kafka.conn kafka-python-producer-1-network-thread : <BrokerConnection node_id=0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]> Response 3 (2.4857521057128906 ms): MetadataResponse_v1(brokers=[(node_id=0, host='localhost', port=9092, rack=None)], controller_id=0, topics=[(error_code=0, topic='0x294095d04151', is_internal=False, partitions=[(error_code=0, partition=0, leader=0, replicas=[0], isr=[0])])])
+2023-05-06 01:01:35,442 DEBUG kafka.cluster kafka-python-producer-1-network-thread : Updated cluster metadata to ClusterMetadata(brokers: 1, topics: 1, groups: 0)
+2023-05-06 01:06:35,443 DEBUG kafka.client kafka-python-producer-1-network-thread : Sending metadata request MetadataRequest_v1(topics=['0x294095d04151']) to node 0
+2023-05-06 01:06:35,443 DEBUG kafka.protocol.parser kafka-python-producer-1-network-thread : Sending request MetadataRequest_v1(topics=['0x294095d04151'])
+2023-05-06 01:06:35,443 DEBUG kafka.conn kafka-python-producer-1-network-thread : <BrokerConnection node_id=0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]> Request 4: MetadataRequest_v1(topics=['0x294095d04151'])
+2023-05-06 01:06:35,445 DEBUG kafka.protocol.parser kafka-python-producer-1-network-thread : Received correlation id: 4
+2023-05-06 01:06:35,445 DEBUG kafka.protocol.parser kafka-python-producer-1-network-thread : Processing response MetadataResponse_v1
+2023-05-06 01:06:35,446 DEBUG kafka.conn kafka-python-producer-1-network-thread : <BrokerConnection node_id=0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]> Response 4 (2.075672149658203 ms): MetadataResponse_v1(brokers=[(node_id=0, host='localhost', port=9092, rack=None)], controller_id=0, topics=[(error_code=0, topic='0x294095d04151', is_internal=False, partitions=[(error_code=0, partition=0, leader=0, replicas=[0], isr=[0])])])
+2023-05-06 01:06:35,446 DEBUG kafka.cluster kafka-python-producer-1-network-thread : Updated cluster metadata to ClusterMetadata(brokers: 1, topics: 1, groups: 0)
+2023-05-06 01:11:35,447 DEBUG kafka.client kafka-python-producer-1-network-thread : Sending metadata request MetadataRequest_v1(topics=['0x294095d04151']) to node 0
+2023-05-06 01:11:35,447 DEBUG kafka.protocol.parser kafka-python-producer-1-network-thread : Sending request MetadataRequest_v1(topics=['0x294095d04151'])
+2023-05-06 01:11:35,447 DEBUG kafka.conn kafka-python-producer-1-network-thread : <BrokerConnection node_id=0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]> Request 5: MetadataRequest_v1(topics=['0x294095d04151'])
+2023-05-06 01:11:35,449 DEBUG kafka.protocol.parser kafka-python-producer-1-network-thread : Received correlation id: 5
+2023-05-06 01:11:35,449 DEBUG kafka.protocol.parser kafka-python-producer-1-network-thread : Processing response MetadataResponse_v1
+2023-05-06 01:11:35,450 DEBUG kafka.conn kafka-python-producer-1-network-thread : <BrokerConnection node_id=0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]> Response 5 (2.037525177001953 ms): MetadataResponse_v1(brokers=[(node_id=0, host='localhost', port=9092, rack=None)], controller_id=0, topics=[(error_code=0, topic='0x294095d04151', is_internal=False, partitions=[(error_code=0, partition=0, leader=0, replicas=[0], isr=[0])])])
+2023-05-06 01:11:35,450 DEBUG kafka.cluster kafka-python-producer-1-network-thread : Updated cluster metadata to ClusterMetadata(brokers: 1, topics: 1, groups: 0)
+2023-05-06 01:16:35,451 DEBUG kafka.client kafka-python-producer-1-network-thread : Sending metadata request MetadataRequest_v1(topics=['0x294095d04151']) to node 0
+2023-05-06 01:16:35,451 DEBUG kafka.protocol.parser kafka-python-producer-1-network-thread : Sending request MetadataRequest_v1(topics=['0x294095d04151'])
+2023-05-06 01:16:35,451 DEBUG kafka.conn kafka-python-producer-1-network-thread : <BrokerConnection node_id=0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]> Request 6: MetadataRequest_v1(topics=['0x294095d04151'])
+2023-05-06 01:16:35,453 DEBUG kafka.protocol.parser kafka-python-producer-1-network-thread : Received correlation id: 6
+2023-05-06 01:16:35,453 DEBUG kafka.protocol.parser kafka-python-producer-1-network-thread : Processing response MetadataResponse_v1
+2023-05-06 01:16:35,453 DEBUG kafka.conn kafka-python-producer-1-network-thread : <BrokerConnection node_id=0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]> Response 6 (1.8947124481201172 ms): MetadataResponse_v1(brokers=[(node_id=0, host='localhost', port=9092, rack=None)], controller_id=0, topics=[(error_code=0, topic='0x294095d04151', is_internal=False, partitions=[(error_code=0, partition=0, leader=0, replicas=[0], isr=[0])])])
+2023-05-06 01:16:35,453 DEBUG kafka.cluster kafka-python-producer-1-network-thread : Updated cluster metadata to ClusterMetadata(brokers: 1, topics: 1, groups: 0)
+2023-05-06 01:21:35,455 DEBUG kafka.client kafka-python-producer-1-network-thread : Sending metadata request MetadataRequest_v1(topics=['0x294095d04151']) to node 0
+2023-05-06 01:21:35,455 DEBUG kafka.protocol.parser kafka-python-producer-1-network-thread : Sending request MetadataRequest_v1(topics=['0x294095d04151'])
+2023-05-06 01:21:35,455 DEBUG kafka.conn kafka-python-producer-1-network-thread : <BrokerConnection node_id=0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]> Request 7: MetadataRequest_v1(topics=['0x294095d04151'])
+2023-05-06 01:21:35,457 DEBUG kafka.protocol.parser kafka-python-producer-1-network-thread : Received correlation id: 7
+2023-05-06 01:21:35,457 DEBUG kafka.protocol.parser kafka-python-producer-1-network-thread : Processing response MetadataResponse_v1
+2023-05-06 01:21:35,457 DEBUG kafka.conn kafka-python-producer-1-network-thread : <BrokerConnection node_id=0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]> Response 7 (2.0186901092529297 ms): MetadataResponse_v1(brokers=[(node_id=0, host='localhost', port=9092, rack=None)], controller_id=0, topics=[(error_code=0, topic='0x294095d04151', is_internal=False, partitions=[(error_code=0, partition=0, leader=0, replicas=[0], isr=[0])])])
+2023-05-06 01:21:35,458 DEBUG kafka.cluster kafka-python-producer-1-network-thread : Updated cluster metadata to ClusterMetadata(brokers: 1, topics: 1, groups: 0)
+2023-05-06 01:26:35,458 DEBUG kafka.client kafka-python-producer-1-network-thread : Sending metadata request MetadataRequest_v1(topics=['0x294095d04151']) to node 0
+2023-05-06 01:26:35,459 DEBUG kafka.protocol.parser kafka-python-producer-1-network-thread : Sending request MetadataRequest_v1(topics=['0x294095d04151'])
+2023-05-06 01:26:35,459 DEBUG kafka.conn kafka-python-producer-1-network-thread : <BrokerConnection node_id=0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]> Request 8: MetadataRequest_v1(topics=['0x294095d04151'])
+2023-05-06 01:26:35,461 DEBUG kafka.protocol.parser kafka-python-producer-1-network-thread : Received correlation id: 8
+2023-05-06 01:26:35,461 DEBUG kafka.protocol.parser kafka-python-producer-1-network-thread : Processing response MetadataResponse_v1
+2023-05-06 01:26:35,461 DEBUG kafka.conn kafka-python-producer-1-network-thread : <BrokerConnection node_id=0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]> Response 8 (1.8415451049804688 ms): MetadataResponse_v1(brokers=[(node_id=0, host='localhost', port=9092, rack=None)], controller_id=0, topics=[(error_code=0, topic='0x294095d04151', is_internal=False, partitions=[(error_code=0, partition=0, leader=0, replicas=[0], isr=[0])])])
+2023-05-06 01:26:35,461 DEBUG kafka.cluster kafka-python-producer-1-network-thread : Updated cluster metadata to ClusterMetadata(brokers: 1, topics: 1, groups: 0)
