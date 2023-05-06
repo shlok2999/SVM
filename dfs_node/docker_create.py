@@ -149,7 +149,18 @@ def init_env_setup_steps(installation_steps, data):
 	# docker = DockerClient(compose_files=["./compose.yaml"])
 	# docker.compose.build()
 	# docker.compose.up()
-	subprocess.Popen(['docker','compose','--compatibility','up','-d'])
+	proc = subprocess.Popen(['docker','compose','--compatibility','up','-d'], stdout=subprocess.PIPE)
+	output = proc.stdout.read().decode()
+	print(output)
+	print(type(output))
+	print("Done")
+	message_list = output.split('\n')
+	print(message_list)
+
+	if message_list[-2].find("DONE") != -1:
+		print("Success")
+	else:
+		print("Failiure")
 
 # docker_run_command_list = ["docker run -d"]
 # docker_run_command_list.extend(port_mapping_content)
