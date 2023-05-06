@@ -65,4 +65,16 @@ On clicking the Submit button a progress bar will be shown which also shows succ
 
 ## Configuration Contract
 ### Env Config
-![dfs](https://github.com/shlok2999/SVM/blob/main/contracts/dfs_config.png)
+![dfs](https://github.com/shlok2999/SVM/blob/shlok/contracts/dfs_config.png)
+
+### Services Self Regsiter Contract
+![dfs](https://github.com/shlok2999/SVM/blob/shlok/contracts/dfs_service.png)
+
+### Library Contract
+![dfs](https://github.com/shlok2999/SVM/blob/shlok/contracts/dfs_library.png)
+
+### Deployment Config
+![dfs](https://github.com/shlok2999/SVM/blob/shlok/contracts/dfs_deployment.png)
+
+### Templates Config
+![dfs](https://github.com/shlok2999/SVM/blob/shlok/contracts/dfs_template.png)
