@@ -14,6 +14,7 @@ class DevelopmentConfig(Config):
     DFS_SERVER = "dfs-server"
     NODE_MANAGER = "node-manager"
     DFS_NODE = "node-agent"
+    NODE_MONITOR = "node-monitor"
     DEVELOPMENT = True
 
 class ProductionConfig(Config):
@@ -29,4 +30,5 @@ class ProductionConfig(Config):
     DFS_SERVER = "dfs-server"
     NODE_MANAGER = "node-manager"
     DFS_NODE = "node-agent"
+    NODE_MONITOR = "node-monitor"
     ENV = "production"

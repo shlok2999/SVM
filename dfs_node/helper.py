@@ -6,6 +6,10 @@ def get_response(ip_address,data):
     ans = requests.get(ip_address, params=data).content.decode()
     ans = json.loads(ans)
     return ans
+
+def post_response(ip_address, path, data):
+    ans = requests.post(ip_address + path, params=data).json()
+    return ans
     
 def get_environment_details():
     file_desc = open('environment.json')

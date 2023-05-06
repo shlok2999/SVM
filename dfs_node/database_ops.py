@@ -151,3 +151,13 @@ def get_installation_steps(db_obj, collection):
     except Exception as e:
         print("An exception occurred ::", e)
         return None
+
+
+def get_service(db_obj, collection, service_name):
+    try:
+        col_obj = db_obj[collection]
+        service = col_obj.find_one({"service-name": service_name})
+        return f'{service["ip"]}:{service["port"]}'
+    except Exception as e:
+        print("An exception occurred ::", e)
+        return None

@@ -145,7 +145,7 @@ def register_self():
 @app.route("/configs")
 def retrieve_all_configs():
     app.logger.info(f"received request for retireieve_all_configs()")
-    configs_obj = get_all_configs(db, app.config['CONFIGS_COLL'])
+    configs_obj = get_all_configs(db, app.config['CONFIGS_COLL'], app.config['DEPLOYMENTS_COLL'])
 
     if configs_obj is None:
         app.logger.error(f"failed to query db or No entry found in db for configs collection")
@@ -153,6 +153,19 @@ def retrieve_all_configs():
 
     app.logger.info(f"returning all configs list from db")
     return create_bson_response(configs_obj)
+
+
+@app.route("/deployments")
+def retrieve_all_deployments():
+    app.logger.info(f"received request for retireieve_all_deployments()")
+    deployments_obj = get_all_deployments(db, app.config['DEPLOYMENTS_COLL'])
+
+    if deployments_obj is None:
+        app.logger.error(f"failed to query db or No entry found in db for deployments collection")
+        return create_response(INTERNAL_SERVER_ERROR), 500
+
+    app.logger.info(f"returning all deployments list from db")
+    return create_bson_response(deployments_obj)
 
 @app.route("/configs/<config_id>")
 def get_single_config(config_id):
@@ -165,6 +178,14 @@ def get_single_config(config_id):
 
     app.logger.info(f"returning record for config id {config_id} from db")
     return create_bson_response(config_obj)
+
+@app.route("/deployment/<config_id>")
+def get_single_deployment_status(config_id):
+    app.logger.info(f"received request for get_single_deployment() for config id {config_id}")
+    deployment_status = get_deployment_status(db, app.config['DEPLOYMENTS_COLL'], config_id)
+
+    app.logger.info(f"returning record for config id {config_id} from db")
+    return jsonify(deployment_status)
 
 @app.route("/provision/<config_id>", methods=["POST"])
 def provision_env(config_id):

@@ -106,14 +106,45 @@ def save_deployment_detail(db_obj, collection, config_id, node_agent_id):
         print("An exception occurred ::", e)
         return None
 
-def get_all_configs(db_obj, collection):
+def get_all_configs(db_obj, config_collection, deployment_collection):
     try:
-        col_obj = db_obj[collection]
+        col_obj = db_obj[config_collection]
         config_record = list(col_obj.find({}))
+        
+        print(len(config_record))
+
+        deployement_col_obj = db_obj[deployment_collection]
+        for index in range(len(config_record)):
+            config_id = config_record[index]['_id']
+            print(config_id)
+            deployment_record = deployement_col_obj.find_one({"config_id": config_id})
+            if deployment_record is not None:
+                deployment_status = deployment_record["status"]
+                config_record[index]["deployment_status"] = deployment_status
         return config_record
     except Exception as e:
         print("An exception occurred ::", e)
         return None
+
+def get_all_deployments(db_obj, deployment_collection):
+    try:
+        deployment_obj = db_obj[config_collection]
+        deployment_record = list(deployment_obj.find({}))
+
+        return config_record
+    except Exception as e:
+        print("An exception occurred ::", e)
+        return None
+
+def get_deployment_status(db_obj,collection,config_id):
+    config_id = ObjectId(config_id)
+    try:
+        col_obj = db_obj[collection]
+        result = col_obj.find_one({'config_id' : config_id})
+        return {'status':result['status']}
+    except Exception as e:
+        print("An exception occurred ::", e)
+        return {'status':-1}
 
 def register_service(db_obj, collection, service_name, ip, port):
     try:

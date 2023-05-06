@@ -4,6 +4,12 @@ from python_on_whales import docker, DockerClient
 from utils import *
 import os
 
+
+STATUS_SUCCESS = 1
+STATUS_FAILURE = 2
+NODE_MONITOR = "node-monitor"
+NODE_MONITOR_STATUS_UPDATE_PATH = '/update_status'
+
 def install_os(os_name, installation_steps):
 	os_tags = "latest"
 
@@ -93,7 +99,7 @@ def extract_temp_filesystem(storage_req):
 		req_list.append(req)
 	return req_list
 
-def init_env_setup_steps(installation_steps, data):
+def init_env_setup_steps(db, service_collection, installation_steps, data):
 	env_name = None
 	if 'env-name' in data:
 		env_name = data['env-name']
@@ -143,44 +149,21 @@ def init_env_setup_steps(installation_steps, data):
 
 	create_compose_file(env_name + "_"+ data['_id'], ram, cpu, gpu, port_mapping_content, temp_filesystem)
 
-	# with open("output.log", "w") as output:
-	# 	subprocess.call("sudo docker compose --compatibility up -d", shell=True, stdout=output, stderr=output)
-
-	# docker = DockerClient(compose_files=["./compose.yaml"])
-	# docker.compose.build()
-	# docker.compose.up()
 	proc = subprocess.Popen(['docker','compose','--compatibility','up','-d'], stdout=subprocess.PIPE)
 	output = proc.stdout.read().decode()
-	print(output)
-	print(type(output))
-	print("Done")
 	message_list = output.split('\n')
 	print(message_list)
 
+	status = 0
+
 	if message_list[-2].find("DONE") != -1:
-		print("Success")
+		# print("Success")
+		status = 1
 	else:
-		print("Failiure")
+		status = 2
 
-# docker_run_command_list = ["docker run -d"]
-# docker_run_command_list.extend(port_mapping_content)
-# docker_run_command_list.extend(resources_dockerfile_content)
-# docker_run_command_list.append("demo-svm")
-
-# docker_run_command = ' '.join(docker_run_command_list)
-
-# with open("output.log", "w") as output:
-# 	subprocess.call("docker build . -t demo_svm", shell=True, stdout=output, stderr=output)
-# 	subprocess.call(docker_run_command, shell=True, stdout=output, stderr=output)
-
-
-# os_dockerfile_content = install_os(os, installation_steps)
-# languages_dockerfile_content = install_language_and_library(languages, installation_steps)
-# ram, gpu, cpu = extract_resource_requirements(resources)
-# base_image = os['image-name'] + ":" + os['tags']
-# docker_run_command = []
-# docker_run_command.extend(os_dockerfile_content)
-# docker_run_command.extend(languages_dockerfile_content)
-
-# base_image_obj = docker.pull(base_image)
-# docker.container.run(image=base_image_obj, command=docker_run_command, cpus=cpu, detach=True, memory=ram, gpus=gpu)
+	json_stub = {}
+	json_stub["config_id"] = data['_id']
+	json_stub["status"] = status
+	node_monitor_address = get_service(db_obj, service_collection, NODE_MONITOR)
+	response = post_response(node_monitor_address, NODE_MONITOR_STATUS_UPDATE_PATH, json_stub)

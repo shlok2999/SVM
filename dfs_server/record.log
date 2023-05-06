@@ -4445,3 +4445,38 @@ requests.exceptions.ConnectionError: HTTPConnectionPool(host='10.42.0.221', port
 2023-05-06 13:19:15,986 DEBUG kafka.producer.sender kafka-python-producer-1-network-thread : Parsing produce response: ProduceResponse_v7(topics=[(topic='0x5f6e4b6e4b50', partitions=[(partition=0, error_code=0, offset=7, timestamp=-1, log_start_offset=0)])], throttle_time_ms=0)
 2023-05-06 13:19:15,986 DEBUG kafka.producer.record_accumulator kafka-python-producer-1-network-thread : Produced messages to topic-partition TopicPartition(topic='0x5f6e4b6e4b50', partition=0) with base offset 7 log start offset 0 and error None.
 2023-05-06 13:19:16,983 INFO werkzeug Thread-1 (process_request_thread) : 192.168.137.91 - - [06/May/2023 13:19:16] "POST /provision/644ece15809917bf2dc3956c HTTP/1.1" 200 -
+2023-05-06 13:50:23,535 INFO app MainThread : registering service dfs-server at ip 10.1.37.194
+2023-05-06 13:50:23,535 INFO app MainThread : found free port at 8000
+2023-05-06 13:50:23,993 INFO app MainThread : registering service dfs-server at ip 10.1.37.194 and port 8000
+2023-05-06 13:50:23,997 INFO werkzeug MainThread :  * Running on http://10.1.37.194:8000/ (Press CTRL+C to quit)
+2023-05-06 13:51:02,217 INFO app Thread-1 : received request for retireieve_all_configs()
+2023-05-06 13:51:02,260 ERROR app Thread-1 : failed to query db or No entry found in db for configs collection
+2023-05-06 13:51:02,261 INFO werkzeug Thread-1 : 10.1.37.194 - - [06/May/2023 13:51:02] "[35m[1mGET /configs HTTP/1.1[0m" 500 -
+2023-05-06 13:52:41,353 INFO app MainThread : registering service dfs-server at ip 10.1.37.194
+2023-05-06 13:52:41,353 INFO app MainThread : found free port at 8000
+2023-05-06 13:52:41,811 INFO app MainThread : registering service dfs-server at ip 10.1.37.194 and port 8000
+2023-05-06 13:52:41,814 INFO werkzeug MainThread :  * Running on http://10.1.37.194:8000/ (Press CTRL+C to quit)
+2023-05-06 13:52:54,208 INFO app Thread-1 : received request for retireieve_all_configs()
+2023-05-06 13:52:54,252 ERROR app Thread-1 : failed to query db or No entry found in db for configs collection
+2023-05-06 13:52:54,254 INFO werkzeug Thread-1 : 10.1.37.194 - - [06/May/2023 13:52:54] "[35m[1mGET /configs HTTP/1.1[0m" 500 -
+2023-05-06 13:53:31,655 INFO app MainThread : registering service dfs-server at ip 10.1.37.194
+2023-05-06 13:53:31,656 INFO app MainThread : found free port at 8001
+2023-05-06 13:53:32,088 INFO app MainThread : registering service dfs-server at ip 10.1.37.194 and port 8001
+2023-05-06 13:53:32,091 INFO werkzeug MainThread :  * Running on http://10.1.37.194:8001/ (Press CTRL+C to quit)
+2023-05-06 13:53:44,237 INFO app Thread-1 : received request for retireieve_all_configs()
+2023-05-06 13:53:44,382 ERROR app Thread-1 : failed to query db or No entry found in db for configs collection
+2023-05-06 13:53:44,383 INFO werkzeug Thread-1 : 10.1.37.194 - - [06/May/2023 13:53:44] "[35m[1mGET /configs HTTP/1.1[0m" 500 -
+2023-05-06 13:54:21,664 INFO app MainThread : registering service dfs-server at ip 10.1.37.194
+2023-05-06 13:54:21,664 INFO app MainThread : found free port at 8000
+2023-05-06 13:54:22,084 INFO app MainThread : registering service dfs-server at ip 10.1.37.194 and port 8000
+2023-05-06 13:54:22,090 INFO werkzeug MainThread :  * Running on http://10.1.37.194:8000/ (Press CTRL+C to quit)
+2023-05-06 13:54:35,340 INFO app Thread-1 : received request for retireieve_all_configs()
+2023-05-06 13:54:35,448 ERROR app Thread-1 : failed to query db or No entry found in db for configs collection
+2023-05-06 13:54:35,449 INFO werkzeug Thread-1 : 10.1.37.194 - - [06/May/2023 13:54:35] "[35m[1mGET /configs HTTP/1.1[0m" 500 -
+2023-05-06 13:55:19,308 INFO app MainThread : registering service dfs-server at ip 10.1.37.194
+2023-05-06 13:55:19,308 INFO app MainThread : found free port at 8001
+2023-05-06 13:55:19,736 INFO app MainThread : registering service dfs-server at ip 10.1.37.194 and port 8001
+2023-05-06 13:55:19,739 INFO werkzeug MainThread :  * Running on http://10.1.37.194:8001/ (Press CTRL+C to quit)
+2023-05-06 13:55:28,596 INFO app Thread-1 : received request for retireieve_all_configs()
+2023-05-06 13:55:28,990 INFO app Thread-1 : returning all configs list from db
+2023-05-06 13:55:28,996 INFO werkzeug Thread-1 : 10.1.37.194 - - [06/May/2023 13:55:28] "GET /configs HTTP/1.1" 200 -
