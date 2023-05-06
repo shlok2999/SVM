@@ -25,6 +25,8 @@ The system provides an efficient solution for building a containerised ecosystem
 
 - handle concurrent requests
 
+- Support for configuration templates
+
 ## 3. Non Functional Requirements
 
 - Performance: The system should be able to handle high and perform efficiently, with quick response time.
@@ -47,18 +49,17 @@ The system provides an efficient solution for building a containerised ecosystem
 The project will be delivered in phases:
 - Prototype phase: Building a simple and efficient prototype to demonstrate the workflow for container ecosystem deployment
 - Concurrency support: This phase will mostly focus on making the abover prototype more rustic and handle traffic efficiently
-- UI Integration phase
-    This phase deals with the Integration of whole backend with a UI Interface so that, it can be easily used by the end user.
+
     
     
     ![dfs](https://github.com/shlok2999/SVM/blob/main/dfs_new.png)
 
     As shown in the above diagram, the UI will appear in the as a form wherein user will get to choose the language version user will work on, library user wants to get support of in their Ecosystem, Computing Requirements for the Ecosystem. All the libraries & langiages resource requirements will be a dropdwon which shows the list of resources that are avialbale to create an ecosystem.
-On clicking the Submit button a progress bar will be shown which also shows success/failure status at the end of loading.
-
-    
       
 - Logging and Fault Tolerance
+- Final Backend: This phase will contain all above deliverables plus support for templates.
+- UI Integration phase
+    This phase deals with the Integration of whole backend with a UI Interface so that, it can be easily used by the end user.
 
 ## Architecture Overview
 ![dfs](https://github.com/shlok2999/SVM/blob/shlok/dfs_arch_v2.png)
