@@ -129,7 +129,10 @@ def update_container():
     if data['status'] == PROVISION_FAILURE_CODE:
         response = get_resource_detail(db_obj = db, config_id = data['config_id'], collection = 'configs')
         node_manager_url = get_service(db, app.config['SERVICES_COLL'], app.config['NODE_MANAGER'])
+        response['topic'] = data['topic']
         post_response(ip = node_manager_url, function = app.config['NODE_MANAGER_NODE_FAIL_API'], data = response)
+    
+    return jsonify({"status":200})
 
 
 if __name__ == '__main__':

@@ -3,7 +3,8 @@ import subprocess
 from python_on_whales import docker, DockerClient
 from utils import *
 import os
-
+from database_ops import *
+from helper import *
 
 STATUS_SUCCESS = 1
 STATUS_FAILURE = 2
@@ -99,7 +100,7 @@ def extract_temp_filesystem(storage_req):
 		req_list.append(req)
 	return req_list
 
-def init_env_setup_steps(db, service_collection, installation_steps, data):
+def init_env_setup_steps(db, service_collection, installation_steps, data, topic):
 	env_name = None
 	if 'env-name' in data:
 		env_name = data['env-name']
@@ -156,7 +157,7 @@ def init_env_setup_steps(db, service_collection, installation_steps, data):
 
 	status = 0
 
-	if message_list[-2].find("DONE") != -1:
+	if (len(message_list) == 1 and message_list[0] == '') or (message_list[-2].find("DONE") != -1):
 		# print("Success")
 		status = 1
 	else:
@@ -165,5 +166,6 @@ def init_env_setup_steps(db, service_collection, installation_steps, data):
 	json_stub = {}
 	json_stub["config_id"] = data['_id']
 	json_stub["status"] = status
-	node_monitor_address = get_service(db_obj, service_collection, NODE_MONITOR)
+	json_stub["topic"] = topic
+	node_monitor_address = get_service(db, service_collection, NODE_MONITOR)
 	response = post_response(node_monitor_address, NODE_MONITOR_STATUS_UPDATE_PATH, json_stub)

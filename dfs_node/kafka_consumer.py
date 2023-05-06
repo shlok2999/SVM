@@ -40,5 +40,5 @@ if __name__ == '__main__':
         # print(type(message.value))
         json_data = json.loads(message.value)
         os_name = json_data["os"]
-        init_env_setup_steps(db, SERVICES_COLL, installation_steps[os_name], json_data)
+        init_env_setup_steps(db, SERVICES_COLL, installation_steps[os_name], json_data,topic)
 

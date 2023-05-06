@@ -8,7 +8,7 @@ def get_response(ip_address,data):
     return ans
 
 def post_response(ip_address, path, data):
-    ans = requests.post(ip_address + path, params=data).json()
+    ans = requests.post(ip_address + path, json=data).json()
     return ans
     
 def get_environment_details():
