@@ -183,7 +183,9 @@ def get_single_config(config_id):
 def get_single_deployment_status(config_id):
     app.logger.info(f"received request for get_single_deployment() for config id {config_id}")
     deployment_status = get_deployment_status(db, app.config['DEPLOYMENTS_COLL'], config_id)
+    deployment_ip = get_deployment_ip(db, app.config['SERVICES_COLL'], deployment_status['node_agent_id'])
 
+    deployment_status['deployment_ip'] = deployment_ip
     app.logger.info(f"returning record for config id {config_id} from db")
     return jsonify(deployment_status)
 
@@ -229,6 +231,28 @@ def provision_env(config_id):
     print(config_obj_data)
     kafka_producer_obj.send_valid_config(config_obj_data)
     return jsonify({'status':200})
+
+@app.route("/unprovision/<config_id>", methods=["POST"])
+def unprovision_env(config_id):
+    config_obj = get_config(db, app.config['CONFIGS_COLL'], config_id)
+    
+    if config_obj is None:
+        app.logger.error(f"failed to query db or No entry found in db for configs collection for config id {config_id}")
+        return create_response(INTERNAL_SERVER_ERROR), 500
+
+    if config_obj["deployment_status"] != PROVISION_SUCCESS_CODE:
+        app.logger.error(f"no deployment found for config id {config_id}")
+        return create_response(INTERNAL_SERVER_ERROR), 500
+
+    kafka_producer_obj = Kafka_Producer(deployable_node['topic'])
+    config_obj_data = {}
+    config_obj_data['config-id'] = str(config_obj['_id'])
+    config_obj_data["env-name"] = config_obj["env-name"]
+    config_obj_data['action'] = UNPROVISION_ACTION
+    print(config_obj_data)
+    kafka_producer_obj.send_valid_config(config_obj_data)
+    return jsonify({'status':200})
+
 
 if __name__ == "__main__":
     ip, port = register_self()

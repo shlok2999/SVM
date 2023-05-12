@@ -1,6 +1,7 @@
 import requests
 import json
 import socket
+import subprocess
 
 def get_response(ip_address,data):
     ans = requests.get(ip_address, params=data).content.decode()
@@ -43,3 +44,9 @@ def next_free_port():
         except OSError:
             port += 1
     return None
+
+def init_container_termination(data):
+    container_name = data["env-name"] + '_' + data['config-id']
+    proc = subprocess.Popen(['docker','stop', 'container_name',], stdout=subprocess.PIPE)
+	output = proc.stdout.read().decode()
+    print(output)

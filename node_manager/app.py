@@ -139,7 +139,7 @@ def create_app():
             storage += size
         
         resource_data['storage'] = storage
-        resource_data['container_name'] = data["env_name"]
+        resource_data['container_name'] = data["env_name"] + '_' + data['_id']
         resource_data['_id'] = data['_id']
         resource_data['cpu'] = float(resource_data['cpu'])
         resource_data['gpu'] = int(resource_data['gpu'])

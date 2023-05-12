@@ -164,3 +164,12 @@ def get_node_manager(db_obj, collection, service_name):
     except Exception as e:
         print("An exception occurred ::", e)
         return None
+
+def get_deployment_ip(db_obj, collection, service_name):
+    try:
+        col_obj = db_obj[collection]
+        node_agent = col_obj.find_one({"service-name": service_name})
+        return node_agent["ip"]
+    except Exception as e:
+        print("An exception occurred ::", e)
+        return None
