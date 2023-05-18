@@ -240,17 +240,22 @@ def unprovision_env(config_id):
         app.logger.error(f"failed to query db or No entry found in db for configs collection for config id {config_id}")
         return create_response(INTERNAL_SERVER_ERROR), 500
 
-    if config_obj["deployment_status"] != PROVISION_SUCCESS_CODE:
+    deployment_status = get_deployment_status(db, app.config['DEPLOYMENTS_COLL'], config_id)
+
+    if deployment_status["status"] != PROVISION_SUCCESS_CODE:
         app.logger.error(f"no deployment found for config id {config_id}")
         return create_response(INTERNAL_SERVER_ERROR), 500
 
-    kafka_producer_obj = Kafka_Producer(deployable_node['topic'])
+    kafka_producer_obj = Kafka_Producer(deployment_status['topic'])
     config_obj_data = {}
     config_obj_data['config-id'] = str(config_obj['_id'])
     config_obj_data["env-name"] = config_obj["env-name"]
     config_obj_data['action'] = UNPROVISION_ACTION
     print(config_obj_data)
     kafka_producer_obj.send_valid_config(config_obj_data)
+
+    
+
     return jsonify({'status':200})
 
 

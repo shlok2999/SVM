@@ -157,7 +157,7 @@ def get_service(db_obj, collection, service_name):
     try:
         col_obj = db_obj[collection]
         service = col_obj.find_one({"service-name": service_name})
-        return f'{service["ip"]:{service["port"]}}'
+        return f'{service["ip"]}:{service["port"]}'
     except Exception as e:
         print("An exception occurred ::", e)
         return None

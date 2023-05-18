@@ -165,7 +165,7 @@ def get_service(db_obj, collection, service_name):
 def remove_deployment_entry(db_obj, collection, json_data):
     try:
         col_obj = db_obj[collection]
-        service = col_obj.remove({"config-id": json_data["config-id"]})
+        service = col_obj.delete_one({"config_id": ObjectId(json_data["config-id"])})
         return True
     except Exception as e:
         print("An exception occurred ::", e)

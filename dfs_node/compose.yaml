@@ -1,12 +1,11 @@
 version: '3.9'
 services:
-  fjasldf_644ece15809917bf2dc3956c:
-    container_name: fjasldf_644ece15809917bf2dc3956c
+  dfssvm_645e3a0099db361fdab687ca:
+    container_name: dfssvm_645e3a0099db361fdab687ca
     build:
       context: .
     ports:
-    - 9000:9000/tcp
-    - 9080:980/udp
+    - 6000:6005/tcp
     tty: true
     volumes:
     - type: tmpfs
@@ -14,12 +13,12 @@ services:
       tmpfs:
         size: 1G
     - type: volume
-      source: fjasldf_644ece15809917bf2dc3956c
-      target: /fjasldf_644ece15809917bf2dc3956c
+      source: dfssvm_645e3a0099db361fdab687ca
+      target: /dfssvm_645e3a0099db361fdab687ca
     deploy:
       resources:
         limits:
-          cpus: '1.0'
+          cpus: '1'
           memory: 1G
         reservations:
           devices:
@@ -28,4 +27,4 @@ services:
             capabilities:
             - gpu
 volumes:
-  fjasldf_644ece15809917bf2dc3956c: {}
+  dfssvm_645e3a0099db361fdab687ca: {}

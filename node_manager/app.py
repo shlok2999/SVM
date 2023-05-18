@@ -162,6 +162,8 @@ def create_app():
         node_usage_status[data['topic']]['gpu'] += data['gpu']
         node_usage_status[data['topic']]['ram'] += data['ram']
 
+        return jsonify({"status" : "updated successfully"})
+
     
     def initiate(db, config, logger):
         initiate_the_usage(db, config, logger)

@@ -47,6 +47,6 @@ def next_free_port():
 
 def init_container_termination(data):
     container_name = data["env-name"] + '_' + data['config-id']
-    proc = subprocess.Popen(['docker','stop', 'container_name',], stdout=subprocess.PIPE)
-	output = proc.stdout.read().decode()
+    proc = subprocess.Popen(['docker','stop', container_name,], stdout=subprocess.PIPE)
+    output = proc.stdout.read().decode()
     print(output)
