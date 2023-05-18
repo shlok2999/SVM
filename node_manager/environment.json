@@ -1,0 +1,8 @@
+{
+    "database":"",
+    "minio_endpoint":"",
+    "bootstrap_servers": ["localhost:9092"],
+    "resource_manager":"",
+    "node_monitor":"http://127.0.0.1:8020",
+    "node_manager":"http://127.0.0.1:8080"
+}

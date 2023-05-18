@@ -1,0 +1,76 @@
+[   
+    {
+        "os": "ubuntu",
+        "init-steps":["apt-get -y update", "apt -y install vim", "apt install git"],
+        "specifications": {
+            "python": {
+                "installation-steps": ["apt install -y python3", "apt-get install -y python3-pip"],
+                "libraries": {
+                    "tensorflow":["pip install --upgrade tensorflow"],
+                    "scikit-learn":["pip install --upgrade scikit-learn"],
+                    "numpy": ["pip install --upgrade numpy"],
+                    "pandas" : ["pip install --upgrade pandas"],
+                    "jupyter-notebook": ["pip install notebook"]
+                }
+            },
+            "node-js": {
+                "installation-steps":["apt install nodejs",
+                                    "apt-get install python3-software-properties gnupg2", 
+                                    "apt install npm"],
+                "libraries": {
+                    "express": ["npm install -g express"],
+                    "gulp": ["npm install -g gulp-cli"],
+                    "async-js": ["npm i async"],
+                    "request": ["npm install request -g"]
+                } 
+            },
+            "golang": {
+                "installation-steps":["apt install curl", 
+                                    "curl -OL https://golang.org/dl/go1.20.3.linux-amd64.tar.gz", 
+                                    "tar -C /usr/local -xvf go1.20.3.linux-amd64.tar.gz",
+                                    "mkdir $HOME/go",
+                                    "mkdir -p $HOME/go/src $HOME/go/bin",
+                                    "echo 'export GOPATH=$HOME/go' >> ~/.bash_profile",
+                                    "echo 'export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin' >> ~/.bash_profile",
+                                    "source ~/.bash_profile",
+                                    "rm go1.20.3.linux-amd64.tar.gz"],
+                "libraries": {
+                } 
+            }
+        }
+    },
+    {
+        "os": "alpine",
+        "init-steps":["apk update", "apk add vim"],
+        "specifications": {
+            "python": {
+                "installation-steps": ["apk add --update --no-cache python3 && ln -sf python3 /usr/bin/python", 
+                                    "python3 -m ensurepip", "pip3 install --no-cache --upgrade pip setuptools"],
+                "libraries": {
+                    "scikit-learn":["apk add py3-scikit-learn"],
+                    "numpy": ["apk add py3-numpy"],
+                    "pandas" : ["apk add py3-pandas"],
+                    "jupyter-notebook":["apk add jupyter-notebook"]
+                }
+            },
+            "node-js": {
+                "installation-steps":["apk add --update nodejs npm", "apk add --update git"],
+                "libraries": {
+                    "express": ["npm install express-generator -g"],
+                    "gulp": ["npm install -g gulp-cli"],
+                    "async-js": ["npm i async"],
+                    "request": ["npm install request -g"]
+                } 
+            },
+            "golang": {
+                "installation-steps":["apk add --no-cache git make musl-dev go",
+                                    "ENV GOROOT /usr/lib/go",
+                                    "ENV GOPATH /go",
+                                    "ENV PATH /go/bin:$PATH",
+                                    "mkdir -p ${GOPATH}/src ${GOPATH}/bin"],
+                "libraries": {
+                } 
+            }
+        }
+    }
+]

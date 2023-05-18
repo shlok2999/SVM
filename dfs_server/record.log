@@ -1,0 +1,4 @@
+2023-05-12 15:31:53,260 INFO app MainThread : registering service dfs-server at ip 10.42.0.168
+2023-05-12 15:31:53,261 INFO app MainThread : found free port at 8000
+2023-05-12 15:31:53,664 INFO app MainThread : registering service dfs-server at ip 10.42.0.168 and port 8000
+2023-05-12 15:31:53,666 INFO werkzeug MainThread :  * Running on http://10.42.0.168:8000/ (Press CTRL+C to quit)

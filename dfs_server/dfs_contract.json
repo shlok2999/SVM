@@ -1,11 +1,8 @@
 {
   "env-name": "fjasldf",
   "version": "1",
-  "os": {
-    "image-name": "ubuntu",
-    "version": "",
-    "tags": "22.04"
-  },
+  "isTemplate": 0,
+  "os": "ubuntu",
   "languages": [{
     "language-name":"python",
     "libraries":["numpy"]
@@ -14,10 +11,9 @@
   "resources": {
     "ram": "1G",
     "cpu": "1.0",
-    "gpu": "1",
-    "storage": 54
+    "gpu": "1"
   },
-  "dataset": [
+  "datasets": [
     {
       "category-name": "ffs",
       "db": [
@@ -38,22 +34,28 @@
     {
       "external": 
       {
-        "ports": "8000"
+        "ports": "9000"
       },
       "internal": {
-        "ports": "8000",
+        "ports": "9000",
         "protocol": "tcp"
       }
     },
     {
       "external": 
       {
-        "ports": "8080"
+        "ports": "9080"
       },
       "internal": {
-        "ports": "80",
+        "ports": "980",
         "protocol": "udp"
       }
     }
-  ]
+  ],
+
+  "storage": [{
+    "target": "/target",
+    "size": "104857600",
+    "lifecycle": "temporary"
+  }]
 }
