@@ -13,6 +13,7 @@ def get_response(ip_address,function,data):
     return ans
 
 def post_response(ip_address,function,data):
+    print(ip_address)
     ans = requests.post(ip_address + function, json=data).json()
     # ans = json.loads(ans)
     return ans

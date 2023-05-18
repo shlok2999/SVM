@@ -141,7 +141,7 @@ def get_deployment_status(db_obj,collection,config_id):
     try:
         col_obj = db_obj[collection]
         result = col_obj.find_one({'config_id' : config_id})
-        return {'status':result['status']}
+        return {'status':result['status'], 'node_agent_id': result['node_agent_id'], 'topic': result['topic']}
     except Exception as e:
         print("An exception occurred ::", e)
         return {'status':-1}
