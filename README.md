@@ -86,7 +86,7 @@ Project can be run by following below given steps:
 - Run the following services one by one:
     -   Run the main API server: python3 dfs_server/app.py (apis to be accessed by frontend)
     -   Run node agents, one for each deployable node: python3 dfs_node/app.py
-    -   Run kafka consumer service, one for each deployable node: python3 dfs_node/kiafka_consumer.py
+    -   Run kafka consumer service, one for each deployable node: python3 dfs_node/kafka_consumer.py
     -   Run the node manager serrvice: python3 node_manager/app.py
     -   Run the node monitor serrvice: python3 dfs_monitor/app.py
 
