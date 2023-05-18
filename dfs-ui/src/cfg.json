@@ -1,0 +1,8 @@
+{
+"configs": {
+	"node-monitor-ip" : "127.0.0.1",
+	"node-monitor-port" : "8001",
+	"dfs-server-ip" : "127.0.0.1",
+	"dfs-server-port" : "8002"
+ }
+}

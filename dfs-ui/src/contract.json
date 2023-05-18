@@ -1,0 +1,28 @@
+{
+  "languages": [
+    {
+      "libraries": [
+        "tensorflow", 
+        "scikit-learn", 
+        "numpy", 
+        "pandas", 
+        "jupyter-notebook"
+      ], 
+      "name": "python"
+    }, 
+    {
+      "libraries": [
+        "express", 
+        "gulp", 
+        "async-js", 
+        "request"
+      ], 
+      "name": "node-js"
+    }, 
+    {
+      "libraries": [], 
+      "name": "golang"
+    }
+  ], 
+  "os": "ubuntu"
+}
